@@ -1,0 +1,14 @@
+version: '2'
+
+services:
+  cassandra:
+    image: cassandra
+    ports:
+      - '7000:7000'
+      - '9042:9042'
+    volumes:
+      - '/podman_volumes/cassandra:/cassandra'
+    environment:
+      - CASSANDRA_SEEDS=cassandra
+      - CASSANDRA_PASSWORD_SEEDER=yes
+      - CASSANDRA_PASSWORD=cassandra
