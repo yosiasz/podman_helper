@@ -9,24 +9,12 @@ services:
     environment:
       POSTGRES_USER: admin
       POSTGRES_PASSWORD: 
-    volumes:
-      - db:/var/lib/postgresql/data
     ports:
-      - 6543:5432
-    networks:
-      - postgres-net
-
+      - "6543:5432"
+    #extra_hosts:
+    #  - "host.docker.internal:127.0.0.1"
   adminer:
     image: adminer
     restart: always
     ports:
-      - 8080:8080
-    networks:
-      - postgres-net
-
-volumes:
-  db:
-    driver: local
-
-networks:
-  postgres-net:
+      - 8068:8080

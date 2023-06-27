@@ -1,0 +1,80 @@
+version: '3.1'
+
+services:
+  influxdb:
+    image: influxdb:1.8.10-alpine
+    container_name: influxdb
+    restart: always
+    environment:
+      - INFLUXDB_DB=influx
+      - INFLUXDB_ADMIN_USER=admin
+      - INFLUXDB_ADMIN_PASSWORD=
+    ports:
+      - '8086:8086'
+    volumes:
+      - ../.podman_volumes/influxdb:/var/lib/influxdb
+    networks:
+      - postgres-net
+
+  telegraf:
+    image: telegraf:1.247
+    container_name: telegraf
+    restart: always
+    volumes:
+    - ./telegraf.conf:/etc/telegraf/telegraf.conf:ro
+    depends_on:
+      - influxdb
+    links:
+      - influxdb
+    ports:
+    - '8125:8125'
+    networks:
+      - postgres-net
+
+  grafana_dev:
+    image: grafana/grafana:9.4.7
+    container_name: grafana_adam_dev
+    environment:
+      - GF_PATHS_CONFIG=/etc/grafana/grafana.ini
+      - GF_PATHS_DATA=/var/lib/grafana
+      - GF_PATHS_HOME=/usr/share/grafana
+    ports:
+      - 3001:3000
+    links:
+      - postgres_dev
+      - influxdb
+    volumes:
+      - ../.podman_volumes/grafana:/var/lib/grafana
+      #- ../.podman_volumes/grafana/custom.ini:/etc/grafana/grafana.ini
+    depends_on:
+      - postgres_dev
+      - influxdb
+    networks:
+      - postgres-net
+
+  postgres_dev:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: 
+    volumes:
+      - ../.podman_volumes/postgres/data:/var/lib/postgresql/data
+    ports:
+      - 6543:5432
+    networks:
+      - postgres-net
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
+    networks:
+      - postgres-net
+
+volumes:
+    influxdb_data: {}
+
+networks:
+  postgres-net:    
