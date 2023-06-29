@@ -1,0 +1,15 @@
+version: '2'
+
+services:
+  grafana:
+      image:  docker.io/grafana/grafana:latest
+      container_name: grafana
+      user: '104'
+      ports:
+        - "3000:3000"
+      volumes:
+        - /docker_volumes/grafana:/var/lib/grafana
+        - /docker_volumes/grafana/etc/grafana:/etc/grafana
+      restart: unless-stopped
+      #environment:
+        #- GF_PATHS_LOGS=/var/lib/grafana/logs

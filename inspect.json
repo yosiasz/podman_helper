@@ -1,0 +1,307 @@
+[
+    {
+        "Id": "547ddb6f96472f59d81c3067ea4440f81efcfa8684c931f05fe131297d3791e0",
+        "Created": "2023-05-31T09:46:15.313263211-07:00",
+        "Path": "/entrypoint.sh",
+        "Args": [
+            "influxd"
+        ],
+        "State": {
+            "OciVersion": "1.0.2-dev",
+            "Status": "running",
+            "Running": true,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 1769,
+            "ConmonPid": 1766,
+            "ExitCode": 0,
+            "Error": "",
+            "StartedAt": "2023-05-31T09:46:15.40859914-07:00",
+            "FinishedAt": "0001-01-01T00:00:00Z",
+            "Healthcheck": {
+                "Status": "",
+                "FailingStreak": 0,
+                "Log": null
+            },
+            "CgroupPath": "/"
+        },
+        "Image": "a7e8486aa7b58c929652892aaeaf8ced19f5e867e81b9f5723f764cf9def8bd2",
+        "ImageName": "docker.io/library/influxdb:1.8",
+        "Rootfs": "",
+        "Pod": "",
+        "ResolvConfPath": "/tmp/podman-run-1000/containers/overlay-containers/547ddb6f96472f59d81c3067ea4440f81efcfa8684c931f05fe131297d3791e0/userdata/resolv.conf",
+        "HostnamePath": "/tmp/podman-run-1000/containers/overlay-containers/547ddb6f96472f59d81c3067ea4440f81efcfa8684c931f05fe131297d3791e0/userdata/hostname",
+        "HostsPath": "/tmp/podman-run-1000/containers/overlay-containers/547ddb6f96472f59d81c3067ea4440f81efcfa8684c931f05fe131297d3791e0/userdata/hosts",
+        "StaticDir": "/home/jsolomon/.local/share/containers/storage/overlay-containers/547ddb6f96472f59d81c3067ea4440f81efcfa8684c931f05fe131297d3791e0/userdata",
+        "OCIConfigPath": "/home/jsolomon/.local/share/containers/storage/overlay-containers/547ddb6f96472f59d81c3067ea4440f81efcfa8684c931f05fe131297d3791e0/userdata/config.json",
+        "OCIRuntime": "crun",
+        "ConmonPidFile": "/tmp/podman-run-1000/containers/overlay-containers/547ddb6f96472f59d81c3067ea4440f81efcfa8684c931f05fe131297d3791e0/userdata/conmon.pid",
+        "PidFile": "/tmp/podman-run-1000/containers/overlay-containers/547ddb6f96472f59d81c3067ea4440f81efcfa8684c931f05fe131297d3791e0/userdata/pidfile",
+        "Name": "awesome_elbakyan",
+        "RestartCount": 0,
+        "Driver": "overlay",
+        "MountLabel": "",
+        "ProcessLabel": "",
+        "AppArmorProfile": "",
+        "EffectiveCaps": [
+            "CAP_CHOWN",
+            "CAP_DAC_OVERRIDE",
+            "CAP_FOWNER",
+            "CAP_FSETID",
+            "CAP_KILL",
+            "CAP_NET_BIND_SERVICE",
+            "CAP_SETFCAP",
+            "CAP_SETGID",
+            "CAP_SETPCAP",
+            "CAP_SETUID",
+            "CAP_SYS_CHROOT"
+        ],
+        "BoundingCaps": [
+            "CAP_CHOWN",
+            "CAP_DAC_OVERRIDE",
+            "CAP_FOWNER",
+            "CAP_FSETID",
+            "CAP_KILL",
+            "CAP_NET_BIND_SERVICE",
+            "CAP_SETFCAP",
+            "CAP_SETGID",
+            "CAP_SETPCAP",
+            "CAP_SETUID",
+            "CAP_SYS_CHROOT"
+        ],
+        "ExecIDs": [],
+        "GraphDriver": {
+            "Name": "overlay",
+            "Data": {
+                "LowerDir": "/home/jsolomon/.local/share/containers/storage/overlay/3d05a0012ce586d937d2dfc475efd106f19b1b9da70534f0e28227baf6542a78/diff:/home/jsolomon/.local/share/containers/storage/overlay/fb0659ad154608387260f7d33cb4595001829a6a58d2c2ee9f5044d127d53f58/diff:/home/jsolomon/.local/share/containers/storage/overlay/b3c7bcd40dc91aa8a37bb3c9296769b37f2d224dcb8ca7de503ae927d3df5ff6/diff:/home/jsolomon/.local/share/containers/storage/overlay/938bd3ee23eba8eb6eb014c1a9a9adf25d50e56013bc2303613efec0bd4789f4/diff:/home/jsolomon/.local/share/containers/storage/overlay/4e28dc9392feff971ac544eef2e27a188898bb04dda58d32caeb0f0c188c17cc/diff:/home/jsolomon/.local/share/containers/storage/overlay/3012b872b7a07b15b229809a6716d38a02005fcb5ca64611c2f7cc4d2c336993/diff:/home/jsolomon/.local/share/containers/storage/overlay/974e52a24adf98b37b8895f61b8d8d273b73a8596b80da491342936fa1751541/diff",
+                "MergedDir": "/home/jsolomon/.local/share/containers/storage/overlay/01b7df5bd108d31621ed3dfca2e598fb4006710f7461acd023e741b19851e0e9/merged",
+                "UpperDir": "/home/jsolomon/.local/share/containers/storage/overlay/01b7df5bd108d31621ed3dfca2e598fb4006710f7461acd023e741b19851e0e9/diff",
+                "WorkDir": "/home/jsolomon/.local/share/containers/storage/overlay/01b7df5bd108d31621ed3dfca2e598fb4006710f7461acd023e741b19851e0e9/work"
+            }
+        },
+        "Mounts": [
+            {
+                "Type": "volume",
+                "Name": "influxdb",
+                "Source": "/home/jsolomon/.local/share/containers/storage/volumes/influxdb/_data",
+                "Destination": "/var/lib/influxdb",
+                "Driver": "local",
+                "Mode": "",
+                "Options": [
+                    "nosuid",
+                    "nodev",
+                    "rbind"
+                ],
+                "RW": true,
+                "Propagation": "rprivate"
+            }
+        ],
+        "Dependencies": [],
+        "NetworkSettings": {
+            "EndpointID": "",
+            "Gateway": "",
+            "IPAddress": "",
+            "IPPrefixLen": 0,
+            "IPv6Gateway": "",
+            "GlobalIPv6Address": "",
+            "GlobalIPv6PrefixLen": 0,
+            "MacAddress": "",
+            "Bridge": "",
+            "SandboxID": "",
+            "HairpinMode": false,
+            "LinkLocalIPv6Address": "",
+            "LinkLocalIPv6PrefixLen": 0,
+            "Ports": {
+                "8086/tcp": [
+                    {
+                        "HostIp": "",
+                        "HostPort": "8086"
+                    }
+                ]
+            },
+            "SandboxKey": "/mnt/wslg/runtime-dir/netns/cni-5ac64a48-1028-5644-fe18-1ccb7ab35579"
+        },
+        "ExitCommand": [
+            "/usr/bin/podman",
+            "--root",
+            "/home/jsolomon/.local/share/containers/storage",
+            "--runroot",
+            "/tmp/podman-run-1000/containers",
+            "--log-level",
+            "warning",
+            "--cgroup-manager",
+            "cgroupfs",
+            "--tmpdir",
+            "/tmp/podman-run-1000/libpod/tmp",
+            "--runtime",
+            "crun",
+            "--storage-driver",
+            "overlay",
+            "--storage-opt",
+            "overlay.mount_program=/usr/bin/fuse-overlayfs",
+            "--events-backend",
+            "file",
+            "container",
+            "cleanup",
+            "547ddb6f96472f59d81c3067ea4440f81efcfa8684c931f05fe131297d3791e0"
+        ],
+        "Namespace": "",
+        "IsInfra": false,
+        "Config": {
+            "Hostname": "547ddb6f9647",
+            "Domainname": "",
+            "User": "",
+            "AttachStdin": false,
+            "AttachStdout": false,
+            "AttachStderr": false,
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "TERM=xterm",
+                "container=podman",
+                "INFLUXDB_VERSION=1.8.10",
+                "HOME=/root",
+                "HOSTNAME=547ddb6f9647"
+            ],
+            "Cmd": [
+                "influxd"
+            ],
+            "Image": "docker.io/library/influxdb:1.8",
+            "Volumes": null,
+            "WorkingDir": "/",
+            "Entrypoint": "/entrypoint.sh",
+            "OnBuild": null,
+            "Labels": null,
+            "Annotations": {
+                "io.container.manager": "libpod",
+                "io.kubernetes.cri-o.Created": "2023-05-31T09:46:15.313263211-07:00",
+                "io.kubernetes.cri-o.TTY": "false",
+                "io.podman.annotations.autoremove": "FALSE",
+                "io.podman.annotations.init": "FALSE",
+                "io.podman.annotations.privileged": "FALSE",
+                "io.podman.annotations.publish-all": "FALSE",
+                "org.opencontainers.image.stopSignal": "15"
+            },
+            "StopSignal": 15,
+            "CreateCommand": [
+                "podman",
+                "run",
+                "-p",
+                "8086:8086",
+                "-v",
+                "influxdb:/var/lib/influxdb",
+                "influxdb:1.8"
+            ],
+            "Umask": "0022",
+            "Timeout": 0,
+            "StopTimeout": 10
+        },
+        "HostConfig": {
+            "Binds": [
+                "influxdb:/var/lib/influxdb:rw,rprivate,nosuid,nodev,rbind"
+            ],
+            "CgroupManager": "cgroupfs",
+            "CgroupMode": "host",
+            "ContainerIDFile": "",
+            "LogConfig": {
+                "Type": "k8s-file",
+                "Config": null,
+                "Path": "/home/jsolomon/.local/share/containers/storage/overlay-containers/547ddb6f96472f59d81c3067ea4440f81efcfa8684c931f05fe131297d3791e0/userdata/ctr.log",
+                "Tag": "",
+                "Size": "0B"
+            },
+            "NetworkMode": "slirp4netns",
+            "PortBindings": {
+                "8086/tcp": [
+                    {
+                        "HostIp": "",
+                        "HostPort": "8086"
+                    }
+                ]
+            },
+            "RestartPolicy": {
+                "Name": "",
+                "MaximumRetryCount": 0
+            },
+            "AutoRemove": false,
+            "VolumeDriver": "",
+            "VolumesFrom": null,
+            "CapAdd": [],
+            "CapDrop": [
+                "CAP_AUDIT_WRITE",
+                "CAP_MKNOD",
+                "CAP_NET_RAW"
+            ],
+            "Dns": [],
+            "DnsOptions": [],
+            "DnsSearch": [],
+            "ExtraHosts": [],
+            "GroupAdd": [],
+            "IpcMode": "private",
+            "Cgroup": "",
+            "Cgroups": "default",
+            "Links": null,
+            "OomScoreAdj": 0,
+            "PidMode": "private",
+            "Privileged": false,
+            "PublishAllPorts": false,
+            "ReadonlyRootfs": false,
+            "SecurityOpt": [],
+            "Tmpfs": {},
+            "UTSMode": "private",
+            "UsernsMode": "",
+            "ShmSize": 65536000,
+            "Runtime": "oci",
+            "ConsoleSize": [
+                0,
+                0
+            ],
+            "Isolation": "",
+            "CpuShares": 0,
+            "Memory": 0,
+            "NanoCpus": 0,
+            "CgroupParent": "",
+            "BlkioWeight": 0,
+            "BlkioWeightDevice": null,
+            "BlkioDeviceReadBps": null,
+            "BlkioDeviceWriteBps": null,
+            "BlkioDeviceReadIOps": null,
+            "BlkioDeviceWriteIOps": null,
+            "CpuPeriod": 0,
+            "CpuQuota": 0,
+            "CpuRealtimePeriod": 0,
+            "CpuRealtimeRuntime": 0,
+            "CpusetCpus": "",
+            "CpusetMems": "",
+            "Devices": [],
+            "DiskQuota": 0,
+            "KernelMemory": 0,
+            "MemoryReservation": 0,
+            "MemorySwap": 0,
+            "MemorySwappiness": 0,
+            "OomKillDisable": false,
+            "PidsLimit": 0,
+            "Ulimits": [
+                {
+                    "Name": "RLIMIT_NOFILE",
+                    "Soft": 1048576,
+                    "Hard": 1048576
+                },
+                {
+                    "Name": "RLIMIT_NPROC",
+                    "Soft": 32768,
+                    "Hard": 32768
+                }
+            ],
+            "CpuCount": 0,
+            "CpuPercent": 0,
+            "IOMaximumIOps": 0,
+            "IOMaximumBandwidth": 0,
+            "CgroupConf": null
+        }
+    }
+]

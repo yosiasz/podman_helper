@@ -1,0 +1,15 @@
+version: "3.5"
+
+services:
+
+  rrdrest:
+    image: michaelwadman/rrdrest:latest
+    container_name: rrdrest
+    restart: always
+    ports:
+      - "9000:9000"
+    volumes:
+      #- "/opt/librenms/rrd:/opt/librenms/rrd:Z"
+      - "../.podman_volumes/rrd:/opt/librenms/rrd:Z"
+    environment:
+      - TZ=America/Denver

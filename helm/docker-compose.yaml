@@ -1,0 +1,12 @@
+version: '3.6'
+services:
+  helm:
+      image: alpine/helm
+      container_name: helm
+      restart: always
+      volumes:       
+        - ../.podman_volumes/apps:/apps
+        - ../.podman_volumes/.kube:/root/.kube
+        - ../.podman_volumes/.helm:/root/.helm
+        - ../.podman_volumes/.config/helm:/root/.config/helm        
+        - ../.podman_volumes/.cache/helm:/root/.cache/helm

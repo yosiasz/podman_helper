@@ -1,0 +1,363 @@
+[
+     {
+          "Id": "9dd298577aaed0ff4ee73050440c76bb9ae12a6a71b7f8d2d1a3927ce2487727",
+          "Created": "2023-05-31T11:05:32.850483997-07:00",
+          "Path": "./opensearch-docker-entrypoint.sh",
+          "Args": [
+               "opensearch"
+          ],
+          "State": {
+               "OciVersion": "1.1.0-rc.1",
+               "Status": "running",
+               "Running": true,
+               "Paused": false,
+               "Restarting": false,
+               "OOMKilled": false,
+               "Dead": false,
+               "Pid": 3381,
+               "ConmonPid": 3379,
+               "ExitCode": 0,
+               "Error": "",
+               "StartedAt": "2023-05-31T11:05:33.029547125-07:00",
+               "FinishedAt": "0001-01-01T00:00:00Z",
+               "Health": {
+                    "Status": "",
+                    "FailingStreak": 0,
+                    "Log": null
+               },
+               "CgroupPath": "/user.slice/user-1000.slice/user@1000.service/app.slice/podman.service",
+               "CheckpointedAt": "0001-01-01T00:00:00Z",
+               "RestoredAt": "0001-01-01T00:00:00Z"
+          },
+          "Image": "5b7cb929b9642e8c58307e541f562ac2e3935f8a8d96ab560c8bebf354285592",
+          "ImageDigest": "sha256:98827fd1cf7157688912407f2211006166ed6dbaec385d5ac038886961b77fe1",
+          "ImageName": "docker.io/opensearchproject/opensearch:latest",
+          "Rootfs": "",
+          "Pod": "",
+          "ResolvConfPath": "/run/user/1000/containers/overlay-containers/9dd298577aaed0ff4ee73050440c76bb9ae12a6a71b7f8d2d1a3927ce2487727/userdata/resolv.conf",
+          "HostnamePath": "/run/user/1000/containers/overlay-containers/9dd298577aaed0ff4ee73050440c76bb9ae12a6a71b7f8d2d1a3927ce2487727/userdata/hostname",
+          "HostsPath": "/run/user/1000/containers/overlay-containers/9dd298577aaed0ff4ee73050440c76bb9ae12a6a71b7f8d2d1a3927ce2487727/userdata/hosts",
+          "StaticDir": "/home/user/.local/share/containers/storage/overlay-containers/9dd298577aaed0ff4ee73050440c76bb9ae12a6a71b7f8d2d1a3927ce2487727/userdata",
+          "OCIConfigPath": "/home/user/.local/share/containers/storage/overlay-containers/9dd298577aaed0ff4ee73050440c76bb9ae12a6a71b7f8d2d1a3927ce2487727/userdata/config.json",
+          "OCIRuntime": "crun",
+          "ConmonPidFile": "/run/user/1000/containers/overlay-containers/9dd298577aaed0ff4ee73050440c76bb9ae12a6a71b7f8d2d1a3927ce2487727/userdata/conmon.pid",
+          "PidFile": "/run/user/1000/containers/overlay-containers/9dd298577aaed0ff4ee73050440c76bb9ae12a6a71b7f8d2d1a3927ce2487727/userdata/pidfile",
+          "Name": "opensearch-node1",
+          "RestartCount": 0,
+          "Driver": "overlay",
+          "MountLabel": "",
+          "ProcessLabel": "",
+          "AppArmorProfile": "",
+          "EffectiveCaps": null,
+          "BoundingCaps": [
+               "CAP_CHOWN",
+               "CAP_DAC_OVERRIDE",
+               "CAP_FOWNER",
+               "CAP_FSETID",
+               "CAP_KILL",
+               "CAP_NET_BIND_SERVICE",
+               "CAP_SETFCAP",
+               "CAP_SETGID",
+               "CAP_SETPCAP",
+               "CAP_SETUID",
+               "CAP_SYS_CHROOT"
+          ],
+          "ExecIDs": [],
+          "GraphDriver": {
+               "Name": "overlay",
+               "Data": {
+                    "LowerDir": "/home/user/.local/share/containers/storage/overlay/baa369aadebe3ec525de52f7ee90d32dd17ef733f66c89b5682e7a6cc580ced1/diff:/home/user/.local/share/containers/storage/overlay/1dba763a2830410446a5d785883b51992c5b32186dd1edfd951461fca9e666cb/diff:/home/user/.local/share/containers/storage/overlay/a48344ccdd991ddb705773adc5060f9df620eb25ac13528d5e1e8ebd986dcd96/diff:/home/user/.local/share/containers/storage/overlay/570a78322b2ceb2baed255a667aa84f17a51780022fad29aeca534b342f724a2/diff:/home/user/.local/share/containers/storage/overlay/ae423845dced8e031cc2f00e56aea314c7aabd9771e71eaccfa2656503329df5/diff:/home/user/.local/share/containers/storage/overlay/bb4f47d8b629f152eeb0a92862a75b09bb005ea87da5a28a2d4bacdf4b072c96/diff:/home/user/.local/share/containers/storage/overlay/8c667e7e65fe68c6430d9e509da4015ea2fd5e80a9310e4f0d6753eec678739f/diff",
+                    "MergedDir": "/home/user/.local/share/containers/storage/overlay/79afd539197f7cea0a87d961480e316edfa23922bdd4bb8bd7c37e24aa1e3ade/merged",
+                    "UpperDir": "/home/user/.local/share/containers/storage/overlay/79afd539197f7cea0a87d961480e316edfa23922bdd4bb8bd7c37e24aa1e3ade/diff",
+                    "WorkDir": "/home/user/.local/share/containers/storage/overlay/79afd539197f7cea0a87d961480e316edfa23922bdd4bb8bd7c37e24aa1e3ade/work"
+               }
+          },
+          "Mounts": [
+               {
+                    "Type": "bind",
+                    "Source": "/mnt/c../.podman_volumes/opensearch",
+                    "Destination": "/usr/share/opensearch/data",
+                    "Driver": "",
+                    "Mode": "",
+                    "Options": [
+                         "rbind"
+                    ],
+                    "RW": true,
+                    "Propagation": "rprivate"
+               }
+          ],
+          "Dependencies": [],
+          "NetworkSettings": {
+               "EndpointID": "",
+               "Gateway": "",
+               "IPAddress": "",
+               "IPPrefixLen": 0,
+               "IPv6Gateway": "",
+               "GlobalIPv6Address": "",
+               "GlobalIPv6PrefixLen": 0,
+               "MacAddress": "",
+               "Bridge": "",
+               "SandboxID": "",
+               "HairpinMode": false,
+               "LinkLocalIPv6Address": "",
+               "LinkLocalIPv6PrefixLen": 0,
+               "Ports": {
+                    "9200/tcp": [
+                         {
+                              "HostIp": "",
+                              "HostPort": "9200"
+                         }
+                    ],
+                    "9300/tcp": null,
+                    "9600/tcp": [
+                         {
+                              "HostIp": "",
+                              "HostPort": "9600"
+                         }
+                    ],
+                    "9650/tcp": null
+               },
+               "SandboxKey": "/run/user/1000/netns/netns-be23737f-ffc2-48d6-8d46-20bcab60579b",
+               "Networks": {
+                    "opensearch_opensearch-net": {
+                         "EndpointID": "",
+                         "Gateway": "10.89.8.1",
+                         "IPAddress": "10.89.8.4",
+                         "IPPrefixLen": 24,
+                         "IPv6Gateway": "",
+                         "GlobalIPv6Address": "",
+                         "GlobalIPv6PrefixLen": 0,
+                         "MacAddress": "9a:59:88:30:5c:54",
+                         "NetworkID": "opensearch_opensearch-net",
+                         "DriverOpts": null,
+                         "IPAMConfig": null,
+                         "Links": null,
+                         "Aliases": [
+                              "opensearch-node1",
+                              "9dd298577aae"
+                         ]
+                    }
+               }
+          },
+          "Namespace": "",
+          "IsInfra": false,
+          "IsService": false,
+          "Config": {
+               "Hostname": "9dd298577aae",
+               "Domainname": "",
+               "User": "1000",
+               "AttachStdin": false,
+               "AttachStdout": false,
+               "AttachStderr": false,
+               "Tty": false,
+               "OpenStdin": false,
+               "StdinOnce": false,
+               "Env": [
+                    "LD_LIBRARY_PATH=:/usr/share/opensearch/plugins/opensearch-knn/lib",
+                    "discovery.type=single-node",
+                    "node.name=opensearch-node1",
+                    "OPENSEARCH_JAVA_OPTS=-Xms512m -Xmx512m",
+                    "DISABLE_INSTALL_DEMO_CONFIG=true",
+                    "DISABLE_SECURITY_PLUGIN=true",
+                    "cluster.name=opensearch-cluster",
+                    "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/share/opensearch/jdk/bin:/usr/share/opensearch/bin",
+                    "TERM=xterm",
+                    "container=podman",
+                    "JAVA_HOME=/usr/share/opensearch/jdk",
+                    "HOME=/usr/share/opensearch",
+                    "HOSTNAME=9dd298577aae"
+               ],
+               "Cmd": [
+                    "opensearch"
+               ],
+               "Image": "docker.io/opensearchproject/opensearch:latest",
+               "Volumes": null,
+               "WorkingDir": "/usr/share/opensearch",
+               "Entrypoint": "./opensearch-docker-entrypoint.sh",
+               "OnBuild": null,
+               "Labels": {
+                    "PODMAN_SYSTEMD_UNIT": "podman-compose@opensearch.service",
+                    "com.docker.compose.container-number": "1",
+                    "com.docker.compose.project": "opensearch",
+                    "com.docker.compose.project.config_files": "docker-compose.yaml",
+                    "com.docker.compose.project.working_dir": "C:\\podman_helper\\opensearch",
+                    "com.docker.compose.service": "opensearch-node1",
+                    "io.podman.compose.config-hash": "1504d0a10a021721a898b1de8e14812fd8a203257749f14e7534872ff7892402",
+                    "io.podman.compose.project": "opensearch",
+                    "io.podman.compose.version": "1.0.6",
+                    "org.label-schema.build-date": "2023-04-27T23:12:35Z",
+                    "org.label-schema.description": "7771",
+                    "org.label-schema.license": "Apache-2.0",
+                    "org.label-schema.name": "opensearch",
+                    "org.label-schema.schema-version": "1.0",
+                    "org.label-schema.url": "https://opensearch.org",
+                    "org.label-schema.vcs-url": "https://github.com/OpenSearch",
+                    "org.label-schema.vendor": "OpenSearch",
+                    "org.label-schema.version": "2.7.0"
+               },
+               "Annotations": {
+                    "io.container.manager": "libpod",
+                    "org.opencontainers.image.stopSignal": "15"
+               },
+               "StopSignal": 15,
+               "HealthcheckOnFailureAction": "none",
+               "CreateCommand": [
+                    "podman",
+                    "run",
+                    "--name=opensearch-node1",
+                    "-d",
+                    "--label",
+                    "io.podman.compose.config-hash=1504d0a10a021721a898b1de8e14812fd8a203257749f14e7534872ff7892402",
+                    "--label",
+                    "io.podman.compose.project=opensearch",
+                    "--label",
+                    "io.podman.compose.version=1.0.6",
+                    "--label",
+                    "PODMAN_SYSTEMD_UNIT=podman-compose@opensearch.service",
+                    "--label",
+                    "com.docker.compose.project=opensearch",
+                    "--label",
+                    "com.docker.compose.project.working_dir=C:\\podman_helper\\opensearch",
+                    "--label",
+                    "com.docker.compose.project.config_files=docker-compose.yaml",
+                    "--label",
+                    "com.docker.compose.container-number=1",
+                    "--label",
+                    "com.docker.compose.service=opensearch-node1",
+                    "-e",
+                    "cluster.name=opensearch-cluster",
+                    "-e",
+                    "node.name=opensearch-node1",
+                    "-e",
+                    "OPENSEARCH_JAVA_OPTS=-Xms512m -Xmx512m",
+                    "-e",
+                    "DISABLE_INSTALL_DEMO_CONFIG=true",
+                    "-e",
+                    "DISABLE_SECURITY_PLUGIN=true",
+                    "-e",
+                    "discovery.type=single-node",
+                    "-v",
+                    "C:\\podman_volumes\\opensearch:/usr/share/opensearch/data",
+                    "--net",
+                    "opensearch_opensearch-net",
+                    "--network-alias",
+                    "opensearch-node1",
+                    "-p",
+                    "9200:9200",
+                    "-p",
+                    "9600:9600",
+                    "opensearchproject/opensearch"
+               ],
+               "Umask": "0022",
+               "Timeout": 0,
+               "StopTimeout": 10,
+               "Passwd": true,
+               "sdNotifyMode": "container"
+          },
+          "HostConfig": {
+               "Binds": [
+                    "/mnt/c../.podman_volumes/opensearch:/usr/share/opensearch/data:rw,rprivate,rbind"
+               ],
+               "CgroupManager": "cgroupfs",
+               "CgroupMode": "host",
+               "ContainerIDFile": "",
+               "LogConfig": {
+                    "Type": "journald",
+                    "Config": null,
+                    "Path": "",
+                    "Tag": "",
+                    "Size": "0B"
+               },
+               "NetworkMode": "bridge",
+               "PortBindings": {
+                    "9200/tcp": [
+                         {
+                              "HostIp": "",
+                              "HostPort": "9200"
+                         }
+                    ],
+                    "9600/tcp": [
+                         {
+                              "HostIp": "",
+                              "HostPort": "9600"
+                         }
+                    ]
+               },
+               "RestartPolicy": {
+                    "Name": "",
+                    "MaximumRetryCount": 0
+               },
+               "AutoRemove": false,
+               "VolumeDriver": "",
+               "VolumesFrom": null,
+               "CapAdd": [],
+               "CapDrop": [],
+               "Dns": [],
+               "DnsOptions": [],
+               "DnsSearch": [],
+               "ExtraHosts": [],
+               "GroupAdd": [],
+               "IpcMode": "shareable",
+               "Cgroup": "",
+               "Cgroups": "default",
+               "Links": null,
+               "OomScoreAdj": 0,
+               "PidMode": "private",
+               "Privileged": false,
+               "PublishAllPorts": false,
+               "ReadonlyRootfs": false,
+               "SecurityOpt": [],
+               "Tmpfs": {},
+               "UTSMode": "private",
+               "UsernsMode": "",
+               "ShmSize": 65536000,
+               "Runtime": "oci",
+               "ConsoleSize": [
+                    0,
+                    0
+               ],
+               "Isolation": "",
+               "CpuShares": 0,
+               "Memory": 0,
+               "NanoCpus": 0,
+               "CgroupParent": "",
+               "BlkioWeight": 0,
+               "BlkioWeightDevice": null,
+               "BlkioDeviceReadBps": null,
+               "BlkioDeviceWriteBps": null,
+               "BlkioDeviceReadIOps": null,
+               "BlkioDeviceWriteIOps": null,
+               "CpuPeriod": 0,
+               "CpuQuota": 0,
+               "CpuRealtimePeriod": 0,
+               "CpuRealtimeRuntime": 0,
+               "CpusetCpus": "",
+               "CpusetMems": "",
+               "Devices": [],
+               "DiskQuota": 0,
+               "KernelMemory": 0,
+               "MemoryReservation": 0,
+               "MemorySwap": 0,
+               "MemorySwappiness": 0,
+               "OomKillDisable": false,
+               "PidsLimit": 0,
+               "Ulimits": [
+                    {
+                         "Name": "RLIMIT_NOFILE",
+                         "Soft": 1048576,
+                         "Hard": 1048576
+                    },
+                    {
+                         "Name": "RLIMIT_NPROC",
+                         "Soft": 32768,
+                         "Hard": 32768
+                    }
+               ],
+               "CpuCount": 0,
+               "CpuPercent": 0,
+               "IOMaximumIOps": 0,
+               "IOMaximumBandwidth": 0,
+               "CgroupConf": null
+          }
+     }
+]

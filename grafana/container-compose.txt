@@ -1,0 +1,14 @@
+version: '2'
+
+services:
+  grafana:
+    image: docker.io/grafana/grafana:latest
+    ports:
+      - 3000:3000
+    user: '104'
+    volumeMounts:
+      - mountPath: /etc/grafana/grafana.ini:Z
+        name: grafana-config
+      - mountPath: /var/lib/grafana:Z
+        name: grafana
+      

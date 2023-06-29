@@ -1,14 +1,24 @@
-version: '2'
+# Use root/example as user/password credentials
+version: '3.1'
 
 services:
-  cassandra:
+
+  db:
     image: cassandra
     ports:
-      - '7000:7000'
-      - '9042:9042'
+      - 9042:9042
     volumes:
-      - '/podman_volumes/cassandra:/cassandra'
+      - ../.podman_volumes/cassandra:/var/lib/cassandra
+    networks:
+      - cassandra-net
     environment:
-      - CASSANDRA_SEEDS=cassandra
-      - CASSANDRA_PASSWORD_SEEDER=yes
-      - CASSANDRA_PASSWORD=cassandra
+      - CASSANDRA_CLUSTER_NAME=cloudinfra
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
+
+networks:
+  cassandra-net:
