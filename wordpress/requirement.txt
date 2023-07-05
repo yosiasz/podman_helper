@@ -1,0 +1,5 @@
+woo-commerce-save-cc
+
+	security is key
+	save client's credit card on stripe to be able to charge it again
+	woo commerce is the platform for ecommerce

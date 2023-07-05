@@ -1,5 +1,3 @@
 *node_modules
-podman_volumes
 .env
 .podman_volumes
-node_modules

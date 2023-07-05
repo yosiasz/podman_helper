@@ -3,7 +3,7 @@
       - ZBX_SERVER_HOST=zabbix-server
       - DB_SERVER_HOST=mysql-server
       - MYSQL_USER=admin
-      - MYSQL_PASSWORD=TechOps!      
+      - MYSQL_PASSWORD=     
     image: zabbix/zabbix-web-apache-mysql
     ports:
       - "8085:80"

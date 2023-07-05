@@ -18,8 +18,7 @@ services:
       - DOCKER_INFLUXDB_INIT_PASSWORD=password1
       - DOCKER_INFLUXDB_INIT_ORG=k6io
       - DOCKER_INFLUXDB_INIT_BUCKET=demo
-      - DOCKER_INFLUXDB_INIT_ADMIN_TOKEN=Qu4uGgUhKCdP0Bh8WgNEYj-yRk_mHZTGdt3F2rorIa-MPUUSPjUcSknNdjr17taqtzcWE8fg75MkXoTg_Am_Ig==
-      #EEKpryGZk8pVDXmIuy484BKUxM5jOEDv7YNoeNZUbsNbpbPbP6kK_qY9Zsyw7zNnlZ7pHG16FYzNaqwLMBUz8g==
+      - DOCKER_INFLUXDB_INIT_ADMIN_TOKEN=
 
   grafana:
     image: grafana/grafana
@@ -48,7 +47,6 @@ services:
       - K6_INFLUXDB_INSECURE=true
         # NOTE: This is an Admin token, it's not suggested to use this configuration in production.
         # Instead, use a Token with restricted privileges.
-      - K6_INFLUXDB_TOKEN=Qu4uGgUhKCdP0Bh8WgNEYj-yRk_mHZTGdt3F2rorIa-MPUUSPjUcSknNdjr17taqtzcWE8fg75MkXoTg_Am_Ig==
-      #EEKpryGZk8pVDXmIuy484BKUxM5jOEDv7YNoeNZUbsNbpbPbP6kK_qY9Zsyw7zNnlZ7pHG16FYzNaqwLMBUz8g==
+      - K6_INFLUXDB_TOKEN=
     volumes:
       - ./samples:/scripts

@@ -9,12 +9,9 @@ services:
     environment:
       - DB_SERVER_HOST=mysql-server
       - MYSQL_USER=admin
-      - MYSQL_PASSWORD=TechOps!
+      - MYSQL_PASSWORD=
     image: zabbix/zabbix-server-mysql
     ports:
       - "3306:3306"
     networks:
-      - internal 
-
-
-
+      - internal
