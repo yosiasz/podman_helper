@@ -1,0 +1,15 @@
+# Use terraform/example user/password credentials
+version: '3.1'
+
+services:
+
+  terraform:
+    image: hashicorp/terraform
+    restart: always
+    volumes:
+      - ../.podman/terraform:/var/lib/terraformql/data
+    networks:
+      - terraform-net
+
+networks:
+  terraform-net:
