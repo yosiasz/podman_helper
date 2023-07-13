@@ -24,10 +24,9 @@ services:
     networks:
       - loki
   grafana:
-    image: grafana/grafana:latest
-    user: "1000"
+    image: grafana/grafana:9.5.5
     volumes:
-    - .../.podman_volumes/grafana:/var/lib/grafana
+    - ../.podman_volumes/grafana:/var/lib/grafana
     ports:
       - "3954:3000"
     restart: unless-stopped
