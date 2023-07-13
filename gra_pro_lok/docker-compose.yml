@@ -3,7 +3,7 @@ networks:
   loki:
 services:
   loki:
-    image: grafana/loki:2.4.0
+    image: grafana/loki:latest
     volumes:
       - ./loki-config.yml:/etc/loki/loki-config.yml
     ports:
@@ -13,10 +13,12 @@ services:
     networks:
       - loki
   promtail:
-    image: grafana/promtail:2.4.0
+    image: grafana/promtail:latest
     volumes:
-      - ../.podman_volumes/promtail/log:/var/log
+      #- ../.podman_volumes/promtail/log:/var/log
       - ./promtail-config.yml:/etc/promtail/promtail-config.yml
+      - ./log/sql.log:/var/log/sql.log
+
     # ports:
     #   - "1514:1514" # this is only needed if you are going to send syslogs
     restart: unless-stopped
@@ -26,9 +28,9 @@ services:
   grafana:
     image: grafana/grafana:9.5.5
     volumes:
-    - ../.podman_volumes/grafana:/var/lib/grafana
+      - ../.podman_volumes/grafana:/var/lib/grafana
     ports:
-      - "3954:3000"
+      - "3010:3000"
     restart: unless-stopped
     networks:
       - loki
