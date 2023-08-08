@@ -1,3 +1,7 @@
 *node_modules
 .env
 .podman_volumes
+
+data01
+data02
+data03
