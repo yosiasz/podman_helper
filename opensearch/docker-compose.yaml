@@ -39,8 +39,5 @@ services:
     networks:
       - opensearch-net
 
-volumes:
-  ../.podman_volumes/opensearch:
-
 networks:
   opensearch-net:
