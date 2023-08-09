@@ -7,18 +7,18 @@ SET sql_mode = 'NO_AUTO_VALUE_ON_ZERO';
 
 SET NAMES utf8mb4;
 
-DROP DATABASE IF EXISTS `grafana`;
-CREATE DATABASE `grafana` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
-USE `grafana`;
+DROP DATABASE IF EXISTS grafana;
+CREATE DATABASE grafana /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
 
-DROP TABLE IF EXISTS `posts`;
-CREATE TABLE `posts` (
-  `device_id` int NOT NULL,
-  `timedate` datetime NOT NULL,
-  `posicion` float NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+DROP TABLE IF EXISTS posts;
 
-INSERT INTO `posts` (`timedate`, `device_id`, `posicion`) VALUES
+CREATE TABLE posts (
+  device_id int NOT NULL,
+  timedate date NOT NULL,
+  posicion float NOT NULL
+) 
+
+INSERT INTO posts (timedate, device_id, posicion) VALUES
 ('2023-05-26 16:00:39.473' ,1, 54.53),
 ('2023-05-27 16:00:39.473' ,1000, 55.86),
 ('2023-05-28 16:00:39.473' ,3, 29.26),
