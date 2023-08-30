@@ -7,13 +7,18 @@ services:
     container_name: nginx
     ports:
     ports:
-      - 8080:80
+      - target: 80
+        published: 8081 # Outside port
+        mode: host
+        protocol: tcp    
+      #- 8080:80
     volumes:
       #- "./nginx.conf:/etc/nginx/nginx.conf:ro"
       #- ./nginx.conf:/etc/nginx/sites-enabled/grafana.conf:ro
       #- ./default.conf:/etc/nginx/conf.d/default.conf
-      - "./default.conf:/etc/nginx/nginx.conf"
-      - "./htpasswd:/etc/nginx/htpasswd"
+      #- "./conf_nginx:/etc/nginx/conf.d:Z"
+      #- "./misc/htpasswd:/etc/nginx/htpasswd"
+      - "./conf_nginx/default.conf:/etc/nginx/nginx.conf"
 
   grafana:
     image: grafana/grafana:latest
@@ -25,6 +30,10 @@ services:
       - GF_LOG_MODE=console
       - GF_LOG_LEVEL=critical
     volumes:
-      - ./defaults.ini:/usr/share/grafana/conf/defaults.ini:ro
+      - ./conf_grafana/defaults.ini:/usr/share/grafana/conf/defaults.ini
     ports:
-      - 5000:3000
+      - target: 3000
+        published: 5000 # Outside port
+        mode: host
+        protocol: tcp       
+      #- 5000:3000

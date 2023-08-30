@@ -11,7 +11,7 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: example
     ports:
-      - 172.26.176.1:3306:3306
+      - 3306:3306
     networks:
       - mysql-net
 
