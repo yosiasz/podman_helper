@@ -4,7 +4,7 @@ services:
   setup:
     image: docker.elastic.co/elasticsearch/elasticsearch:${STACK_VERSION}
     volumes:
-      - ../.podman_volumes/elasticsearch/certs:/usr/share/elasticsearch/config/certs
+      - ./certs:/usr/share/elasticsearch/config/certs
     user: "0"
     command: >
       bash -c '
@@ -68,8 +68,8 @@ services:
         condition: service_healthy
     image: docker.elastic.co/elasticsearch/elasticsearch:${STACK_VERSION}
     volumes:
-      - ../.podman_volumes/elasticsearch/certs:/usr/share/elasticsearch/config/certs
-      - ../.podman_volumes/elasticsearch/esdata01:/usr/share/elasticsearch/data
+      - ./certs:/usr/share/elasticsearch/config/certs
+      - ./data01:/usr/share/elasticsearch/data
     ports:
       - ${ES_PORT}:9200
     environment:
@@ -78,7 +78,7 @@ services:
       - cluster.initial_master_nodes=es01,es02,es03
       - discovery.seed_hosts=es02,es03
       - ELASTIC_PASSWORD=${ELASTIC_PASSWORD}
-      - bootstrap.memory_lock=true
+      #- bootstrap.memory_lock=true
       - xpack.security.enabled=true
       - xpack.security.http.ssl.enabled=true
       - xpack.security.http.ssl.key=certs/es01/es01.key
@@ -90,11 +90,19 @@ services:
       - xpack.security.transport.ssl.certificate_authorities=certs/ca/ca.crt
       - xpack.security.transport.ssl.verification_mode=certificate
       - xpack.license.self_generated.type=${LICENSE}
+<<<<<<< HEAD
     mem_limit: ${MEM_LIMIT}
     #ulimits:
     #  memlock:
     #    soft: -1
     #    hard: -1
+=======
+    #mem_limit: ${MEM_LIMIT}
+    #ulimits:
+      #memlock:
+        #soft: -1
+        #hard: -1
+>>>>>>> 39af0ed8cd4c40ac2a40f20abe432309c9b39273
     healthcheck:
       test:
         [
@@ -110,14 +118,19 @@ services:
       - es01
     image: docker.elastic.co/elasticsearch/elasticsearch:${STACK_VERSION}
     volumes:
+<<<<<<< HEAD
       - ../.podman_volumes/elasticsearch/certs:/usr/share/elasticsearch/config/certs
       - ../.podman_volumes/elasticsearch/esdata02:/usr/share/elasticsearch/data
+=======
+      - ./certs:/usr/share/elasticsearch/config/certs
+      - ./data02:/usr/share/elasticsearch/data
+>>>>>>> 39af0ed8cd4c40ac2a40f20abe432309c9b39273
     environment:
       - node.name=es02
       - cluster.name=${CLUSTER_NAME}
       - cluster.initial_master_nodes=es01,es02,es03
       - discovery.seed_hosts=es01,es03
-      - bootstrap.memory_lock=true
+      #- bootstrap.memory_lock=true
       - xpack.security.enabled=true
       - xpack.security.http.ssl.enabled=true
       - xpack.security.http.ssl.key=certs/es02/es02.key
@@ -129,11 +142,19 @@ services:
       - xpack.security.transport.ssl.certificate_authorities=certs/ca/ca.crt
       - xpack.security.transport.ssl.verification_mode=certificate
       - xpack.license.self_generated.type=${LICENSE}
+<<<<<<< HEAD
     mem_limit: ${MEM_LIMIT}
     #ulimits:
     #  memlock:
     #    soft: -1
     #    hard: -1
+=======
+    #mem_limit: ${MEM_LIMIT}
+    #ulimits:
+      #memlock:
+        #soft: -1
+        #hard: -1
+>>>>>>> 39af0ed8cd4c40ac2a40f20abe432309c9b39273
     healthcheck:
       test:
         [
@@ -149,14 +170,19 @@ services:
       - es02
     image: docker.elastic.co/elasticsearch/elasticsearch:${STACK_VERSION}
     volumes:
+<<<<<<< HEAD
       - ../.podman_volumes/elasticsearch/certs:/usr/share/elasticsearch/config/certs
       - ../.podman_volumes/elasticsearch/esdata03:/usr/share/elasticsearch/data
+=======
+      - ./certs:/usr/share/elasticsearch/config/certs
+      - ./data03:/usr/share/elasticsearch/data
+>>>>>>> 39af0ed8cd4c40ac2a40f20abe432309c9b39273
     environment:
       - node.name=es03
       - cluster.name=${CLUSTER_NAME}
       - cluster.initial_master_nodes=es01,es02,es03
       - discovery.seed_hosts=es01,es02
-      - bootstrap.memory_lock=true
+      #- bootstrap.memory_lock=true
       - xpack.security.enabled=true
       - xpack.security.http.ssl.enabled=true
       - xpack.security.http.ssl.key=certs/es03/es03.key
@@ -168,11 +194,19 @@ services:
       - xpack.security.transport.ssl.certificate_authorities=certs/ca/ca.crt
       - xpack.security.transport.ssl.verification_mode=certificate
       - xpack.license.self_generated.type=${LICENSE}
+<<<<<<< HEAD
     mem_limit: ${MEM_LIMIT}
     #ulimits:
     #  memlock:
     #    soft: -1
     #    hard: -1
+=======
+    #mem_limit: ${MEM_LIMIT}
+    #ulimits:
+      #memlock:
+        #soft: -1
+        #hard: -1
+>>>>>>> 39af0ed8cd4c40ac2a40f20abe432309c9b39273
     healthcheck:
       test:
         [
@@ -193,8 +227,13 @@ services:
         condition: service_healthy
     image: docker.elastic.co/kibana/kibana:${STACK_VERSION}
     volumes:
+<<<<<<< HEAD
       - ../.podman_volumes/elasticsearch/certs:/usr/share/kibana/config/certs
       - ../.podman_volumes/elasticsearch/kibanadata:/usr/share/kibana/data
+=======
+      - ./certs:/usr/share/kibana/config/certs
+      - ./kibanadata:/usr/share/kibana/data
+>>>>>>> 39af0ed8cd4c40ac2a40f20abe432309c9b39273
     ports:
       - ${KIBANA_PORT}:5601
     environment:
@@ -203,7 +242,7 @@ services:
       - ELASTICSEARCH_USERNAME=kibana_system
       - ELASTICSEARCH_PASSWORD=${KIBANA_PASSWORD}
       - ELASTICSEARCH_SSL_CERTIFICATEAUTHORITIES=config/certs/ca/ca.crt
-    mem_limit: ${MEM_LIMIT}
+    #mem_limit: ${MEM_LIMIT}
     healthcheck:
       test:
         [
