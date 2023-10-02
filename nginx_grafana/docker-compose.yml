@@ -1,0 +1,39 @@
+# Use root/example as user/password credentials
+version: "3.1"
+
+services:
+  nginx:
+    image: nginx
+    container_name: nginx
+    ports:
+    ports:
+      - target: 80
+        published: 8081 # Outside port
+        mode: host
+        protocol: tcp    
+      #- 8080:80
+    volumes:
+      #- "./nginx.conf:/etc/nginx/nginx.conf:ro"
+      #- ./nginx.conf:/etc/nginx/sites-enabled/grafana.conf:ro
+      #- ./default.conf:/etc/nginx/conf.d/default.conf
+      #- "./conf_nginx:/etc/nginx/conf.d:Z"
+      #- "./misc/htpasswd:/etc/nginx/htpasswd"
+      - "./conf_nginx/default.conf:/etc/nginx/nginx.conf"
+
+  grafana:
+    image: grafana/grafana:latest
+    container_name: grafana
+    environment:
+      - GF_AUTH_ANONYMOUS_ENABLED=true
+      - GF_AUTH_ANONYMOUS_ORG_ROLE=Admin
+      - GF_USERS_DEFAULT_THEME=light
+      - GF_LOG_MODE=console
+      - GF_LOG_LEVEL=critical
+    volumes:
+      - ./conf_grafana/defaults.ini:/usr/share/grafana/conf/defaults.ini
+    ports:
+      - target: 3000
+        published: 5000 # Outside port
+        mode: host
+        protocol: tcp       
+      #- 5000:3000

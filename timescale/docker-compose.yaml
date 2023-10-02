@@ -1,0 +1,26 @@
+# Use postgres
+version: "3.1"
+#podman pull timescale/timescaledb:latest-pg14 --tls-verify=false
+services:
+  db:
+    image: timescale/timescaledb:latest-pg14
+    restart: always
+    volumes:
+      - ../.podman_volumes/timescaledb:/home/postgres/pgdata/data
+    environment:
+      POSTGRES_PASSWORD: TechOps!
+    ports:
+      - 5432:5432
+    networks:
+      - timescale
+      
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8900:8080
+    networks:
+      - timescale
+
+networks:
+  timescale:
