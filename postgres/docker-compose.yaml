@@ -7,9 +7,10 @@ services:
     restart: always
     environment:
       POSTGRES_USER: admin
-      POSTGRES_PASSWORD:
+      POSTGRES_PASSWORD: example
+      PGDATA: /data/postgres
     volumes:
-      - ../.podman_volumes/postgresql/data:/var/lib/postgresql/data
+      - postgres:/data/postgres
     ports:
       - 6543:5432
     networks:
@@ -24,8 +25,7 @@ services:
       - postgres-net
 
 volumes:
-  db:
-    driver: local
+  postgres:
 
 networks:
   postgres-net:
