@@ -1,0 +1,17 @@
+# Use root/example as user/password credentials
+version: "3.1"
+
+services:
+  db:
+    image: humio/humio
+    restart: always
+    volumes:
+      - ../.podman_volumes/humio/data:/data
+      - ../.podman_volumes/humio/:/etc/humio:ro
+    ports:
+      - 8080:8080
+    networks:
+      - humio-net
+
+networks:
+  humio-net:

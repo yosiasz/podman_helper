@@ -1,7 +1,7 @@
-version: "3.4"
+version: "3"
 services:
   grafana:
-    image: grafana/grafana:9.5.5
+    image: grafana/grafana:8.2.6
     environment:
       - GF_AUTH_ANONYMOUS_ENABLED=true
       - GF_AUTH_ANONYMOUS_ORG_ROLE=Admin
@@ -9,4 +9,4 @@ services:
       - GF_LOG_MODE=console
       - GF_LOG_LEVEL=critical
     ports:
-      - 3955:3000
+      - "3955:3000"
