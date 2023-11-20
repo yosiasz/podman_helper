@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 
 import os
 sure=load_dotenv()
-TOKEN = 'oaG9rjtlKB5Sj3cHmtJBXX6xPPChLCCGvepuOfVo-NFWvISRtRDNeEUkwgVo_emNf0ARYepZanTpkXO8WmSYrA=='
+TOKEN = ''
 #os.getenv('INFLUX_TOKEN')
 URL = os.getenv('INFLUX_URL')
 ORG = os.getenv('INFLUX_ORG')
