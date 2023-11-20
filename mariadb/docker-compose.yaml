@@ -1,5 +1,4 @@
 # Use root/example as user/password credentials
-<<<<<<< HEAD
 version: "3.1"
 
 services:
@@ -16,8 +15,6 @@ services:
       - 3308:3306
     networks:
       - mysql-net
-=======
-version: '3.1'
 
 networks:
   grafana:
@@ -44,18 +41,13 @@ services:
       MARIADB_ROOT_PASSWORD: example
     networks:
       grafana:      
->>>>>>> 371875e (beyla and other changes)
 
   adminer:
     image: adminer
     restart: always
     ports:
       - 8080:8080
-<<<<<<< HEAD
 
 networks:
   mysql-net:
-=======
-    networks:
-      grafana:      
->>>>>>> 371875e (beyla and other changes)
+  grafana:      
