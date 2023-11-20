@@ -1,4 +1,5 @@
 # Use root/example as user/password credentials
+<<<<<<< HEAD
 version: "3.1"
 
 services:
@@ -15,12 +16,46 @@ services:
       - 3308:3306
     networks:
       - mysql-net
+=======
+version: '3.1'
+
+networks:
+  grafana:
+
+services:
+  grafana:
+    image: grafana/grafana
+    environment:
+      - GF_AUTH_ANONYMOUS_ENABLED=true
+      - GF_AUTH_ANONYMOUS_ORG_ROLE=Admin
+      - GF_USERS_DEFAULT_THEME=light
+      - GF_LOG_MODE=console
+      - GF_LOG_LEVEL=critical
+    ports:
+      - 3955:3000
+    networks:
+      grafana:      
+
+  db:
+    image: mariadb
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    environment:
+      MARIADB_ROOT_PASSWORD: example
+    networks:
+      grafana:      
+>>>>>>> 371875e (beyla and other changes)
 
   adminer:
     image: adminer
     restart: always
     ports:
       - 8080:8080
+<<<<<<< HEAD
 
 networks:
   mysql-net:
+=======
+    networks:
+      grafana:      
+>>>>>>> 371875e (beyla and other changes)
