@@ -1,0 +1,970 @@
+measurement,tag1,location,.parking-position.latitude,time
+.parking-position.latitude,parking,New York,40.6943,1700152037000000873
+.parking-position.latitude,parking,Brooklyn,40.6501,1700152037000000873
+.parking-position.latitude,parking,Queens,40.7498,1700152037000000873
+.parking-position.latitude,parking,Manhattan,40.7834,1700152037000000873
+.parking-position.latitude,parking,Bronx,40.8501,1700152037000000873
+.parking-position.latitude,parking,Buffalo,42.9018,1700152037000000873
+.parking-position.latitude,parking,Rochester,43.1680,1700152037000000873
+.parking-position.latitude,parking,Albany,42.6664,1700152037000000873
+.parking-position.latitude,parking,Staten Island,40.5834,1700152037000000873
+.parking-position.latitude,parking,Poughkeepsie,41.6950,1700152037000000873
+.parking-position.latitude,parking,Syracuse,43.0407,1700152037000000873
+.parking-position.latitude,parking,Yonkers,40.9466,1700152037000000873
+.parking-position.latitude,parking,Binghamton,42.1014,1700152037000000873
+.parking-position.latitude,parking,Utica,43.0962,1700152037000000873
+.parking-position.latitude,parking,New Rochelle,40.9304,1700152037000000873
+.parking-position.latitude,parking,Mount Vernon,40.9136,1700152037000000873
+.parking-position.latitude,parking,Saratoga Springs,43.0674,1700152037000000873
+.parking-position.latitude,parking,Glens Falls,43.3109,1700152037000000873
+.parking-position.latitude,parking,Schenectady,42.8025,1700152037000000873
+.parking-position.latitude,parking,Elmira,42.0938,1700152037000000873
+.parking-position.latitude,parking,Brentwood,40.7839,1700152037000000873
+.parking-position.latitude,parking,White Plains,41.0220,1700152037000000873
+.parking-position.latitude,parking,Levittown,40.7241,1700152037000000873
+.parking-position.latitude,parking,Troy,42.7354,1700152037000000873
+.parking-position.latitude,parking,Niagara Falls,43.0921,1700152037000000873
+.parking-position.latitude,parking,Freeport,40.6515,1700152037000000873
+.parking-position.latitude,parking,Hicksville,40.7637,1700152037000000873
+.parking-position.latitude,parking,West Babylon,40.7129,1700152037000000873
+.parking-position.latitude,parking,Coram,40.8812,1700152037000000873
+.parking-position.latitude,parking,East Meadow,40.7197,1700152037000000873
+.parking-position.latitude,parking,Valley Stream,40.6647,1700152037000000873
+.parking-position.latitude,parking,Commack,40.8435,1700152037000000873
+.parking-position.latitude,parking,Elmont,40.7033,1700152037000000873
+.parking-position.latitude,parking,New City,41.1542,1700152037000000873
+.parking-position.latitude,parking,Huntington Station,40.8446,1700152037000000873
+.parking-position.latitude,parking,Central Islip,40.7836,1700152037000000873
+.parking-position.latitude,parking,Long Beach,40.5887,1700152037000000873
+.parking-position.latitude,parking,Baldwin,40.6511,1700152037000000873
+.parking-position.latitude,parking,Uniondale,40.7176,1700152037000000873
+.parking-position.latitude,parking,Spring Valley,41.1151,1700152037000000873
+.parking-position.latitude,parking,Rome,43.2260,1700152037000000873
+.parking-position.latitude,parking,Bay Shore,40.7288,1700152037000000873
+.parking-position.latitude,parking,Franklin Square,40.7002,1700152037000000873
+.parking-position.latitude,parking,Centereach,40.8681,1700152037000000873
+.parking-position.latitude,parking,Ithaca,42.4442,1700152037000000873
+.parking-position.latitude,parking,North Tonawanda,43.0457,1700152037000000873
+.parking-position.latitude,parking,Oceanside,40.6328,1700152037000000873
+.parking-position.latitude,parking,Jamestown,42.0976,1700152037000000873
+.parking-position.latitude,parking,Port Chester,41.0051,1700152037000000873
+.parking-position.latitude,parking,Shirley,40.7936,1700152037000000873
+.parking-position.latitude,parking,Harrison,41.0236,1700152037000000873
+.parking-position.latitude,parking,Middletown,41.4459,1700152037000000873
+.parking-position.latitude,parking,Glen Cove,40.8709,1700152037000000873
+.parking-position.latitude,parking,Lindenhurst,40.6858,1700152037000000873
+.parking-position.latitude,parking,West Islip,40.7041,1700152037000000873
+.parking-position.latitude,parking,Auburn,42.9338,1700152037000000873
+.parking-position.latitude,parking,Plainview,40.7832,1700152037000000873
+.parking-position.latitude,parking,Deer Park,40.7623,1700152037000000873
+.parking-position.latitude,parking,Kiryas Joel,41.3411,1700152037000000873
+.parking-position.latitude,parking,Holbrook,40.7944,1700152037000000873
+.parking-position.latitude,parking,Watertown,43.9734,1700152037000000873
+.parking-position.latitude,parking,Medford,40.8220,1700152037000000873
+.parking-position.latitude,parking,Rockville Centre,40.6643,1700152037000000873
+.parking-position.latitude,parking,Peekskill,41.2884,1700152037000000873
+.parking-position.latitude,parking,Dix Hills,40.8033,1700152037000000873
+.parking-position.latitude,parking,Monsey,41.1181,1700152037000000873
+.parking-position.latitude,parking,Copiague,40.6707,1700152037000000873
+.parking-position.latitude,parking,Kingston,41.9295,1700152037000000873
+.parking-position.latitude,parking,Garden City,40.7266,1700152037000000873
+.parking-position.latitude,parking,East Patchogue,40.7704,1700152037000000873
+.parking-position.latitude,parking,Massapequa,40.6676,1700152037000000873
+.parking-position.latitude,parking,North Bellmore,40.6904,1700152037000000873
+.parking-position.latitude,parking,Selden,40.8714,1700152037000000873
+.parking-position.latitude,parking,Merrick,40.6515,1700152037000000873
+.parking-position.latitude,parking,Lockport,43.1698,1700152037000000873
+.parking-position.latitude,parking,East Northport,40.8791,1700152037000000873
+.parking-position.latitude,parking,West Hempstead,40.6959,1700152037000000873
+.parking-position.latitude,parking,North Bay Shore,40.7602,1700152037000000873
+.parking-position.latitude,parking,Hauppauge,40.8211,1700152037000000873
+.parking-position.latitude,parking,Lynbrook,40.6579,1700152037000000873
+.parking-position.latitude,parking,Plattsburgh,44.6951,1700152037000000873
+.parking-position.latitude,parking,Mineola,40.7470,1700152037000000873
+.parking-position.latitude,parking,Syosset,40.8157,1700152037000000873
+.parking-position.latitude,parking,Nanuet,41.0957,1700152037000000873
+.parking-position.latitude,parking,Ronkonkoma,40.8037,1700152037000000873
+.parking-position.latitude,parking,North Amityville,40.7005,1700152037000000873
+.parking-position.latitude,parking,North Valley Stream,40.6840,1700152037000000873
+.parking-position.latitude,parking,Cortland,42.6004,1700152037000000873
+.parking-position.latitude,parking,Holtsville,40.8124,1700152037000000873
+.parking-position.latitude,parking,East Massapequa,40.6742,1700152037000000873
+.parking-position.latitude,parking,Lake Ronkonkoma,40.8297,1700152037000000873
+.parking-position.latitude,parking,North Massapequa,40.7031,1700152037000000873
+.parking-position.latitude,parking,Bethpage,40.7495,1700152037000000873
+.parking-position.latitude,parking,Melville,40.7824,1700152037000000873
+.parking-position.latitude,parking,Scarsdale,40.9902,1700152037000000873
+.parking-position.latitude,parking,North Babylon,40.7314,1700152037000000873
+.parking-position.latitude,parking,Amsterdam,42.9420,1700152037000000873
+.parking-position.latitude,parking,Lackawanna,42.8182,1700152037000000873
+.parking-position.latitude,parking,Wantagh,40.6686,1700152037000000873
+.parking-position.latitude,parking,Oswego,43.4516,1700152037000000873
+.parking-position.latitude,parking,Massapequa Park,40.6817,1700152037000000873
+.parking-position.latitude,parking,Woodmere,40.6375,1700152037000000873
+.parking-position.latitude,parking,Cohoes,42.7732,1700152037000000873
+.parking-position.latitude,parking,Farmingville,40.8390,1700152037000000873
+.parking-position.latitude,parking,Roosevelt,40.6797,1700152037000000873
+.parking-position.latitude,parking,Pearl River,41.0615,1700152037000000873
+.parking-position.latitude,parking,Port Washington,40.8268,1700152037000000873
+.parking-position.latitude,parking,Kings Park,40.8881,1700152037000000873
+.parking-position.latitude,parking,Floral Park,40.7227,1700152037000000873
+.parking-position.latitude,parking,Sayville,40.7478,1700152037000000873
+.parking-position.latitude,parking,Bellmore,40.6569,1700152037000000873
+.parking-position.latitude,parking,Mastic Beach,40.7664,1700152037000000873
+.parking-position.latitude,parking,Westbury,40.7599,1700152037000000873
+.parking-position.latitude,parking,Seaford,40.6678,1700152037000000873
+.parking-position.latitude,parking,New Cassel,40.7602,1700152037000000873
+.parking-position.latitude,parking,Kenmore,42.9646,1700152037000000873
+.parking-position.latitude,parking,Depew,42.9118,1700152037000000873
+.parking-position.latitude,parking,Mastic,40.8096,1700152037000000873
+.parking-position.latitude,parking,North New Hyde Park,40.7460,1700152037000000873
+.parking-position.latitude,parking,Eggertsville,42.9665,1700152037000000873
+.parking-position.latitude,parking,Tonawanda,43.0105,1700152037000000873
+.parking-position.latitude,parking,Gloversville,43.0491,1700152037000000873
+.parking-position.latitude,parking,South Farmingdale,40.7175,1700152037000000873
+.parking-position.latitude,parking,Hampton Bays,40.8695,1700152037000000873
+.parking-position.latitude,parking,Greenlawn,40.8632,1700152037000000873
+.parking-position.latitude,parking,Batavia,42.9987,1700152037000000873
+.parking-position.latitude,parking,Johnson City,42.1230,1700152037000000873
+.parking-position.latitude,parking,Jericho,40.7875,1700152037000000873
+.parking-position.latitude,parking,Oneonta,42.4551,1700152037000000873
+.parking-position.latitude,parking,Jefferson Valley-Yorktown,41.3180,1700152037000000873
+.parking-position.latitude,parking,Latham,42.7427,1700152037000000873
+.parking-position.latitude,parking,Beacon,41.5036,1700152037000000873
+.parking-position.latitude,parking,Olean,42.0819,1700152037000000873
+.parking-position.latitude,parking,Ridge,40.9068,1700152037000000873
+.parking-position.latitude,parking,St. James,40.8761,1700152037000000873
+.parking-position.latitude,parking,Nesconset,40.8467,1700152037000000873
+.parking-position.latitude,parking,Rocky Point,40.9357,1700152037000000873
+.parking-position.latitude,parking,Fort Drum,44.0450,1700152037000000873
+.parking-position.latitude,parking,Miller Place,40.9374,1700152037000000873
+.parking-position.latitude,parking,Manorville,40.8574,1700152037000000873
+.parking-position.latitude,parking,East Islip,40.7257,1700152037000000873
+.parking-position.latitude,parking,Geneva,42.8645,1700152037000000873
+.parking-position.latitude,parking,Endicott,42.0980,1700152037000000873
+.parking-position.latitude,parking,Salisbury,40.7454,1700152037000000873
+.parking-position.latitude,parking,Patchogue,40.7621,1700152037000000873
+.parking-position.latitude,parking,North Merrick,40.6871,1700152037000000873
+.parking-position.latitude,parking,Roessleville,42.6969,1700152037000000873
+.parking-position.latitude,parking,Dunkirk,42.4801,1700152037000000873
+.parking-position.latitude,parking,North Wantagh,40.6983,1700152037000000873
+.parking-position.latitude,parking,Stony Brook,40.9061,1700152037000000873
+.parking-position.latitude,parking,Wyandanch,40.7496,1700152037000000873
+.parking-position.latitude,parking,Elwood,40.8462,1700152037000000873
+.parking-position.latitude,parking,Terryville,40.9093,1700152037000000873
+.parking-position.latitude,parking,Endwell,42.1184,1700152037000000873
+.parking-position.latitude,parking,Tarrytown,41.0647,1700152037000000873
+.parking-position.latitude,parking,Fulton,43.3171,1700152037000000873
+.parking-position.latitude,parking,East Glenville,42.8648,1700152037000000873
+.parking-position.latitude,parking,Lake Grove,40.8586,1700152037000000873
+.parking-position.latitude,parking,Middle Island,40.8857,1700152037000000873
+.parking-position.latitude,parking,Dobbs Ferry,41.0127,1700152037000000873
+.parking-position.latitude,parking,Mount Kisco,41.2016,1700152037000000873
+.parking-position.latitude,parking,Suffern,41.1138,1700152037000000873
+.parking-position.latitude,parking,Oneida,43.0769,1700152037000000873
+.parking-position.latitude,parking,North Lindenhurst,40.7072,1700152037000000873
+.parking-position.latitude,parking,Woodbury,41.3284,1700152037000000873
+.parking-position.latitude,parking,Corning,42.1470,1700152037000000873
+.parking-position.latitude,parking,Ogdensburg,44.7088,1700152037000000873
+.parking-position.latitude,parking,De Witt,43.0300,1700152037000000873
+.parking-position.latitude,parking,North Bellport,40.7868,1700152037000000873
+.parking-position.latitude,parking,Mount Sinai,40.9372,1700152037000000873
+.parking-position.latitude,parking,Fredonia,42.4407,1700152037000000873
+.parking-position.latitude,parking,West Haverstraw,41.2063,1700152037000000873
+.parking-position.latitude,parking,South Huntington,40.8225,1700152037000000873
+.parking-position.latitude,parking,Great Neck,40.8029,1700152037000000873
+.parking-position.latitude,parking,Sleepy Hollow,41.0936,1700152037000000873
+.parking-position.latitude,parking,Watervliet,42.7243,1700152037000000873
+.parking-position.latitude,parking,Fort Salonga,40.9068,1700152037000000873
+.parking-position.latitude,parking,Loudonville,42.7068,1700152037000000873
+.parking-position.latitude,parking,Fairmount,43.0414,1700152037000000873
+.parking-position.latitude,parking,Scotchtown,41.4765,1700152037000000873
+.parking-position.latitude,parking,East Rockaway,40.6432,1700152037000000873
+.parking-position.latitude,parking,Inwood,40.6219,1700152037000000873
+.parking-position.latitude,parking,Orange Lake,41.5369,1700152037000000873
+.parking-position.latitude,parking,New Hyde Park,40.7323,1700152037000000873
+.parking-position.latitude,parking,North Gates,43.1718,1700152037000000873
+.parking-position.latitude,parking,Myers Corner,41.5864,1700152037000000873
+.parking-position.latitude,parking,Rye Brook,41.0302,1700152037000000873
+.parking-position.latitude,parking,East Setauket,40.9210,1700152037000000873
+.parking-position.latitude,parking,Amityville,40.6696,1700152037000000873
+.parking-position.latitude,parking,Bohemia,40.7717,1700152037000000873
+.parking-position.latitude,parking,Rensselaer,42.6465,1700152037000000873
+.parking-position.latitude,parking,Greenville,40.9986,1700152037000000873
+.parking-position.latitude,parking,Mahopac,41.3688,1700152037000000873
+.parking-position.latitude,parking,Woodbury,40.8176,1700152037000000873
+.parking-position.latitude,parking,Farmingdale,40.7328,1700152037000000873
+.parking-position.latitude,parking,Newark,43.0418,1700152037000000873
+.parking-position.latitude,parking,Plainedge,40.7241,1700152037000000873
+.parking-position.latitude,parking,Valley Cottage,41.1162,1700152037000000873
+.parking-position.latitude,parking,Airmont,41.0992,1700152037000000873
+.parking-position.latitude,parking,Glens Falls North,43.3350,1700152037000000873
+.parking-position.latitude,parking,New Square,41.1410,1700152037000000873
+.parking-position.latitude,parking,Bayport,40.7461,1700152037000000873
+.parking-position.latitude,parking,Stony Brook University,40.9098,1700152037000000873
+.parking-position.latitude,parking,Port Jervis,41.3783,1700152037000000873
+.parking-position.latitude,parking,West Glens Falls,43.3057,1700152037000000873
+.parking-position.latitude,parking,Malverne,40.6746,1700152037000000873
+.parking-position.latitude,parking,South Lockport,43.1366,1700152037000000873
+.parking-position.latitude,parking,Lake Carmel,41.4610,1700152037000000873
+.parking-position.latitude,parking,Hornell,42.3333,1700152037000000873
+.parking-position.latitude,parking,Johnstown,43.0073,1700152037000000873
+.parking-position.latitude,parking,North Patchogue,40.7833,1700152037000000873
+.parking-position.latitude,parking,Congers,41.1491,1700152037000000873
+.parking-position.latitude,parking,Brockport,43.2137,1700152037000000873
+.parking-position.latitude,parking,Wading River,40.9464,1700152037000000873
+.parking-position.latitude,parking,Croton-on-Hudson,41.2005,1700152037000000873
+.parking-position.latitude,parking,Garden City Park,40.7435,1700152037000000873
+.parking-position.latitude,parking,Chestnut Ridge,41.0829,1700152037000000873
+.parking-position.latitude,parking,Port Jefferson,40.9466,1700152037000000873
+.parking-position.latitude,parking,Hastings-on-Hudson,40.9904,1700152037000000873
+.parking-position.latitude,parking,Center Moriches,40.8004,1700152037000000873
+.parking-position.latitude,parking,Manhasset,40.7884,1700152037000000873
+.parking-position.latitude,parking,Mechanicstown,41.4472,1700152037000000873
+.parking-position.latitude,parking,Ilion,43.0114,1700152037000000873
+.parking-position.latitude,parking,Baldwinsville,43.1578,1700152037000000873
+.parking-position.latitude,parking,Briarcliff Manor,41.1400,1700152037000000873
+.parking-position.latitude,parking,Scotia,42.8321,1700152037000000873
+.parking-position.latitude,parking,Port Jefferson Station,40.9259,1700152037000000873
+.parking-position.latitude,parking,Hillcrest,41.1298,1700152037000000873
+.parking-position.latitude,parking,Tappan,41.0270,1700152037000000873
+.parking-position.latitude,parking,Mount Ivy,41.1927,1700152037000000873
+.parking-position.latitude,parking,Northport,40.9038,1700152037000000873
+.parking-position.latitude,parking,Williston Park,40.7587,1700152037000000873
+.parking-position.latitude,parking,Pleasantville,41.1377,1700152037000000873
+.parking-position.latitude,parking,Springs,41.0212,1700152037000000873
+.parking-position.latitude,parking,Viola,41.1288,1700152037000000873
+.parking-position.latitude,parking,East Hills,40.7958,1700152037000000873
+.parking-position.latitude,parking,Nyack,41.0919,1700152037000000873
+.parking-position.latitude,parking,East Shoreham,40.9460,1700152037000000873
+.parking-position.latitude,parking,Sound Beach,40.9578,1700152037000000873
+.parking-position.latitude,parking,Hudson Falls,43.3042,1700152037000000873
+.parking-position.latitude,parking,Hewlett,40.6422,1700152037000000873
+.parking-position.latitude,parking,Great Neck Plaza,40.7869,1700152037000000873
+.parking-position.latitude,parking,Westmere,42.6884,1700152037000000873
+.parking-position.latitude,parking,Oakdale,40.7375,1700152037000000873
+.parking-position.latitude,parking,Baywood,40.7533,1700152037000000873
+.parking-position.latitude,parking,Radisson,43.1824,1700152037000000873
+.parking-position.latitude,parking,North Syracuse,43.1339,1700152037000000873
+.parking-position.latitude,parking,Manorhaven,40.8399,1700152037000000873
+.parking-position.latitude,parking,Bayville,40.9076,1700152037000000873
+.parking-position.latitude,parking,Roslyn Heights,40.7788,1700152037000000873
+.parking-position.latitude,parking,Walden,41.5603,1700152037000000873
+.parking-position.latitude,parking,Cedarhurst,40.6252,1700152037000000873
+.parking-position.latitude,parking,Norwich,42.5333,1700152037000000873
+.parking-position.latitude,parking,Tuckahoe,40.9531,1700152037000000873
+.parking-position.latitude,parking,East Rochester,43.1122,1700152037000000873
+.parking-position.latitude,parking,South Valley Stream,40.6558,1700152037000000873
+.parking-position.latitude,parking,Lawrence,40.6041,1700152037000000873
+.parking-position.latitude,parking,South Hill,42.4113,1700152037000000873
+.parking-position.latitude,parking,Irvington,41.0349,1700152037000000873
+.parking-position.latitude,parking,Bronxville,40.9395,1700152037000000873
+.parking-position.latitude,parking,Monticello,41.6522,1700152037000000873
+.parking-position.latitude,parking,West Point,41.3645,1700152037000000873
+.parking-position.latitude,parking,Solvay,43.0571,1700152037000000873
+.parking-position.latitude,parking,Gananda,43.1274,1700152037000000873
+.parking-position.latitude,parking,East Aurora,42.7667,1700152037000000873
+.parking-position.latitude,parking,Binghamton University,42.0893,1700152037000000873
+.parking-position.latitude,parking,Larchmont,40.9258,1700152037000000873
+.parking-position.latitude,parking,Hudson,42.2515,1700152037000000873
+.parking-position.latitude,parking,Mattydale,43.0992,1700152037000000873
+.parking-position.latitude,parking,University at Buffalo,43.0025,1700152037000000873
+.parking-position.latitude,parking,East Farmingdale,40.7367,1700152037000000873
+.parking-position.latitude,parking,Yaphank,40.8323,1700152037000000873
+.parking-position.latitude,parking,Highland,41.7208,1700152037000000873
+.parking-position.latitude,parking,Harris Hill,42.9730,1700152037000000873
+.parking-position.latitude,parking,Wesley Hills,41.1578,1700152037000000873
+.parking-position.latitude,parking,North Hills,40.7765,1700152037000000873
+.parking-position.latitude,parking,Medina,43.2197,1700152037000000873
+.parking-position.latitude,parking,Hilton,43.2900,1700152037000000873
+.parking-position.latitude,parking,Lake Mohegan,41.3165,1700152037000000873
+.parking-position.latitude,parking,Centerport,40.8951,1700152037000000873
+.parking-position.latitude,parking,Washingtonville,41.4297,1700152037000000873
+.parking-position.latitude,parking,Lakeview,40.6775,1700152037000000873
+.parking-position.latitude,parking,Fairview,41.7321,1700152037000000873
+.parking-position.latitude,parking,Ballston Spa,43.0068,1700152037000000873
+.parking-position.latitude,parking,Wappingers Falls,41.5984,1700152037000000873
+.parking-position.latitude,parking,Rochester Institute of Technology,43.0827,1700152037000000873
+.parking-position.latitude,parking,Albion,43.2460,1700152037000000873
+.parking-position.latitude,parking,Saranac Lake,44.3252,1700152037000000873
+.parking-position.latitude,parking,Pelham Manor,40.8930,1700152037000000873
+.parking-position.latitude,parking,Salamanca,42.1631,1700152037000000873
+.parking-position.latitude,parking,Old Bethpage,40.7558,1700152037000000873
+.parking-position.latitude,parking,New Hempstead,41.1488,1700152037000000873
+.parking-position.latitude,parking,Blauvelt,41.0689,1700152037000000873
+.parking-position.latitude,parking,Kaser,41.1214,1700152037000000873
+.parking-position.latitude,parking,Fairport,43.0990,1700152037000000873
+.parking-position.latitude,parking,Country Knolls,42.9085,1700152037000000873
+.parking-position.latitude,parking,Calverton,40.9138,1700152037000000873
+.parking-position.latitude,parking,North Sea,40.9330,1700152037000000873
+.parking-position.latitude,parking,Kings Point,40.8161,1700152037000000873
+.parking-position.latitude,parking,Islip Terrace,40.7503,1700152037000000873
+.parking-position.latitude,parking,Wheatley Heights,40.7624,1700152037000000873
+.parking-position.latitude,parking,West Hills,40.8199,1700152037000000873
+.parking-position.latitude,parking,Elmsford,41.0541,1700152037000000873
+.parking-position.latitude,parking,Williamsville,42.9623,1700152037000000873
+.parking-position.latitude,parking,Flanders,40.8937,1700152037000000873
+.parking-position.latitude,parking,Hampton Manor,42.6197,1700152037000000873
+.parking-position.latitude,parking,Grandyle Village,42.9867,1700152037000000873
+.parking-position.latitude,parking,Mechanicville,42.9036,1700152037000000873
+.parking-position.latitude,parking,Penn Yan,42.6609,1700152037000000873
+.parking-position.latitude,parking,East Quogue,40.8489,1700152037000000873
+.parking-position.latitude,parking,Firthcliffe,41.4408,1700152037000000873
+.parking-position.latitude,parking,Sea Cliff,40.8441,1700152037000000873
+.parking-position.latitude,parking,Westvale,43.0399,1700152037000000873
+.parking-position.latitude,parking,Carle Place,40.7499,1700152037000000873
+.parking-position.latitude,parking,West Sayville,40.7295,1700152037000000873
+.parking-position.latitude,parking,Albertson,40.7715,1700152037000000873
+.parking-position.latitude,parking,East Moriches,40.8085,1700152037000000873
+.parking-position.latitude,parking,Mattituck,41.0012,1700152037000000873
+.parking-position.latitude,parking,Flower Hill,40.8075,1700152037000000873
+.parking-position.latitude,parking,Chittenango,43.0462,1700152037000000873
+.parking-position.latitude,parking,Glen Head,40.8449,1700152037000000873
+.parking-position.latitude,parking,Island Park,40.6051,1700152037000000873
+.parking-position.latitude,parking,West Elmira,42.0879,1700152037000000873
+.parking-position.latitude,parking,Blue Point,40.7519,1700152037000000873
+.parking-position.latitude,parking,Gang Mills,42.1534,1700152037000000873
+.parking-position.latitude,parking,Little Falls,43.0452,1700152037000000873
+.parking-position.latitude,parking,Dansville,42.5625,1700152037000000873
+.parking-position.latitude,parking,Old Westbury,40.7866,1700152037000000873
+.parking-position.latitude,parking,Montebello,41.1317,1700152037000000873
+.parking-position.latitude,parking,Canastota,43.0836,1700152037000000873
+.parking-position.latitude,parking,Hawthorne,41.1035,1700152037000000873
+.parking-position.latitude,parking,Brewerton,43.2345,1700152037000000873
+.parking-position.latitude,parking,Ardsley,41.0134,1700152037000000873
+.parking-position.latitude,parking,West Bay Shore,40.6948,1700152037000000873
+.parking-position.latitude,parking,Thornwood,41.1184,1700152037000000873
+.parking-position.latitude,parking,Searingtown,40.7705,1700152037000000873
+.parking-position.latitude,parking,Orangeburg,41.0488,1700152037000000873
+.parking-position.latitude,parking,Armonk,41.1319,1700152037000000873
+.parking-position.latitude,parking,University Gardens,40.7752,1700152037000000873
+.parking-position.latitude,parking,Heritage Hills,41.3398,1700152037000000873
+.parking-position.latitude,parking,Springville,42.5084,1700152037000000873
+.parking-position.latitude,parking,Garden City South,40.7120,1700152037000000873
+.parking-position.latitude,parking,Thiells,41.2068,1700152037000000873
+.parking-position.latitude,parking,Elmira Heights,42.1267,1700152037000000873
+.parking-position.latitude,parking,East Hampton North,40.9728,1700152037000000873
+.parking-position.latitude,parking,Gordon Heights,40.8645,1700152037000000873
+.parking-position.latitude,parking,Galeville,43.0868,1700152037000000873
+.parking-position.latitude,parking,Noyack,40.9826,1700152037000000873
+.parking-position.latitude,parking,Waverly,42.0119,1700152037000000873
+.parking-position.latitude,parking,Northwest Harbor,41.0086,1700152037000000873
+.parking-position.latitude,parking,Spackenkill,41.6547,1700152037000000873
+.parking-position.latitude,parking,Fayetteville,43.0308,1700152037000000873
+.parking-position.latitude,parking,Chester,41.3570,1700152037000000873
+.parking-position.latitude,parking,Herricks,40.7567,1700152037000000873
+.parking-position.latitude,parking,Ellenville,41.7009,1700152037000000873
+.parking-position.latitude,parking,Gardnertown,41.5328,1700152037000000873
+.parking-position.latitude,parking,Akwesasne,44.9647,1700152037000000873
+.parking-position.latitude,parking,West Nyack,41.0907,1700152037000000873
+.parking-position.latitude,parking,Highland-on-the-Lake,42.7012,1700152037000000873
+.parking-position.latitude,parking,Lyncourt,43.0820,1700152037000000873
+.parking-position.latitude,parking,Putnam Lake,41.4737,1700152037000000873
+.parking-position.latitude,parking,Red Oaks Mill,41.6517,1700152037000000873
+.parking-position.latitude,parking,Menands,42.6910,1700152037000000873
+.parking-position.latitude,parking,Highland Falls,41.3643,1700152037000000873
+.parking-position.latitude,parking,Setauket,40.9484,1700152037000000873
+.parking-position.latitude,parking,Manhasset Hills,40.7592,1700152037000000873
+.parking-position.latitude,parking,Elma Center,42.8282,1700152037000000873
+.parking-position.latitude,parking,Marlboro,41.6047,1700152037000000873
+.parking-position.latitude,parking,Clifton Knolls-Mill Creek,42.8482,1700152037000000873
+.parking-position.latitude,parking,Village Green,43.1323,1700152037000000873
+.parking-position.latitude,parking,Lloyd Harbor,40.9138,1700152037000000873
+.parking-position.latitude,parking,Muttontown,40.8254,1700152037000000873
+.parking-position.latitude,parking,Spencerport,43.1882,1700152037000000873
+.parking-position.latitude,parking,SUNY Oswego,43.4515,1700152037000000873
+.parking-position.latitude,parking,Cayuga Heights,42.4680,1700152037000000873
+.parking-position.latitude,parking,Glenwood Landing,40.8295,1700152037000000873
+.parking-position.latitude,parking,Whitesboro,43.1240,1700152037000000873
+.parking-position.latitude,parking,South Glens Falls,43.2951,1700152037000000873
+.parking-position.latitude,parking,Brookville,40.8123,1700152037000000873
+.parking-position.latitude,parking,Maybrook,41.4881,1700152037000000873
+.parking-position.latitude,parking,Balmville,41.5281,1700152037000000873
+.parking-position.latitude,parking,Bardonia,41.1128,1700152037000000873
+.parking-position.latitude,parking,Montauk,41.0466,1700152037000000873
+.parking-position.latitude,parking,Calcium,44.0401,1700152037000000873
+.parking-position.latitude,parking,Sloan,42.8921,1700152037000000873
+.parking-position.latitude,parking,Valhalla,41.0773,1700152037000000873
+.parking-position.latitude,parking,Locust Valley,40.8783,1700152037000000873
+.parking-position.latitude,parking,Minoa,43.0742,1700152037000000873
+.parking-position.latitude,parking,Montrose,41.2425,1700152037000000873
+.parking-position.latitude,parking,Wynantskill,42.6879,1700152037000000873
+.parking-position.latitude,parking,North Great River,40.7599,1700152037000000873
+.parking-position.latitude,parking,West Sand Lake,42.6402,1700152037000000873
+.parking-position.latitude,parking,Lake Erie Beach,42.6242,1700152037000000873
+.parking-position.latitude,parking,Walton Park,41.3142,1700152037000000873
+.parking-position.latitude,parking,Carthage,43.9837,1700152037000000873
+.parking-position.latitude,parking,Hoosick Falls,42.9009,1700152037000000873
+.parking-position.latitude,parking,South Nyack,41.0797,1700152037000000873
+.parking-position.latitude,parking,Port Ewen,41.9042,1700152037000000873
+.parking-position.latitude,parking,Islandia,40.8069,1700152037000000873
+.parking-position.latitude,parking,Wanakah,42.7435,1700152037000000873
+.parking-position.latitude,parking,Lake Success,40.7680,1700152037000000873
+.parking-position.latitude,parking,Clarence Center,43.0085,1700152037000000873
+.parking-position.latitude,parking,Hartsdale,41.0154,1700152037000000873
+.parking-position.latitude,parking,Ravena,42.4755,1700152037000000873
+.parking-position.latitude,parking,Port Washington North,40.8434,1700152037000000873
+.parking-position.latitude,parking,South Blooming Grove,41.3735,1700152037000000873
+.parking-position.latitude,parking,South Hempstead,40.6814,1700152037000000873
+.parking-position.latitude,parking,Chenango Bridge,42.1716,1700152037000000873
+.parking-position.latitude,parking,Haviland,41.7650,1700152037000000873
+.parking-position.latitude,parking,Sloatsburg,41.1620,1700152037000000873
+.parking-position.latitude,parking,Westhampton,40.8325,1700152037000000873
+.parking-position.latitude,parking,Shrub Oak,41.3257,1700152037000000873
+.parking-position.latitude,parking,Greenwood Lake,41.2214,1700152037000000873
+.parking-position.latitude,parking,Brightwaters,40.7193,1700152037000000873
+.parking-position.latitude,parking,New York Mills,43.1007,1700152037000000873
+.parking-position.latitude,parking,Pomona,41.1891,1700152037000000873
+.parking-position.latitude,parking,Lake Delta,43.2893,1700152037000000873
+.parking-position.latitude,parking,Harriman,41.3088,1700152037000000873
+.parking-position.latitude,parking,Sherrill,43.0704,1700152037000000873
+.parking-position.latitude,parking,Cutchogue,41.0168,1700152037000000873
+.parking-position.latitude,parking,East Syracuse,43.0638,1700152037000000873
+.parking-position.latitude,parking,Cornwall-on-Hudson,41.4369,1700152037000000873
+.parking-position.latitude,parking,Vails Gate,41.4588,1700152037000000873
+.parking-position.latitude,parking,East Norwich,40.8495,1700152037000000873
+.parking-position.latitude,parking,Munsons Corners,42.5761,1700152037000000873
+.parking-position.latitude,parking,Bedford Hills,41.2361,1700152037000000873
+.parking-position.latitude,parking,Roslyn,40.7991,1700152037000000873
+.parking-position.latitude,parking,Gowanda,42.4612,1700152037000000873
+.parking-position.latitude,parking,Florida,41.3312,1700152037000000873
+.parking-position.latitude,parking,Lido Beach,40.5911,1700152037000000873
+.parking-position.latitude,parking,Great Neck Estates,40.7857,1700152037000000873
+.parking-position.latitude,parking,Cold Spring Harbor,40.8621,1700152037000000873
+.parking-position.latitude,parking,Akron,43.0180,1700152037000000873
+.parking-position.latitude,parking,Baiting Hollow,40.9582,1700152037000000873
+.parking-position.latitude,parking,Mountain Lodge Park,41.3867,1700152037000000873
+.parking-position.latitude,parking,Lakewood,42.0992,1700152037000000873
+.parking-position.latitude,parking,Voorheesville,42.6517,1700152037000000873
+.parking-position.latitude,parking,Angola,42.6379,1700152037000000873
+.parking-position.latitude,parking,Sands Point,40.8528,1700152037000000873
+.parking-position.latitude,parking,Honeoye Falls,42.9557,1700152037000000873
+.parking-position.latitude,parking,Northeast Ithaca,42.4703,1700152037000000873
+.parking-position.latitude,parking,Crown Heights,41.6416,1700152037000000873
+.parking-position.latitude,parking,Munsey Park,40.7990,1700152037000000873
+.parking-position.latitude,parking,Arlington,41.6965,1700152037000000873
+.parking-position.latitude,parking,Blasdell,42.7964,1700152037000000873
+.parking-position.latitude,parking,Green Island,42.7474,1700152037000000873
+.parking-position.latitude,parking,Phoenix,43.2316,1700152037000000873
+.parking-position.latitude,parking,Clifton Gardens,42.8474,1700152037000000873
+.parking-position.latitude,parking,Chappaqua,41.1575,1700152037000000873
+.parking-position.latitude,parking,Vassar College,41.6860,1700152037000000873
+.parking-position.latitude,parking,Riverside,40.9093,1700152037000000873
+.parking-position.latitude,parking,Thomaston,40.7875,1700152037000000873
+.parking-position.latitude,parking,Barnum Island,40.6050,1700152037000000873
+.parking-position.latitude,parking,Yorkville,43.1124,1700152037000000873
+.parking-position.latitude,parking,Brewster Hill,41.4229,1700152037000000873
+.parking-position.latitude,parking,Horseheads North,42.1928,1700152037000000873
+.parking-position.latitude,parking,Keeseville,44.5035,1700152037000000873
+.parking-position.latitude,parking,East Williston,40.7608,1700152037000000873
+.parking-position.latitude,parking,Piermont,41.0423,1700152037000000873
+.parking-position.latitude,parking,Brinckerhoff,41.5515,1700152037000000873
+.parking-position.latitude,parking,Lake Katrine,41.9862,1700152037000000873
+.parking-position.latitude,parking,Beaver Dam Lake,41.4429,1700152037000000873
+.parking-position.latitude,parking,Stone Ridge,41.8436,1700152037000000873
+.parking-position.latitude,parking,Lakeland,43.0909,1700152037000000873
+.parking-position.latitude,parking,Dolgeville,43.1031,1700152037000000873
+.parking-position.latitude,parking,Moriches,40.8070,1700152037000000873
+.parking-position.latitude,parking,Halesite,40.8863,1700152037000000873
+.parking-position.latitude,parking,North Boston,42.6773,1700152037000000873
+.parking-position.latitude,parking,Jamestown West,42.0885,1700152037000000873
+.parking-position.latitude,parking,Rouses Point,44.9933,1700152037000000873
+.parking-position.latitude,parking,Tioga Terrace,42.0508,1700152037000000873
+.parking-position.latitude,parking,Silver Creek,42.5427,1700152037000000873
+.parking-position.latitude,parking,Upper Nyack,41.1143,1700152037000000873
+.parking-position.latitude,parking,Nedrow,42.9780,1700152037000000873
+.parking-position.latitude,parking,Buchanan,41.2642,1700152037000000873
+.parking-position.latitude,parking,Crompond,41.2907,1700152037000000873
+.parking-position.latitude,parking,Melrose Park,42.9085,1700152037000000873
+.parking-position.latitude,parking,Brewster,41.3970,1700152037000000873
+.parking-position.latitude,parking,Falconer,42.1191,1700152037000000873
+.parking-position.latitude,parking,Lake Placid,44.2838,1700152037000000873
+.parking-position.latitude,parking,Pulaski,43.5653,1700152037000000873
+.parking-position.latitude,parking,Washington Mills,43.0478,1700152037000000873
+.parking-position.latitude,parking,Rock Hill,41.6191,1700152037000000873
+.parking-position.latitude,parking,Kerhonkson,41.7779,1700152037000000873
+.parking-position.latitude,parking,West End,42.4667,1700152037000000873
+.parking-position.latitude,parking,Greenport West,41.0989,1700152037000000873
+.parking-position.latitude,parking,Liverpool,43.1065,1700152037000000873
+.parking-position.latitude,parking,Siena College,42.7190,1700152037000000873
+.parking-position.latitude,parking,East Ithaca,42.4276,1700152037000000873
+.parking-position.latitude,parking,Lincoln Park,41.9566,1700152037000000873
+.parking-position.latitude,parking,Apalachin,42.0639,1700152037000000873
+.parking-position.latitude,parking,Glasco,42.0454,1700152037000000873
+.parking-position.latitude,parking,Churchville,43.1034,1700152037000000873
+.parking-position.latitude,parking,Saugerties South,42.0606,1700152037000000873
+.parking-position.latitude,parking,Scottsville,43.0221,1700152037000000873
+.parking-position.latitude,parking,Northwest Ithaca,42.4578,1700152037000000873
+.parking-position.latitude,parking,Watchtower,41.6370,1700152037000000873
+.parking-position.latitude,parking,Bellerose Terrace,40.7221,1700152037000000873
+.parking-position.latitude,parking,Morrisville,42.8987,1700152037000000873
+.parking-position.latitude,parking,Dundee,42.5236,1700152037000000873
+.parking-position.latitude,parking,Marist College,41.7222,1700152037000000873
+.parking-position.latitude,parking,Watkins Glen,42.3801,1700152037000000873
+.parking-position.latitude,parking,St. Bonaventure,42.0802,1700152037000000873
+.parking-position.latitude,parking,Central Square,43.2860,1700152037000000873
+.parking-position.latitude,parking,Aquebogue,40.9425,1700152037000000873
+.parking-position.latitude,parking,Lorenz Park,42.2669,1700152037000000873
+.parking-position.latitude,parking,Oyster Bay Cove,40.8569,1700152037000000873
+.parking-position.latitude,parking,Laurel Hollow,40.8541,1700152037000000873
+.parking-position.latitude,parking,Stewart Manor,40.7202,1700152037000000873
+.parking-position.latitude,parking,Washington Heights,41.4692,1700152037000000873
+.parking-position.latitude,parking,Great River,40.7137,1700152037000000873
+.parking-position.latitude,parking,Clinton,43.0489,1700152037000000873
+.parking-position.latitude,parking,Sag Harbor,40.9971,1700152037000000873
+.parking-position.latitude,parking,Weedsport,43.0482,1700152037000000873
+.parking-position.latitude,parking,Peach Lake,41.3693,1700152037000000873
+.parking-position.latitude,parking,Clifton Springs,42.9609,1700152037000000873
+.parking-position.latitude,parking,Port Dickinson,42.1361,1700152037000000873
+.parking-position.latitude,parking,Cold Spring,41.4191,1700152037000000873
+.parking-position.latitude,parking,Lattingtown,40.8922,1700152037000000873
+.parking-position.latitude,parking,Eastport,40.8402,1700152037000000873
+.parking-position.latitude,parking,Bellport,40.7540,1700152037000000873
+.parking-position.latitude,parking,Middleport,43.2117,1700152037000000873
+.parking-position.latitude,parking,Crest View Heights,42.0754,1700152037000000873
+.parking-position.latitude,parking,Shenorock,41.3307,1700152037000000873
+.parking-position.latitude,parking,Holley,43.2247,1700152037000000873
+.parking-position.latitude,parking,Westhampton Beach,40.8081,1700152037000000873
+.parking-position.latitude,parking,Cooperstown,42.6996,1700152037000000873
+.parking-position.latitude,parking,Fort Montgomery,41.3415,1700152037000000873
+.parking-position.latitude,parking,East Atlantic Beach,40.5876,1700152037000000873
+.parking-position.latitude,parking,Water Mill,40.9222,1700152037000000873
+.parking-position.latitude,parking,Conesus Lake,42.7756,1700152037000000873
+.parking-position.latitude,parking,Tillson,41.8316,1700152037000000873
+.parking-position.latitude,parking,Fort Plain,42.9316,1700152037000000873
+.parking-position.latitude,parking,Clyde,43.0839,1700152037000000873
+.parking-position.latitude,parking,Hamilton College,43.0527,1700152037000000873
+.parking-position.latitude,parking,Village of the Branch,40.8523,1700152037000000873
+.parking-position.latitude,parking,Old Brookville,40.8332,1700152037000000873
+.parking-position.latitude,parking,Montour Falls,42.3499,1700152037000000873
+.parking-position.latitude,parking,Clintondale,41.6924,1700152037000000873
+.parking-position.latitude,parking,Seneca Knolls,43.1201,1700152037000000873
+.parking-position.latitude,parking,Golden's Bridge,41.2878,1700152037000000873
+.parking-position.latitude,parking,Altamont,42.7056,1700152037000000873
+.parking-position.latitude,parking,South Floral Park,40.7135,1700152037000000873
+.parking-position.latitude,parking,Town Line,42.8858,1700152037000000873
+.parking-position.latitude,parking,Walker Valley,41.6399,1700152037000000873
+.parking-position.latitude,parking,Remsenburg-Speonk,40.8158,1700152037000000873
+.parking-position.latitude,parking,Merritt Park,41.5385,1700152037000000873
+.parking-position.latitude,parking,Frewsburg,42.0576,1700152037000000873
+.parking-position.latitude,parking,Shortsville,42.9556,1700152037000000873
+.parking-position.latitude,parking,Katonah,41.2560,1700152037000000873
+.parking-position.latitude,parking,Painted Post,42.1634,1700152037000000873
+.parking-position.latitude,parking,Youngstown,43.2488,1700152037000000873
+.parking-position.latitude,parking,Houghton,42.4277,1700152037000000873
+.parking-position.latitude,parking,Pine Bush,41.6093,1700152037000000873
+.parking-position.latitude,parking,Angola on the Lake,42.6550,1700152037000000873
+.parking-position.latitude,parking,Waterville,42.9306,1700152037000000873
+.parking-position.latitude,parking,Trumansburg,42.5410,1700152037000000873
+.parking-position.latitude,parking,Upper Brookville,40.8475,1700152037000000873
+.parking-position.latitude,parking,Huntington Bay,40.9014,1700152037000000873
+.parking-position.latitude,parking,Northville,40.9723,1700152037000000873
+.parking-position.latitude,parking,Nissequogue,40.9023,1700152037000000873
+.parking-position.latitude,parking,Loch Sheldrake,41.7702,1700152037000000873
+.parking-position.latitude,parking,Gasport,43.1938,1700152037000000873
+.parking-position.latitude,parking,West Hurley,42.0083,1700152037000000873
+.parking-position.latitude,parking,Shinnecock Hills,40.8877,1700152037000000873
+.parking-position.latitude,parking,Yorktown Heights,41.2697,1700152037000000873
+.parking-position.latitude,parking,Bard College,42.0227,1700152037000000873
+.parking-position.latitude,parking,Morrisonville,44.6941,1700152037000000873
+.parking-position.latitude,parking,Sackets Harbor,43.9418,1700152037000000873
+.parking-position.latitude,parking,Norwood,44.7482,1700152037000000873
+.parking-position.latitude,parking,Valatie,42.4134,1700152037000000873
+.parking-position.latitude,parking,Ransomville,43.2396,1700152037000000873
+.parking-position.latitude,parking,Otisville,41.4714,1700152037000000873
+.parking-position.latitude,parking,Billington Heights,42.7862,1700152037000000873
+.parking-position.latitude,parking,West Carthage,43.9730,1700152037000000873
+.parking-position.latitude,parking,Cumberland Head,44.7177,1700152037000000873
+.parking-position.latitude,parking,Castleton-on-Hudson,42.5332,1700152037000000873
+.parking-position.latitude,parking,Bloomfield,42.8991,1700152037000000873
+.parking-position.latitude,parking,Averill Park,42.6393,1700152037000000873
+.parking-position.latitude,parking,Head of the Harbor,40.8981,1700152037000000873
+.parking-position.latitude,parking,Hagaman,42.9728,1700152037000000873
+.parking-position.latitude,parking,Milton,41.6571,1700152037000000873
+.parking-position.latitude,parking,Jordan,43.0671,1700152037000000873
+.parking-position.latitude,parking,Clark Mills,43.0895,1700152037000000873
+.parking-position.latitude,parking,Mayville,42.2531,1700152037000000873
+.parking-position.latitude,parking,Chelsea Cove,41.6133,1700152037000000873
+.parking-position.latitude,parking,Black River,44.0089,1700152037000000873
+.parking-position.latitude,parking,Niverville,42.4484,1700152037000000873
+.parking-position.latitude,parking,Brocton,42.3898,1700152037000000873
+.parking-position.latitude,parking,Stottville,42.2932,1700152037000000873
+.parking-position.latitude,parking,Schuylerville,43.1015,1700152037000000873
+.parking-position.latitude,parking,Lincolndale,41.3356,1700152037000000873
+.parking-position.latitude,parking,Sparkill,41.0289,1700152037000000873
+.parking-position.latitude,parking,Hurleyville,41.7418,1700152037000000873
+.parking-position.latitude,parking,Roslyn Estates,40.7937,1700152037000000873
+.parking-position.latitude,parking,Bay Park,40.6302,1700152037000000873
+.parking-position.latitude,parking,Saint John Fisher College,43.1143,1700152037000000873
+.parking-position.latitude,parking,Shokan,41.9809,1700152037000000873
+.parking-position.latitude,parking,Greenvale,40.8118,1700152037000000873
+.parking-position.latitude,parking,Plandome,40.8069,1700152037000000873
+.parking-position.latitude,parking,Millbrook,41.7842,1700152037000000873
+.parking-position.latitude,parking,Atlantic Beach,40.5893,1700152037000000873
+.parking-position.latitude,parking,Bridgeport,43.1551,1700152037000000873
+.parking-position.latitude,parking,Crugers,41.2279,1700152037000000873
+.parking-position.latitude,parking,Great Bend,44.0198,1700152037000000873
+.parking-position.latitude,parking,New Hackensack,41.6194,1700152037000000873
+.parking-position.latitude,parking,Cortland West,42.5942,1700152037000000873
+.parking-position.latitude,parking,South Fallsburg,41.7040,1700152037000000873
+.parking-position.latitude,parking,Wingdale,41.6376,1700152037000000873
+.parking-position.latitude,parking,Weston Mills,42.0738,1700152037000000873
+.parking-position.latitude,parking,Eatons Neck,40.9324,1700152037000000873
+.parking-position.latitude,parking,Hillside Lake,41.6191,1700152037000000873
+.parking-position.latitude,parking,MacDonnell Heights,41.7165,1700152037000000873
+.parking-position.latitude,parking,Kensington,40.7932,1700152037000000873
+.parking-position.latitude,parking,Sleepy Hollow Lake,42.3034,1700152037000000873
+.parking-position.latitude,parking,Delevan,42.4912,1700152037000000873
+.parking-position.latitude,parking,North Ballston Spa,43.0194,1700152037000000873
+.parking-position.latitude,parking,Union Springs,42.8457,1700152037000000873
+.parking-position.latitude,parking,Round Lake,42.9376,1700152037000000873
+.parking-position.latitude,parking,Bridgehampton,40.9427,1700152037000000873
+.parking-position.latitude,parking,Bellerose,40.7243,1700152037000000873
+.parking-position.latitude,parking,Plattsburgh West,44.6837,1700152037000000873
+.parking-position.latitude,parking,Mineville,44.0933,1700152037000000873
+.parking-position.latitude,parking,Great Neck Gardens,40.7970,1700152037000000873
+.parking-position.latitude,parking,Oriskany,43.1568,1700152037000000873
+.parking-position.latitude,parking,Mill Neck,40.8839,1700152037000000873
+.parking-position.latitude,parking,Point Lookout,40.5906,1700152037000000873
+.parking-position.latitude,parking,Sand Ridge,43.2553,1700152037000000873
+.parking-position.latitude,parking,Sanborn,43.1451,1700152037000000873
+.parking-position.latitude,parking,Olcott,43.3292,1700152037000000873
+.parking-position.latitude,parking,Celoron,42.1052,1700152037000000873
+.parking-position.latitude,parking,East Marion,41.1288,1700152037000000873
+.parking-position.latitude,parking,Palenville,42.1773,1700152037000000873
+.parking-position.latitude,parking,Chadwicks,43.0291,1700152037000000873
+.parking-position.latitude,parking,McGraw,42.5938,1700152037000000873
+.parking-position.latitude,parking,Richfield Springs,42.8536,1700152037000000873
+.parking-position.latitude,parking,Keuka Park,42.6130,1700152037000000873
+.parking-position.latitude,parking,Fallsburg,41.7343,1700152037000000873
+.parking-position.latitude,parking,Poquott,40.9529,1700152037000000873
+.parking-position.latitude,parking,Niagara University,43.1372,1700152037000000873
+.parking-position.latitude,parking,Nazareth College,43.1031,1700152037000000873
+.parking-position.latitude,parking,Arkport,42.3926,1700152037000000873
+.parking-position.latitude,parking,Baxter Estates,40.8338,1700152037000000873
+.parking-position.latitude,parking,Brewster Heights,41.4073,1700152037000000873
+.parking-position.latitude,parking,Sparrow Bush,41.4025,1700152037000000873
+.parking-position.latitude,parking,Whitney Point,42.3303,1700152037000000873
+.parking-position.latitude,parking,Verplanck,41.2552,1700152037000000873
+.parking-position.latitude,parking,Dover Plains,41.7395,1700152037000000873
+.parking-position.latitude,parking,South Corning,42.1262,1700152037000000873
+.parking-position.latitude,parking,Jamesport,40.9546,1700152037000000873
+.parking-position.latitude,parking,Napanoch,41.7530,1700152037000000873
+.parking-position.latitude,parking,Port Byron,43.0366,1700152037000000873
+.parking-position.latitude,parking,Hannawa Falls,44.6016,1700152037000000873
+.parking-position.latitude,parking,Hillburn,41.1263,1700152037000000873
+.parking-position.latitude,parking,Orient,41.1425,1700152037000000873
+.parking-position.latitude,parking,Roslyn Harbor,40.8158,1700152037000000873
+.parking-position.latitude,parking,Wurtsboro,41.5761,1700152037000000873
+.parking-position.latitude,parking,Jefferson Heights,42.2361,1700152037000000873
+.parking-position.latitude,parking,Harbor Isle,40.6018,1700152037000000873
+.parking-position.latitude,parking,Russell Gardens,40.7809,1700152037000000873
+.parking-position.latitude,parking,Adams Center,43.8616,1700152037000000873
+.parking-position.latitude,parking,Philmont,42.2478,1700152037000000873
+.parking-position.latitude,parking,Fair Haven,43.3263,1700152037000000873
+.parking-position.latitude,parking,Saddle Rock,40.7947,1700152037000000873
+.parking-position.latitude,parking,Cattaraugus,42.3300,1700152037000000873
+.parking-position.latitude,parking,North Hornell,42.3453,1700152037000000873
+.parking-position.latitude,parking,Claverack-Red Mills,42.2264,1700152037000000873
+.parking-position.latitude,parking,Alexandria Bay,44.3400,1700152037000000873
+.parking-position.latitude,parking,Hewlett Harbor,40.6327,1700152037000000873
+.parking-position.latitude,parking,South Lansing,42.5369,1700152037000000873
+.parking-position.latitude,parking,Tivoli,42.0587,1700152037000000873
+.parking-position.latitude,parking,Livingston Manor,41.8931,1700152037000000873
+.parking-position.latitude,parking,Old Field,40.9614,1700152037000000873
+.parking-position.latitude,parking,Durhamville,43.1225,1700152037000000873
+.parking-position.latitude,parking,Sodus Point,43.2640,1700152037000000873
+.parking-position.latitude,parking,Lakeville,42.8367,1700152037000000873
+.parking-position.latitude,parking,Millerton,41.9534,1700152037000000873
+.parking-position.latitude,parking,Matinecock,40.8640,1700152037000000873
+.parking-position.latitude,parking,Schroon Lake,43.8345,1700152037000000873
+.parking-position.latitude,parking,Forest Home,42.4529,1700152037000000873
+.parking-position.latitude,parking,Plandome Heights,40.8021,1700152037000000873
+.parking-position.latitude,parking,Breesport,42.1816,1700152037000000873
+.parking-position.latitude,parking,East Herkimer,43.0316,1700152037000000873
+.parking-position.latitude,parking,Tribes Hill,42.9479,1700152037000000873
+.parking-position.latitude,parking,Port Gibson,43.0334,1700152037000000873
+.parking-position.latitude,parking,Earlville,42.7401,1700152037000000873
+.parking-position.latitude,parking,Taconic Shores,42.1193,1700152037000000873
+.parking-position.latitude,parking,North Haven,41.0230,1700152037000000873
+.parking-position.latitude,parking,Laurel,40.9728,1700152037000000873
+.parking-position.latitude,parking,Corfu,42.9611,1700152037000000873
+.parking-position.latitude,parking,Marcy,43.1373,1700152037000000873
+.parking-position.latitude,parking,Forestville,42.4691,1700152037000000873
+.parking-position.latitude,parking,Lime Lake,42.4327,1700152037000000873
+.parking-position.latitude,parking,Woodsburgh,40.6216,1700152037000000873
+.parking-position.latitude,parking,Woodridge,41.7122,1700152037000000873
+.parking-position.latitude,parking,Cleveland,43.2398,1700152037000000873
+.parking-position.latitude,parking,Belmont,42.2226,1700152037000000873
+.parking-position.latitude,parking,Belle Terre,40.9607,1700152037000000873
+.parking-position.latitude,parking,Dexter,44.0111,1700152037000000873
+.parking-position.latitude,parking,Millwood,41.1947,1700152037000000873
+.parking-position.latitude,parking,Hailesboro,44.3097,1700152037000000873
+.parking-position.latitude,parking,Fort Johnson,42.9591,1700152037000000873
+.parking-position.latitude,parking,Oriskany Falls,42.9380,1700152037000000873
+.parking-position.latitude,parking,Middleville,43.1384,1700152037000000873
+.parking-position.latitude,parking,Shelter Island Heights,41.0661,1700152037000000873
+.parking-position.latitude,parking,Nassau Lake,42.5366,1700152037000000873
+.parking-position.latitude,parking,Copake Lake,42.1416,1700152037000000873
+.parking-position.latitude,parking,Lyndonville,43.3213,1700152037000000873
+.parking-position.latitude,parking,Wampsville,43.0772,1700152037000000873
+.parking-position.latitude,parking,Savona,42.2830,1700152037000000873
+.parking-position.latitude,parking,Hillside,41.9177,1700152037000000873
+.parking-position.latitude,parking,Glen Park,44.0016,1700152037000000873
+.parking-position.latitude,parking,La Fargeville,44.1960,1700152037000000873
+.parking-position.latitude,parking,Palatine Bridge,42.9143,1700152037000000873
+.parking-position.latitude,parking,Copenhagen,43.8934,1700152037000000873
+.parking-position.latitude,parking,Hopewell Junction,41.5805,1700152037000000873
+.parking-position.latitude,parking,Rushville,42.7612,1700152037000000873
+.parking-position.latitude,parking,Fonda,42.9536,1700152037000000873
+.parking-position.latitude,parking,Walworth,43.1396,1700152037000000873
+.parking-position.latitude,parking,Lacona,43.6434,1700152037000000873
+.parking-position.latitude,parking,Ruby,42.0125,1700152037000000873
+.parking-position.latitude,parking,Sylvan Beach,43.2061,1700152037000000873
+.parking-position.latitude,parking,Silver Springs,42.6605,1700152037000000873
+.parking-position.latitude,parking,Margaretville,42.1458,1700152037000000873
+.parking-position.latitude,parking,Chestertown,43.6461,1700152037000000873
+.parking-position.latitude,parking,Peconic,41.0369,1700152037000000873
+.parking-position.latitude,parking,Red Creek,43.2488,1700152037000000873
+.parking-position.latitude,parking,Plandome Manor,40.8147,1700152037000000873
+.parking-position.latitude,parking,Chaumont,44.0676,1700152037000000873
+.parking-position.latitude,parking,Freedom Plains,41.6695,1700152037000000873
+.parking-position.latitude,parking,Crystal Beach,42.8095,1700152037000000873
+.parking-position.latitude,parking,West Winfield,42.8838,1700152037000000873
+.parking-position.latitude,parking,Nelliston,42.9318,1700152037000000873
+.parking-position.latitude,parking,Scotts Corners,41.1889,1700152037000000873
+.parking-position.latitude,parking,North Creek,43.6923,1700152037000000873
+.parking-position.latitude,parking,Mongaup Valley,41.6760,1700152037000000873
+.parking-position.latitude,parking,Rapids,43.0976,1700152037000000873
+.parking-position.latitude,parking,Varna,42.4525,1700152037000000873
+.parking-position.latitude,parking,Zena,42.0203,1700152037000000873
+.parking-position.latitude,parking,Nelsonville,41.4291,1700152037000000873
+.parking-position.latitude,parking,Honeoye,42.7885,1700152037000000873
+.parking-position.latitude,parking,North Rose,43.1872,1700152037000000873
+.parking-position.latitude,parking,Oneida Castle,43.0812,1700152037000000873
+.parking-position.latitude,parking,Heuvelton,44.6170,1700152037000000873
+.parking-position.latitude,parking,New Hamburg,41.5891,1700152037000000873
+.parking-position.latitude,parking,East Randolph,42.1693,1700152037000000873
+.parking-position.latitude,parking,Pultneyville,43.2739,1700152037000000873
+.parking-position.latitude,parking,Port Leyden,43.5838,1700152037000000873
+.parking-position.latitude,parking,Hewlett Neck,40.6246,1700152037000000873
+.parking-position.latitude,parking,Stannards,42.0741,1700152037000000873
+.parking-position.latitude,parking,Lyons Falls,43.6170,1700152037000000873
+.parking-position.latitude,parking,Sinclairville,42.2653,1700152037000000873
+.parking-position.latitude,parking,Smallwood,41.6606,1700152037000000873
+.parking-position.latitude,parking,Hammondsport,42.4082,1700152037000000873
+.parking-position.latitude,parking,Sharon Springs,42.7930,1700152037000000873
+.parking-position.latitude,parking,Fultonville,42.9463,1700152037000000873
+.parking-position.latitude,parking,Paul Smiths,44.4341,1700152037000000873
+.parking-position.latitude,parking,South Cairo,42.2684,1700152037000000873
+.parking-position.latitude,parking,Old Forge,43.7060,1700152037000000873
+.parking-position.latitude,parking,Brasher Falls,44.8096,1700152037000000873
+.parking-position.latitude,parking,Rhinecliff,41.9220,1700152037000000873
+.parking-position.latitude,parking,Quogue,40.8215,1700152037000000873
+.parking-position.latitude,parking,Strykersville,42.7063,1700152037000000873
+.parking-position.latitude,parking,Brooktondale,42.3824,1700152037000000873
+.parking-position.latitude,parking,Asharoken,40.9381,1700152037000000873
+.parking-position.latitude,parking,West Valley,42.4037,1700152037000000873
+.parking-position.latitude,parking,Willsboro Point,44.4246,1700152037000000873
+.parking-position.latitude,parking,Interlaken,42.6189,1700152037000000873
+.parking-position.latitude,parking,Round Top,42.2616,1700152037000000873
+.parking-position.latitude,parking,East Frankfort,43.0169,1700152037000000873
+.parking-position.latitude,parking,Tannersville,42.1936,1700152037000000873
+.parking-position.latitude,parking,Schenevus,42.5497,1700152037000000873
+.parking-position.latitude,parking,Accord,41.7972,1700152037000000873
+.parking-position.latitude,parking,Staatsburg,41.8540,1700152037000000873
+.parking-position.latitude,parking,Richburg,42.0887,1700152037000000873
+.parking-position.latitude,parking,Hemlock,42.7938,1700152037000000873
+.parking-position.latitude,parking,East Avon,42.9128,1700152037000000873
+.parking-position.latitude,parking,New Baltimore,42.4489,1700152037000000873
+.parking-position.latitude,parking,Unionville,41.3013,1700152037000000873
+.parking-position.latitude,parking,Odessa,42.3350,1700152037000000873
+.parking-position.latitude,parking,Tuxedo Park,41.2007,1700152037000000873
+.parking-position.latitude,parking,South Dayton,42.3628,1700152037000000873
+.parking-position.latitude,parking,Star Lake,44.1613,1700152037000000873
+.parking-position.latitude,parking,Quiogue,40.8202,1700152037000000873
+.parking-position.latitude,parking,Fillmore,42.4658,1700152037000000873
+.parking-position.latitude,parking,Woodbourne,41.7610,1700152037000000873
+.parking-position.latitude,parking,Malverne Park Oaks,40.6816,1700152037000000873
+.parking-position.latitude,parking,Titusville,41.6663,1700152037000000873
+.parking-position.latitude,parking,Mariaville Lake,42.8252,1700152037000000873
+.parking-position.latitude,parking,Bloomingburg,41.5519,1700152037000000873
+.parking-position.latitude,parking,Cadyville,44.6977,1700152037000000873
+.parking-position.latitude,parking,Hartwick Seminary,42.6522,1700152037000000873
+.parking-position.latitude,parking,Central Bridge,42.7110,1700152037000000873
+.parking-position.latitude,parking,Saddle Rock Estates,40.7940,1700152037000000873
+.parking-position.latitude,parking,North Granville,43.4515,1700152037000000873
+.parking-position.latitude,parking,Coopers Plains,42.1793,1700152037000000873
+.parking-position.latitude,parking,Brushton,44.8308,1700152037000000873
+.parking-position.latitude,parking,Amagansett,40.9841,1700152037000000873
+.parking-position.latitude,parking,Rifton,41.8297,1700152037000000873
+.parking-position.latitude,parking,Hobart,42.3715,1700152037000000873
+.parking-position.latitude,parking,Cassadaga,42.3427,1700152037000000873
+.parking-position.latitude,parking,Pine Valley,42.2272,1700152037000000873
+.parking-position.latitude,parking,Roscoe,41.9399,1700152037000000873
+.parking-position.latitude,parking,Canaseraga,42.4618,1700152037000000873
+.parking-position.latitude,parking,Redwood,44.3011,1700152037000000873
+.parking-position.latitude,parking,Valley Falls,42.9006,1700152037000000873
+.parking-position.latitude,parking,Burdett,42.4168,1700152037000000873
+.parking-position.latitude,parking,Wassaic,41.8064,1700152037000000873
+.parking-position.latitude,parking,Shorehaven,41.5555,1700152037000000873
+.parking-position.latitude,parking,Limestone,42.0229,1700152037000000873
+.parking-position.latitude,parking,East Nassau,42.5330,1700152037000000873
+.parking-position.latitude,parking,Felts Mills,44.0167,1700152037000000873
+.parking-position.latitude,parking,Grahamsville,41.8527,1700152037000000873
+.parking-position.latitude,parking,Evans Mills,44.0870,1700152037000000873
+.parking-position.latitude,parking,Dalton,42.5422,1700152037000000873
+.parking-position.latitude,parking,Millport,42.2681,1700152037000000873
+.parking-position.latitude,parking,Cragsmoor,41.6655,1700152037000000873
+.parking-position.latitude,parking,Pamelia Center,44.0356,1700152037000000873
+.parking-position.latitude,parking,Farnham,42.5950,1700152037000000873
+.parking-position.latitude,parking,Jacksonville,42.5088,1700152037000000873
+.parking-position.latitude,parking,Cayuga,42.9191,1700152037000000873
+.parking-position.latitude,parking,North Lynbrook,40.6685,1700152037000000873
+.parking-position.latitude,parking,Freeville,42.5114,1700152037000000873
+.parking-position.latitude,parking,Sunset Bay,42.5607,1700152037000000873
+.parking-position.latitude,parking,East Kingston,41.9524,1700152037000000873
+.parking-position.latitude,parking,Munnsville,42.9766,1700152037000000873
+.parking-position.latitude,parking,Bolton Landing,43.5630,1700152037000000873
+.parking-position.latitude,parking,Pierrepont Manor,43.7374,1700152037000000873
+.parking-position.latitude,parking,Au Sable Forks,44.4507,1700152037000000873
+.parking-position.latitude,parking,High Falls,41.8255,1700152037000000873
+.parking-position.latitude,parking,Bliss,42.5801,1700152037000000873
+.parking-position.latitude,parking,Caroga Lake,43.1352,1700152037000000873
+.parking-position.latitude,parking,Panama,42.0747,1700152037000000873
+.parking-position.latitude,parking,Rensselaer Falls,44.5909,1700152037000000873
+.parking-position.latitude,parking,Downsville,42.0833,1700152037000000873
+.parking-position.latitude,parking,West Chazy,44.8178,1700152037000000873
+.parking-position.latitude,parking,Leeds,42.2554,1700152037000000873
+.parking-position.latitude,parking,Mannsville,43.7158,1700152037000000873
+.parking-position.latitude,parking,Springfield Center,42.8357,1700152037000000873
+.parking-position.latitude,parking,Wellsburg,42.0126,1700152037000000873
+.parking-position.latitude,parking,Preston-Potter Hollow,42.4330,1700152037000000873
+.parking-position.latitude,parking,Centre Island,40.9017,1700152037000000873
+.parking-position.latitude,parking,Castorland,43.8862,1700152037000000873
+.parking-position.latitude,parking,Mountain Dale,41.6936,1700152037000000873
+.parking-position.latitude,parking,Franklin,42.3415,1700152037000000873
+.parking-position.latitude,parking,Shoreham,40.9570,1700152037000000873
+.parking-position.latitude,parking,Stittville,43.2236,1700152037000000873
+.parking-position.latitude,parking,Groveland Station,42.6634,1700152037000000873
+.parking-position.latitude,parking,Jeffersonville,41.7799,1700152037000000873
+.parking-position.latitude,parking,Narrowsburg,41.6034,1700152037000000873
+.parking-position.latitude,parking,Plessis,44.2736,1700152037000000873
+.parking-position.latitude,parking,Prospect,43.3025,1700152037000000873
+.parking-position.latitude,parking,Fire Island,40.6781,1700152037000000873
+.parking-position.latitude,parking,Harbor Hills,40.7880,1700152037000000873
+.parking-position.latitude,parking,Wyoming,42.8241,1700152037000000873
+.parking-position.latitude,parking,Speculator,43.5944,1700152037000000873
+.parking-position.latitude,parking,Constableville,43.5649,1700152037000000873
+.parking-position.latitude,parking,New Suffolk,40.9961,1700152037000000873
+.parking-position.latitude,parking,Phoenicia,42.0790,1700152037000000873
+.parking-position.latitude,parking,St. Regis Falls,44.6764,1700152037000000873
+.parking-position.latitude,parking,Hewlett Bay Park,40.6346,1700152037000000873
+.parking-position.latitude,parking,Delanson,42.7474,1700152037000000873
+.parking-position.latitude,parking,Malden-on-Hudson,42.0932,1700152037000000873
+.parking-position.latitude,parking,Wainscott,40.9592,1700152037000000873
+.parking-position.latitude,parking,Portlandville,42.5294,1700152037000000873
+.parking-position.latitude,parking,Kauneonga Lake,41.6904,1700152037000000873
+.parking-position.latitude,parking,Greigsville,42.8307,1700152037000000873
+.parking-position.latitude,parking,Fly Creek,42.7191,1700152037000000873
+.parking-position.latitude,parking,Wurtsboro Hills,41.5966,1700152037000000873
+.parking-position.latitude,parking,Smithville Flats,42.3944,1700152037000000873
+.parking-position.latitude,parking,Holland Patent,43.2413,1700152037000000873
+.parking-position.latitude,parking,Fleischmanns,42.1552,1700152037000000873
+.parking-position.latitude,parking,Hall,42.7965,1700152037000000873
+.parking-position.latitude,parking,Gilbertsville,42.4693,1700152037000000873
+.parking-position.latitude,parking,Altmar,43.5110,1700152037000000873
+.parking-position.latitude,parking,Salisbury Mills,41.4308,1700152037000000873
+.parking-position.latitude,parking,Lyon Mountain,44.7253,1700152037000000873
+.parking-position.latitude,parking,Grand View-on-Hudson,41.0627,1700152037000000873
+.parking-position.latitude,parking,Deferiet,44.0344,1700152037000000873
+.parking-position.latitude,parking,Belleville,43.7893,1700152037000000873
+.parking-position.latitude,parking,Richville,44.4151,1700152037000000873
+.parking-position.latitude,parking,Meridian,43.1630,1700152037000000873
+.parking-position.latitude,parking,Cuylerville,42.7778,1700152037000000873
+.parking-position.latitude,parking,Pine Hill,42.1308,1700152037000000873
+.parking-position.latitude,parking,Hortonville,41.7662,1700152037000000873
+.parking-position.latitude,parking,Salisbury Center,43.1423,1700152037000000873
+.parking-position.latitude,parking,Piffard,42.8319,1700152037000000873
+.parking-position.latitude,parking,Davenport Center,42.4458,1700152037000000873
+.parking-position.latitude,parking,Clayville,42.9748,1700152037000000873
+.parking-position.latitude,parking,Sagaponack,40.9302,1700152037000000873
+.parking-position.latitude,parking,Kennedy,42.1590,1700152037000000873
+.parking-position.latitude,parking,Redford,44.6063,1700152037000000873
+.parking-position.latitude,parking,Glen Aubrey,42.2623,1700152037000000873
+.parking-position.latitude,parking,Cold Brook,43.2401,1700152037000000873
+.parking-position.latitude,parking,Swan Lake,41.7573,1700152037000000873
+.parking-position.latitude,parking,Livonia Center,42.8211,1700152037000000873
+.parking-position.latitude,parking,Eldred,41.5268,1700152037000000873
+.parking-position.latitude,parking,Bemus Point,42.1631,1700152037000000873
+.parking-position.latitude,parking,Cementon,42.1356,1700152037000000873
+.parking-position.latitude,parking,Lake Huntington,41.6830,1700152037000000873
+.parking-position.latitude,parking,Cove Neck,40.8840,1700152037000000873
+.parking-position.latitude,parking,East Worcester,42.6284,1700152037000000873
+.parking-position.latitude,parking,Natural Bridge,44.0718,1700152037000000873
+.parking-position.latitude,parking,McLean,42.5517,1700152037000000873
+.parking-position.latitude,parking,Captree,40.6449,1700152037000000873
+.parking-position.latitude,parking,Parc,44.6639,1700152037000000873
+.parking-position.latitude,parking,Bridgeville,41.6319,1700152037000000873
+.parking-position.latitude,parking,Depauville,44.1425,1700152037000000873
+.parking-position.latitude,parking,Unadilla Forks,42.8497,1700152037000000873
+.parking-position.latitude,parking,Bloomville,42.3338,1700152037000000873
+.parking-position.latitude,parking,West Danby,42.3248,1700152037000000873
+.parking-position.latitude,parking,Duane Lake,42.7526,1700152037000000873
+.parking-position.latitude,parking,South Lima,42.8575,1700152037000000873
+.parking-position.latitude,parking,Blodgett Mills,42.5665,1700152037000000873
+.parking-position.latitude,parking,Witherbee,44.0824,1700152037000000873
+.parking-position.latitude,parking,Gilgo,40.6376,1700152037000000873
+.parking-position.latitude,parking,North Bay,43.2283,1700152037000000873
+.parking-position.latitude,parking,Danby,42.3567,1700152037000000873
+.parking-position.latitude,parking,Kiamesha Lake,41.6806,1700152037000000873
+.parking-position.latitude,parking,Salt Point,41.8061,1700152037000000873
+.parking-position.latitude,parking,Barryville,41.4802,1700152037000000873
+.parking-position.latitude,parking,Three Mile Bay,44.0839,1700152037000000873
+.parking-position.latitude,parking,Pottersville,43.7363,1700152037000000873
+.parking-position.latitude,parking,Wadsworth,42.8214,1700152037000000873
+.parking-position.latitude,parking,Copake Falls,42.1202,1700152037000000873
+.parking-position.latitude,parking,South Ilion,42.9924,1700152037000000873
+.parking-position.latitude,parking,Slaterville Springs,42.3953,1700152037000000873
+.parking-position.latitude,parking,Ames,42.8373,1700152037000000873
+.parking-position.latitude,parking,Winthrop,44.8006,1700152037000000873
+.parking-position.latitude,parking,Westernville,43.3079,1700152037000000873
+.parking-position.latitude,parking,Mount Vision,42.5830,1700152037000000873
+.parking-position.latitude,parking,Thousand Island Park,44.2865,1700152037000000873
+.parking-position.latitude,parking,Wells Bridge,42.3712,1700152037000000873
+.parking-position.latitude,parking,Garrattsville,42.6524,1700152037000000873
+.parking-position.latitude,parking,Burlington Flats,42.7404,1700152037000000873
+.parking-position.latitude,parking,South Edmeston,42.6854,1700152037000000873
+.parking-position.latitude,parking,Scottsburg,42.6639,1700152037000000873
+.parking-position.latitude,parking,Herrings,44.0223,1700152037000000873
+.parking-position.latitude,parking,Cranberry Lake,44.2063,1700152037000000873
+.parking-position.latitude,parking,Hankins,41.8214,1700152037000000873
+.parking-position.latitude,parking,Napeague,40.9976,1700152037000000873
+.parking-position.latitude,parking,Oxbow,44.2893,1700152037000000873
+.parking-position.latitude,parking,Hunt,42.5477,1700152037000000873
+.parking-position.latitude,parking,Haines Falls,42.1970,1700152037000000873
+.parking-position.latitude,parking,White Lake,43.5408,1700152037000000873
+.parking-position.latitude,parking,Barrytown,42.0001,1700152037000000873
+.parking-position.latitude,parking,Jefferson,42.4813,1700152037000000873
+.parking-position.latitude,parking,Fowlerville,42.8940,1700152037000000873
+.parking-position.latitude,parking,Upper Red Hook,42.0262,1700152037000000873
+.parking-position.latitude,parking,Schuyler Lake,42.7786,1700152037000000873
+.parking-position.latitude,parking,Oak Beach,40.6388,1700152037000000873
+.parking-position.latitude,parking,Retsof,42.8325,1700152037000000873
+.parking-position.latitude,parking,Websters Crossing,42.6662,1700152037000000873
+.parking-position.latitude,parking,Fishers Landing,44.2772,1700152037000000873
+.parking-position.latitude,parking,Otter Lake,43.5942,1700152037000000873
+.parking-position.latitude,parking,Westford,42.6511,1700152037000000873
+.parking-position.latitude,parking,West Hampton Dunes,40.7777,1700152037000000873
+.parking-position.latitude,parking,White Lake,41.6757,1700152037000000873
+.parking-position.latitude,parking,Cumminsville,42.5706,1700152037000000873
+.parking-position.latitude,parking,Woodsville,42.5790,1700152037000000873
+.parking-position.latitude,parking,Fishers Island,41.2700,1700152037000000873
+.parking-position.latitude,parking,Linwood,42.8967,1700152037000000873
+.parking-position.latitude,parking,Kysorville,42.6528,1700152037000000873
+.parking-position.latitude,parking,West Kill,42.2158,1700152037000000873
+.parking-position.latitude,parking,Thendara,43.7010,1700152037000000873
+.parking-position.latitude,parking,Byersville,42.5839,1700152037000000873
+.parking-position.latitude,parking,Ocean Beach,40.6463,1700152037000000873
+.parking-position.latitude,parking,North Blenheim,42.4718,1700152037000000873
+.parking-position.latitude,parking,Saltaire,40.6389,1700152037000000873
