@@ -1,0 +1,20 @@
+CREATE TABLE IF NOT EXISTS employee_output (
+            id INT AUTO_INCREMENT PRIMARY KEY,
+            ticket_id INT,
+            comment_id INT UNIQUE,
+            invoice_id INT UNIQUE,
+            employee_id INT,            
+            username VARCHAR(255),
+            repairs INT DEFAULT 0,
+            board_repair INT DEFAULT 0,
+            diagnostics INT DEFAULT 0,
+            quality_control INT DEFAULT 0,
+            quality_control_rejects INT DEFAULT 0,
+            quality_control_rejected_person VARCHAR(255),
+            intake INT DEFAULT 0,
+            invoices INT DEFAULT 0,
+            datetime DATETIME,
+            valid TINYINT DEFAULT 1,
+            notes TEXT DEFAULT NULL,
+            linked_comment_id INT DEFAULT 0
+        )
