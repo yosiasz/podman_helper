@@ -3,33 +3,36 @@ version: "3.8"
 services:
   # Service to instrument. Change it to any
   # other container that you want to instrument.
-  nodejs:
-    image: localhost/nodejs_otel
-    network_mode: "service:nodejs"
-    pid: "service:nodejs"
-    ports:
-      # Exposes port 14200, forwarding it to container port 4200
-      - "14200:4200"
-    #ulimits:
-      #memlock:
-        #soft: -1 # Set memlock to unlimited (no soft or hard limit)
-        #hard: -1
-      #nofile:
-        #soft: 65536 # Maximum number of open files for the opensearch user - set to at least 65536
-        #hard: 65536      
+  #nodejs:
+  #image: localhost/nodejs_otel
+  #network_mode: "service:nodejs"
+  #pid: "service:nodejs"
+  #ports:
+  # Exposes port 14200, forwarding it to container port 4200
+  #  - "14200:4200"
+  #ulimits:
+  #memlock:
+  #soft: -1 # Set memlock to unlimited (no soft or hard limit)
+  #hard: -1
+  #nofile:
+  #soft: 65536 # Maximum number of open files for the opensearch user - set to at least 65536
+  #hard: 65536
 
-  autoinstrumenter:
+  beyla:
     image: grafana/beyla:latest
-    #pid: service:nodejs"
-    container: 
-    #cap_add:
-    #  - SYS_ADMIN
+    pid: service:nodejs"
     # If using the above capability fails to instrument your service, remove it
     # and uncomment the line below
     privileged: true
     environment:
       BEYLA_PRINT_TRACES: true
-      BEYLA_OPEN_PORT: 14200
+      BEYLA_OPEN_PORT: 5000
       #BEYLA_PROMETHEUS_PORT: 9090
-      OTEL_EXPORTER_OTLP_ENDPOINT: "http://localhost:4317" 
-      OTEL_EXPORTER_OTLP_PROTOCOL: grpc
+      BEYLA_OTEL_INSECURE_SKIP_VERIFY: false
+      #OTEL_EXPORTER_OTLP_ENDPOINT: "http://localhost"
+      #OTEL_EXPORTER_OTLP_METRICS_ENDPOINT: ""
+      OTEL_EXPORTER_OTLP_ENDPOINT: "http://localhost:4318"
+      #OTEL_EXPORTER_OTLP_TRACES_ENDPOINT
+      #4317 grpc
+      #4318 http
+      #OTEL_EXPORTER_OTLP_PROTOCOL: http/json
