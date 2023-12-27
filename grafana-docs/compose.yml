@@ -1,0 +1,14 @@
+version: "3"
+services:
+  grafana:
+    image: grafana/docs-base:latest
+    environment:
+      #- DOCS_HOST_PORT=3002
+      - HUGO_PORT=3003
+      #- GF_AUTH_ANONYMOUS_ORG_ROLE=Admin
+      #- GF_USERS_DEFAULT_THEME=light
+      #- GF_LOG_MODE=console
+      #- GF_LOG_LEVEL=critical
+    ports:
+      #- "3002:3002"
+      - "3003:3003"

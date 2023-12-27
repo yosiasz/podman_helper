@@ -1,0 +1,14 @@
+version: "3"
+networks:
+  grafanet:
+services:
+  mimir:
+    image: grafana/mimir:latest
+    volumes:
+      - ./mimir-config.yml:/etc/mimir/mimir-config.yml
+    command: -config.file=/etc/mimir/mimir-config.yml
+    ports:
+      - "9009:9009"
+    restart: unless-stopped
+    networks:
+      - grafanet
