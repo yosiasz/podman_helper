@@ -1,4 +1,4 @@
-multitenancy_enabled: false
+multitenancy_enabled: true
 stream_over_http_enabled: true
 server:
   http_listen_port: 3200
@@ -41,11 +41,7 @@ metrics_generator:
   storage:
     path: /tmp/tempo/generator/wal
     remote_write:
-<<<<<<< HEAD
       - url: http://prometheus:9090/api/v1/write
-=======
-      - url: http://localhost:9090/api/v1/write
->>>>>>> b10879d5e89ad1bb961c51b6d57bc08fb59d6cc0
         send_exemplars: true
 
 storage:
