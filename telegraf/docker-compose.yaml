@@ -1,0 +1,23 @@
+version: '3.1'
+
+services:
+  telegraf:
+    image: telegraf:1.247
+    container_name: telegraf
+    restart: always
+    volumes:
+    - ./telegraf.conf:/etc/telegraf/telegraf.conf:ro
+    depends_on:
+      - influxdb
+    links:
+      - influxdb
+    ports:
+    - '8125:8125'
+    networks:
+      - postgres-net
+
+volumes:
+    influxdb_data: {}
+
+networks:
+  postgres-net:    
