@@ -3,23 +3,6 @@ version: "3.8"
 #node --require /mnt/c/myapps/apis4grafana/instrumentation.js server.js
 #OTEL_EXPORTER_OTLP_ENDPOINT=http://localhost:4318 BEYLA_OTEL_INSECURE_SKIP_VERIFY=true BEYLA_PRINT_TRACES=true BEYLA_OPEN_PORT=4700 sudo -E beyla --config=beyla-config.yaml
 services:
-  # Service to instrument. Change it to any
-  # other container that you want to instrument.
-  #nodejs:
-  #image: localhost/nodejs_otel
-  #network_mode: "service:nodejs"
-  #pid: "service:nodejs"
-  #ports:
-  # Exposes port 14200, forwarding it to container port 4200
-  #  - "14200:4200"
-  #ulimits:
-  #memlock:
-  #soft: -1 # Set memlock to unlimited (no soft or hard limit)
-  #hard: -1
-  #nofile:
-  #soft: 65536 # Maximum number of open files for the opensearch user - set to at least 65536
-  #hard: 65536
-
   beyla:
     image: grafana/beyla:latest
     pid: service:nodejs"
