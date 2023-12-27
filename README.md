@@ -1,3 +1,5 @@
+podman pull docker.io/grafana/beyla:latest --tls-verify=false
+
 podman-compose up -d --force-recreate
 
 To go inside a container
