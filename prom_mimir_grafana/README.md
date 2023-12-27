@@ -1,1 +1,0 @@
-docker run -v ../.podman_volumes/promtail/log/journal/:/var/log/journal/ -v ../.podman_volumes/promtail/log/journal/:/run/log/journal/ -v ../.podman_volumes/promtail/machine-id:/etc/machine-id grafana/promtail:latest -config.file=.config.yaml
