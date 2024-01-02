@@ -6,10 +6,11 @@ services:
       - '--config.file=/etc/prometheus/prometheus.yml'
       - --web.enable-remote-write-receiver
       - --enable-feature=exemplar-storage
+      - --enable-feature=otlp-write-receiver
     ports:
       - 9090:9090
     restart: unless-stopped
     volumes:
-      - ./prometheus.yml:/etc/prometheus/prometheus.yml
+      #- ./prometheus.yml:/etc/prometheus/prometheus.yml
       - ../.podman_volumes/prometheus:/etc/prometheus
       - ../.podman_volumes/prom_data:/prometheus
