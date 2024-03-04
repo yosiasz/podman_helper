@@ -6,7 +6,7 @@ services:
     container_name: snipeit
     network_mode: bridge
     ports:
-    - "7777:80"
+    - "5555:80"
     volumes:
     - ../.podman_volumes/snipeit/storage/logs:/var/www/html/storage/logs
     depends_on:
@@ -26,21 +26,28 @@ services:
     - .env
     networks:
     - snipeit-backend
-    ports:
-      - "3306:3306"
+    #ports:
+    #  - "3306:3306"
 
   #redis:
   #  image: redis:6.2.5-buster
   #  networks:
   #  - snipeit-backend
 
-  mailhog:
-    image: mailhog/mailhog:v1.0.1
+  adminer:
+    image: adminer
+    network_mode: bridge
+    restart: always
     ports:
+      - 8080:8080
+
+  #mailhog:
+  #  image: mailhog/mailhog:v1.0.1
+  #  ports:
     # - 1025:1025
-    - "8025:8025"
-    networks:
-    - snipeit-backend
+  #  - "8025:8025"
+  #  networks:
+  #  - snipeit-backend
 
 
 volumes:
