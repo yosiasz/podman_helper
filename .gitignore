@@ -3,4 +3,4 @@
 .podman_volumes
 podman_volumes
 bethel
-cosmos
+/bethel/cosmos

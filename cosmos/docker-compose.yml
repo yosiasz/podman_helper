@@ -1,0 +1,26 @@
+version: "3.9"
+services:
+  azurite:
+    image: mcr.microsoft.com/azure-storage/azurite
+    volumes:
+      - azurite-data:/data
+    ports:
+      - "10000-10002:10000-10002"
+  cosmos:
+    image: mcr.microsoft.com/cosmosdb/linux/azure-cosmos-emulator:latest
+    mem_limit: 4g
+    cpu_count: 2
+    environment:
+      AZURE_COSMOS_EMULATOR_PARTITION_COUNT: 10
+      AZURE_COSMOS_EMULATOR_ENABLE_DATA_PERSISTENCE: true
+      AZURE_COSMOS_EMULATOR_IP_ADDRESS_OVERRIDE: 127.0.0.1
+    volumes:
+      - cosmosdb-data:/tmp/cosmos/appdata
+    ports:
+      - "8081:8081"
+      - "10250-10255:10250-10255"
+      - "10350:10350"
+
+volumes:
+  azurite-data:
+  cosmosdb-data:
