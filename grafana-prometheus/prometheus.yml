@@ -10,3 +10,12 @@ scrape_configs:
     honor_labels: true
     static_configs:
       - targets: ["localhost:9090"]
+  #- job_name: otel
+    #metrics_path: /v1/
+    #scheme: http
+    #honor_labels: true
+    #static_configs:
+      #- targets: ["localhost:4317"]
+      #- targets: ["localhost:4318"]
+      #- targets: ["localhost:8888"]
+      #- targets: ["localhost:8889"]
