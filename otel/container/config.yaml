@@ -1,0 +1,37 @@
+receivers:
+  syslog:
+    tcp:
+      listen_address: "localhost:54526"
+    operators:
+      - type: add
+        field: body
+        value: EXPR(replace(body, '\t', '\\t'))
+      - type: syslog_parser
+        protocol: rfc3164      
+    protocol: rfc3164
+exporters:
+  # Data sources: traces, metrics, logs
+  file:
+    path: ./filename.json
+  #logging:
+  #  loglevel: debug
+  #otlp:
+  #  endpoint: localhost:3100
+  # Data sources: traces, metrics, logs
+  # NOTE: Prior to v0.86.0 use `logging` instead of `debug`
+  debug:
+    verbosity: detailed
+  loki:
+    endpoint: https://localhost:3100/loki/api/v1/push
+    #default_labels_enabled:
+    #  exporter: false
+    #  job: true
+service:
+  pipelines:
+    logs:
+        receivers: [syslog]
+        exporters: [debug,loki,file]
+  #pipelines:
+    #logs:
+      #receivers: [syslog]
+      #exporters: [file]
