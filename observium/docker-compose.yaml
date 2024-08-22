@@ -15,7 +15,8 @@ services:
       - MYSQL_DATABASE=observium
       - TZ=Asia/Bangkok
     volumes:
-      - ./data:/var/lib/mysql
+      - ../.podman_volumes/observimu/data:/var/lib/mysql
+      - ../.podman_volumes/observimu/logs:/var/lib/mysql
     networks:
       - back-tier
     restart: always
