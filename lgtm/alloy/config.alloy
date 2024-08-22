@@ -1,0 +1,29 @@
+logging {
+  level  = "info"
+  format = "logfmt"
+}
+
+loki.source.file "files" {
+  targets    = [
+    {__path__ = "/tmp/syslog.log", "color" = "pink"},
+  ]
+  forward_to = [loki.process.regex.receiver]
+}
+
+loki.process "regex" {
+    stage.regex {
+        expression = `(?P<zoom><\d+>\d)\s*(?P<date>.*T)(?P<time>.*Z)\s*(-.)*(?P<trace>\w+\d+).(-\s*)(?P<time2>\d+:\d+:\d+.\d+)\s*(?P<msgid>.*:)\s+(?P<hex>.*)`
+    }
+    forward_to = [loki.echo.debug.receiver]
+
+    stage.labels {
+      values = {
+        zoom = "",
+        trace = "",
+        msgid = "",
+        hex = "",
+      }
+    }
+}
+
+loki.echo "debug" { }
