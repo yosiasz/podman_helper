@@ -1,8 +1,8 @@
 # Use terraform/example user/password credentials
-version: '3.1'
+version: "3.1"
 
 services:
-
+  #docker pull hashicorp/terraform
   terraform:
     image: hashicorp/terraform
     restart: always

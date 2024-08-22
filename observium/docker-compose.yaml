@@ -1,0 +1,57 @@
+# Docker compose file for Observium
+# Maintained by somsakc@hotmail.com
+
+version: "3"
+
+services:
+  db:
+    image: mariadb:10.6.4
+    command: --max_allowed_packet=1024M
+    #&& --wait_timeout=1000000
+    environment:
+      - MYSQL_ROOT_PASSWORD=TechOps!
+      - MYSQL_USER=observium
+      - MYSQL_PASSWORD=TechOps!
+      - MYSQL_DATABASE=observium
+      - TZ=Asia/Bangkok
+    volumes:
+      - ./data:/var/lib/mysql
+    networks:
+      - back-tier
+    restart: always
+
+  app:
+    # Launch published image.
+    image: mbixtech/observium:latest
+
+    # Or build image.
+    # build:
+    #   args:
+    #     # Build specific version or "latest".
+    #     # - FETCH_VERSION=22.12
+    #     - FETCH_VERSION=latest
+
+    environment:
+      - OBSERVIUM_ADMIN_USER=admin
+      - OBSERVIUM_ADMIN_PASS=TechOps!
+      - OBSERVIUM_DB_HOST=db
+      - OBSERVIUM_DB_NAME=observium
+      - OBSERVIUM_DB_USER=observium
+      - OBSERVIUM_DB_PASS=TechOps!
+      - OBSERVIUM_BASE_URL=http://localhost:8888
+      #http://observium.mbixtech.com:8888
+      - TZ=Asia/Bangkok
+    volumes:
+      - ./logs:/opt/observium/logs
+      - ./rrd:/opt/observium/rrd
+    networks:
+      - back-tier
+    ports:
+      - "8888:80"
+    restart: always
+    depends_on:
+      - db
+
+networks:
+  back-tier:
+    driver: bridge
