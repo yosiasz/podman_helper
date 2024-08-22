@@ -1,7 +1,8 @@
 version: "3"
 services:
   grafana:
-    image: grafana/grafana:latest
+    #image: grafana/grafana:latest
+    image: grafana/grafana:10.1.5
     environment:
       - GF_AUTH_ANONYMOUS_ENABLED=true
       - GF_AUTH_ANONYMOUS_ORG_ROLE=Admin

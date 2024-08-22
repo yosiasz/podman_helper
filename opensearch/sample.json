@@ -1,0 +1,158 @@
+{
+		"@source_timestamp": "2024-05-15T11:32:21.579Z",
+		"protocol": "1.0",
+		"label": "ABC 720@60",
+		"event_severity": "Major",
+		"receivers": [
+			{
+				"manifest-url": "https://content.uplynk.com/channel/3324f2467c414329b3b0cc5cd987b6be.m3u8",
+				"target_duration": 4.1,
+				"program_bitrate": 5261207,
+				"main-profile": "https://content-ausw2-up-1.uplynk.com/ch..........e/f.m3u8?pbs=7ebe7fa33d0b41c2951d6cd8e7fdf927",
+				"networks": [
+					{
+						"source_ip": "35.82.254.255",
+						"source_port": "443",
+						"name": "Nic1"
+					}
+				],
+				"stream_type": "HLS",
+				"selection": {
+					"resolution": "1280x720",
+					"codecs": "mp4a.40.5,avc1.640020",
+					"bandwidth": 4588519,
+					"found": false
+				}
+			}
+		],
+		"components": [
+			{
+				"index": 1,
+				"bitrate": 0,
+				"content_type": "PAT",
+				"monitored": true,
+				"stat_type": "template",
+				"pid": 0
+			},
+			{
+				"index": 1,
+				"bitrate": 0,
+				"content_type": "PMT",
+				"children": [
+					{
+						"bitrate": 127626,
+						"samplerate": "48000",
+						"pid": 257,
+						"index": 1,
+						"nielsen": [
+							{
+								"sid": "3",
+								"code": "NWPC"
+							},
+							{
+								"sid": "0x6aba",
+								"code": "CBL2"
+							},
+							{
+								"sid": "7",
+								"code": "N2PC"
+							}
+						],
+						"level_3sec": -25.2,
+						"content_type": "Audio",
+						"truepeak": -10.9,
+						"level": -18.0,
+						"channels": "2",
+						"codec": "ADTS/HE-AAC",
+						"audio_stat": "MM",
+						"pts_interval": 43,
+						"parent_pid": 256,
+						"monitored": true,
+						"loudness": {
+							"timestamp_us": 1715772600000000,
+							"hourly": {
+								"lra": 6.0,
+								"peak": -4,
+								"integrated": -21.3
+							},
+							"daily": {
+								"lra": 5.1,
+								"integrated": -21.2
+							}
+						}
+					},
+					{
+						"brightness": 1385,
+						"bitrate": 5133581,
+						"gop_size": 123,
+						"motion": 40,
+						"aspect": "16:9 SAR 1.00 DAR 1.78",
+						"blocking_frame": 0,
+						"colorspace": "YUV420 BT.709",
+						"pid": 258,
+						"index": 1,
+						"profile_level": "HiP@3.2",
+						"content_type": "Video",
+						"framerate": "59.94",
+						"gop_struct": "IPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+						"closed_captions": [
+							"CEA-608   (3)"
+						],
+						"codec": "H.264",
+						"resolution": "1280x720p",
+						"pts_interval": 17,
+						"blocking_scene": 0,
+						"parent_pid": 256,
+						"monitored": true,
+						"xds": {
+							"vchip": "[TPG] TV-NR",
+							"program": "AMERICA THIS MORNING",
+							"network": "ABC News Live",
+							"call": null
+						}
+					},
+					{
+						"index": 1,
+						"bitrate": 0,
+						"content_type": "ID3",
+						"parent_pid": 256,
+						"monitored": true,
+						"stat_type": "template",
+						"pid": 259
+					}
+				],
+				"monitored": true,
+				"stat_type": "template",
+				"pid": 256
+			}
+		],
+		"mcm-version": "6.3.6",
+		"profile": {
+			"label": "Default",
+			"uuid": "17ca66c5-640a-4047-998f-15cba5c83dea"
+		},
+		"timestamp_us": 1715772741579994,
+		"uuid": "0855bb07-29f8-4f5b-a7f7-99a13531ca57",
+		"device": "ed94f174-b177-492d-ac2b-19ce6593c4c3",
+		"thresholds": {
+			"label": "HLS - Only",
+			"uuid": "1e990761-33d5-4333-a242-6a6ee82936ac"
+		},
+		"access_type": "HLS",
+		"active_events_counter": 4,
+		"@version": "1",
+		"@timestamp": "2024-05-15T11:32:21.919Z",
+		"transport": {
+			"bitrate": 5818277,
+			"program_cc": 0,
+			"resolution": "1280x720p59.94"
+		},
+		"processed_us": 1715772741919000,
+		"resources": {
+			"memory_used": 232328,
+			"cpu_used": 17,
+			"memory_allocation": 3533104,
+			"up_time_sec": 366914
+		},
+		"tags": null
+	}
