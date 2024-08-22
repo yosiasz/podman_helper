@@ -1,0 +1,36 @@
+version: "2.1"
+networks:
+  alloy:
+services:
+  alloy:
+    image: grafana/alloy:latest
+    ports:
+      - "12347:12345"
+      #- "12348:12348"
+      #- "6832:6832"
+      #- "55679:55679"
+    volumes:
+      - "./config.alloy:/etc/alloy/config.alloy"
+      - "../data/syslog.log:/tmp/syslog.log"
+    command:
+      [
+        "run",
+        "--server.http.listen-addr=0.0.0.0:12345",
+        "--storage.path=/var/lib/alloy/data",
+        "--stability.level=public-preview",
+        "/etc/alloy/config.alloy",
+      ]
+    networks:
+      - alloy
+  # The Loki service stores logs sent to it, and takes queries from Grafana
+  # to visualise those logs.
+  loki:
+    image: grafana/loki:latest
+    command:
+      ["--pattern-ingester.enabled=true", "-config.file=/etc/loki/loki.yaml"]
+    ports:
+      - "3100:3100"
+    volumes:
+      - "./loki.yaml:/etc/loki/loki.yaml"
+    networks:
+      - alloy
