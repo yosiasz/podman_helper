@@ -1,0 +1,39 @@
+#podman-compose up -d --force-recreate
+version: "3"
+networks:
+  alloy:
+services:
+  prometheus:
+    image: prom/prometheus
+    #volumes:
+    #  - ./prometheus.yml:/etc/prometheus/prometheus.yml
+    networks:
+      - alloy
+    ports:
+      - 9090:9090
+  loki:
+    image: grafana/loki:latest
+    ports:
+      - "3100:3100"
+    command: -config.file=/etc/loki/local-config.yaml
+    volumes:
+      - ./loki-config.yml:/etc/loki/loki-config.yml
+    networks:
+      - alloy       
+  alloy:
+    image: grafana/alloy:latest
+    ports:
+      - 12345:12345
+    volumes:
+      - ./config.alloy:/etc/alloy/config.alloy
+      
+    command: [
+          "run",
+          "--server.http.listen-addr=0.0.0.0:12345",
+          "--storage.path=/var/lib/alloy/data",
+          "/etc/alloy/config.alloy",
+        ]      
+    #"--stability.level=public-preview",    xperimental, public-preview, generally-available
+    networks:
+      - alloy
+    

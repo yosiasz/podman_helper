@@ -1,0 +1,36 @@
+/* for debugging puporses */
+logging {
+    level = "debug"
+    format = "logfmt"
+    write_to = [loki.process.alloy.receiver]
+}
+
+loki.process "alloy" {
+    stage.labels {
+        values = {
+            service_name = "alloy",
+        }
+    }
+    forward_to = [loki.echo.debug.receiver]
+}
+/* for debugging puporses ^^ */
+
+prometheus.scrape "addisabeba" {
+  targets = [
+      {"__address__" = "http://loki:3100/metrics", "instance" = "one"},
+    ]
+
+    forward_to = [prometheus.remote_write.onprem.receiver]
+
+}
+
+prometheus.remote_write "onprem" {
+  // Send metrics to a locally running prometheus.
+  endpoint {
+    url = "http://prometheus:9090/api/v1/write"
+    
+  }
+}
+
+loki.echo "debug" { }
+
