@@ -5,6 +5,7 @@ this is the original influxdb accessed only via cli
 # DDL
 
 CREATE DATABASE NOAA_water_database
+CREATE DATABASE boombam
 
 # DML
 
