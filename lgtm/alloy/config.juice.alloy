@@ -1,0 +1,65 @@
+logging {
+  level  = "info"
+  format = "logfmt"
+}
+
+loki.source.file "files" {
+  targets    = [
+    {__path__ = "/tmp/syslog.log", "color" = "pink"},
+  ]
+  forward_to = [loki.process.add_level_label.receiver]
+}
+
+loki.process "regex" {
+    stage.regex {
+        expression = `status=(?P<trace>\d+)(\s+)remote_addr=(?P<remote_addr>\d+.\d+.\d+.\d+)`
+    }
+    forward_to = [loki.echo.debug.receiver, loki.write.default.receiver]
+
+    stage.labels {
+      values = {
+        log_id = "",
+        trace = "",
+        msgid = "",
+        message = "",
+      }
+    }
+}
+
+loki.process "add_level_label" {
+        stage.logfmt {
+            mapping = {
+                extracted_level = "level",
+            }
+        }
+        stage.labels {
+            values = {
+                level = "extracted_level",
+            }
+        }
+        forward_to = [loki.echo.debug.receiver, loki.write.default.receiver]
+}
+
+/*
+loki.process "add_level_label_v2" {
+    stage.logfmt {
+        mapping = {
+            level = "",
+        }
+    }
+    stage.labels {
+        values = {
+            extracted_level = "level",
+        }
+    }
+    forward_to = [loki.echo.debug.receiver]
+    
+}
+*/
+loki.echo "debug" { }
+
+loki.write "default" {
+  endpoint {
+    url = "http://loki:3100/loki/api/v1/push"
+  }
+}

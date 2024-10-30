@@ -2,11 +2,11 @@ import pandas as pd
 from influxdb_client import InfluxDBClient, Point, WritePrecision, WriteOptions
 from influxdb_client.client.write_api import SYNCHRONOUS
 from datetime import datetime, timezone
-from dotenv import load_dotenv
+#from dotenv import load_dotenv
 
 import os
-sure=load_dotenv()
-TOKEN = 'dS82CctBqX4N-sxwVD7r4j2Nv0vSu0mBINgKLHgU-5XQqltXuYwzZxkbrOJaHgouaSmuXYloPT1KX-MVtDZj7A=='
+#sure=load_dotenv()
+TOKEN = 'WlnO0H0bDTkdskSHPmIc9Y49XXZkxqyJWzLjeamMvl3kez0JexEspvJ16DP3kRNBHwK7ehD0RC-jJaMpqKfqrg=='
 #os.getenv('INFLUX_TOKEN')
 URL = 'localhost:8086'
 #os.getenv('INFLUX_URL')
@@ -14,6 +14,42 @@ ORG = 'research'
 #os.getenv('INFLUX_ORG')
 
 #,
+def load_lidar_vertices():
+    bucket = "lidar_vertices"
+
+    """
+    Write data into InfluxDB
+    """
+    client = InfluxDBClient(url=URL, token=TOKEN, org=ORG, debug=True)
+    write_api = client.write_api(write_options=SYNCHRONOUS)  
+    #_time,_value,_field,_measurement,machine,name
+    #2024-10-08T01:53:52.953284608Z,"[{""x"": -18.27, ""y"": 10.88}, {""x"": -10.69, ""y"": 10.88}, {""x"": -11.02, ""y"": 6.87}, {""x"": -18.6, ""y"": 6.76}, {""x"": -18.27, ""y"": 10.88}]",
+    # vertices,zones,apache2-NUC9i9,Zone-1
+    col_list = ["_time","_value","_field","_measurement","machine","name"]
+    df = pd.read_csv("./data/lidar_vertices.csv", usecols=col_list)
+    for index, row in df.iterrows():
+        _time =  row['_time']
+        _field =  row['_field']
+        _value =  row['_value']
+        _measurement = row['_measurement']
+        machine = row['machine']
+        name = row['name']
+        
+        point = Point(_measurement) \
+                    .field(_field, _value) \
+                    .field('machine',machine) \
+                    .field('name',name) \
+                    .time(_time, WritePrecision.NS)
+
+        print(point)
+        #write_api.write(bucket, ORG, point) 
+    write_api.__del__()
+
+    """
+    Close client
+    """
+    client.__del__()
+
 def load_bie():
     bucket = "bie"
 
@@ -76,7 +112,6 @@ def load_speed():
     Close client
     """
     client.__del__()
-
 def load_parking_lon():
 #print(datetime.utcnow().timestamp()*10**9)
     bucket = "parking"
@@ -147,7 +182,8 @@ def load_parking_lat():
 def main():
     #load_parking_lat()
     #load_parking_lon()
-    load_bie()
+    #load_bie()
+    load_lidar_vertices()
 
 if __name__ == '__main__':
     main()

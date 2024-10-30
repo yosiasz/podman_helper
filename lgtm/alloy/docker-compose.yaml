@@ -1,3 +1,4 @@
+#podman-compose up -d --force-recreate
 version: "2.1"
 networks:
   alloy:
@@ -10,8 +11,8 @@ services:
       #- "6832:6832"
       #- "55679:55679"
     volumes:
-      - "./config.alloy:/etc/alloy/config.alloy"
-      - "../data/syslog.log:/tmp/syslog.log"
+      - "./config.pfsense.alloy:/etc/alloy/config.alloy"
+      - "./data/pfsense.log:/tmp/syslog.log"
     command:
       [
         "run",
@@ -26,11 +27,10 @@ services:
   # to visualise those logs.
   loki:
     image: grafana/loki:latest
-    command:
-      ["--pattern-ingester.enabled=true", "-config.file=/etc/loki/loki.yaml"]
     ports:
       - "3100:3100"
+    command: -config.file=/etc/loki/local-config.yaml
     volumes:
-      - "./loki.yaml:/etc/loki/loki.yaml"
+      - ./loki-config.yml:/etc/loki/loki-config.yml
     networks:
       - alloy

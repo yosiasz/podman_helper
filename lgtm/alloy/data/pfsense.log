@@ -1,0 +1,4 @@
+<134>1 2024-10-27T08:49:34-07:00 hostname filterlog 58921 - [meta sequenceId="113299"] 12,,,7ca0bdbea8e636fba2e984923ed67866,igb0,match,block,in,4,0x0,,238,7685,0,none,6,tcp,40,79.1.1.1,108.1.1.1,54280,26203,0,S,579073575,,1024,,
+<134>1 2024-10-30T08:49:34-07:00 hostname filterlog 58921 - [meta sequenceId="113299"] 12,,,7ca0bdbea8e636fba2e984923ed67866,igb0,match,block,in,4,0x0,,238,7685,0,none,6,tcp,40,79.1.1.1,108.1.1.1,54280,26203,0,S,579073575,,1024,,
+
+

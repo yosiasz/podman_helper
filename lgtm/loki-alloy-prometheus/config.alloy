@@ -15,19 +15,22 @@ loki.process "alloy" {
 }
 /* for debugging puporses ^^ */
 
+discovery.dns "dns_lookup" {
+  names = ["loki"]
+  type = "A"
+  port = 3100
+}
+
 prometheus.scrape "addisabeba" {
-  targets = [
-      {"__address__" = "http://loki:3100/metrics", "instance" = "one"},
-    ]
-
-    forward_to = [prometheus.remote_write.onprem.receiver]
-
+  scrape_interval = "10s"
+  targets         = discovery.dns.dns_lookup.targets
+  forward_to   = [prometheus.remote_write.onprem.receiver]
 }
 
 prometheus.remote_write "onprem" {
   // Send metrics to a locally running prometheus.
   endpoint {
-    url = "http://prometheus:9090/api/v1/write"
+    url = "http://prometheus:9090"
     
   }
 }
