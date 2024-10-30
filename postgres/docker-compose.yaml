@@ -11,6 +11,7 @@ services:
       PGDATA: /data/postgres
     volumes:
       - postgres:/data/postgres
+      - ./grafana.db.sql:/data/grafana.db.sql
     ports:
       - 6543:5432
     networks:
