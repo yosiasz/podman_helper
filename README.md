@@ -2,6 +2,11 @@ podman-compose up -d --force-recreate
 
 podman pull docker.io/grafana/beyla:latest --tls-verify=false
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0291f04b7301dbe09a72c1acfbf79523e10ffb99
 To go inside a container
     podman exec -u 0 -it 8662ea2fa000 /bin/bash
 
