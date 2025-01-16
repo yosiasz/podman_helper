@@ -11,8 +11,10 @@ services:
       #- "6832:6832"
       #- "55679:55679"
     volumes:
-      - "./config.pfsense.alloy:/etc/alloy/config.alloy"
-      - "./data/pfsense.log:/tmp/syslog.log"
+      #- "./config.pfsense.alloy:/etc/alloy/config.alloy"
+      #- "./data/pfsense.log:/tmp/syslog.log"
+      - "./config.json.alloy:/etc/alloy/config.alloy"
+      - "./data/ngnix.log:/tmp/ngnix.log"
     command:
       [
         "run",

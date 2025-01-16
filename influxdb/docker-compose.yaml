@@ -1,18 +1,21 @@
-version: '3.6'
+version: "3.6"
 services:
   influxdb:
-      #image: influxdb:1.8-alpine
-      image: influxdb:latest
-      container_name: influxdb
-      restart: always
-      environment:
-        - INFLUXDB_DB=influx
-        - INFLUXDB_ADMIN_USER=admin
-        - INFLUXDB_ADMIN_PASSWORD=TechOps!
-      ports:
-        - '8086:8086'
-      volumes:
-        - ../.podman_volumes/influxdb2:/var/lib/influxdb2
+    #image: influxdb:1.8-alpine
+    image: influxdb:latest
+    container_name: influxdb
+    restart: always
+    environment:
+      - INFLUXDB_DB=influx
+      - INFLUXDB_ADMIN_USER=admin
+      - INFLUXDB_ADMIN_PASSWORD=TechOps!
+    ports:
+      - "8086:8086"
+    volumes:
+      #- ../.podman_volumes/influxdb2:/var/lib/influxdb2
+      - influxdb_data:/var/lib/influxdb2
+    logging:
+      driver: "json-file"
 volumes:
   grafana_data: {}
-  influxdb_data: {}        
+  influxdb_data: {}

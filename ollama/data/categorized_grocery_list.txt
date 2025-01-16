@@ -1,0 +1,18 @@
+After analyzing the syslog items, I have categorized them into the following categories:
+
+**Error**
+
+* <130>1 2018-08-13T15:24:15.672152+00:00 mycompany-com ThinkstCanary 6051 newincident [BasicIncidentDetails@51136 eventid="1004" CanaryName="intranet03.mycompany.com" Description="Canary Disconnected" Timestamp="2018-08-13 15:24:14 (UTC)" IncidentHash="7e90c25b733d48fc46ce257efef497e1" CanaryLocation="Rack22 above switch" SourceIP="" CanaryID="0000000018a22bf1"]
+* <130>1 2018-08-13T14:12:45.238658+00:00 mycompany-com ThinkstCanary 6051 newincident [BasicIncidentDetails@51136 eventid="1004" CanaryName="intranet03.mycompany.com" Description="Canary Reconnected" Timestamp="2018-06-19 07:07:30 (UTC)" IncidentHash="d0e47e37d0515e2b2b0765aaaa2d584e" CanaryLocation="Rack22 above switch" SourceIP="" CanaryID="0000000018a22bf1"]
+* <130>1 2023-08-02T17:26:15.611322+00:00 mycompany-com ThinkstCanary 6051 newincident [BasicIncidentDetails@51136 eventid="23002" CanaryName="SRV01" Description="Canary Settings Changed" CanaryPort="443" Timestamp="2023-08-02 17:24:14 (UTC)" CanaryIP="abc123.canary.tools" IncidentHash="4f9eb17f8e470455e070a669d73a1615" CanaryLocation="" SourceIP="1.1.1.1" CanaryID="00000000fc738ff7"]
+
+**Success**
+
+* <130>1 2018-08-13T13:50:35.127637+00:00 mycompany-com ThinkstCanary 6051 newincident [BasicIncidentDetails@51136 eventid="5007" ReverseDNS="attacker.in.mycompany.com" CanaryName="hyphen-hyphen" Description="Consolidated Network Port Scan" CanaryPort="80" Timestamp="2018-08-13 13:50:34 (UTC)" CanaryIP="192.168.1.29" IncidentHash="c307d1830441cbb238c42eef88b024bf" CanaryLocation="DC 5, Rack 17, Blade E, Unit 2" SourceIP="192.168.1.82" CanaryID="00027550afb6819c"]
+
+**Info/Notification**
+
+* <130>1 2023-08-03T20:51:29.402623+00:00 mycompany-com ThinkstCanary 31760 newincident [BasicIncidentDetails@51136 eventid="23001" CanaryName="Console" Description="Console Settings Changed" Timestamp="2023-08-03 20:49:29 (UTC)" CanaryIP="abc123.canary.tools" IncidentHash="88bee65ef162f7d00be81ab86ceea7e3" CanaryPort="443" SourceIP="1.1.1.1" CanaryID="Console"]
+* <130>1 2023-08-02T17:26:15.611322+00:00 mycompany-com ThinkstCanary 32264 newincident [BasicIncidentDetails@51136 eventid="23002" CanaryName="SRV01" Description="Canary Settings Changed" CanaryPort="443" Timestamp="2023-08-02 17:24:14 (UTC)" CanaryIP="abc123.canary.tools" IncidentHash="4f9eb17f8e470455e070a669d73a1615" CanaryLocation="" SourceIP="1.1.1.1" CanaryID="00000000fc738ff7"]
+
+Note that the 32264 code is not a traditional error or success code, but rather an event indicating a need to hit the dance floor.

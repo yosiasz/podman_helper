@@ -1,0 +1,33 @@
+#podman-compose up -d --force-recreate
+#podman logs --tail 2 b3f2436bdb97
+version: "2.1"
+networks:
+  cadvisor:
+services:
+  alloy:
+    image: grafana/alloy:latest
+    ports:
+      - "12347:12345"
+    volumes:
+      - "./config.cadvisor.alloy:/etc/alloy/config.alloy"
+    command:
+      [
+        "run",
+        "--server.http.listen-addr=0.0.0.0:12345",
+        "--storage.path=/var/lib/alloy/data",
+        "--stability.level=public-preview",
+        "/etc/alloy/config.alloy",
+      ]
+    networks:
+      - cadvisor
+  cadvisor:
+    image: gcr.io/cadvisor/cadvisor:v0.51.0
+    ports:
+      - "8080:8080"
+    volumes:
+      - "../.podman_volumes/cadvisor:/rootfs:ro"
+      - "../.podman_volumes/cadvisor/var/run:/var/run:rw"
+      - "../.podman_volumes/cadvisor/sys:/sys:ro"
+      - "../.podman_volumes/cadvisor/var/lib/docker:/var/lib/docker:ro"
+    networks:
+      - cadvisor

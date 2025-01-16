@@ -1,0 +1,46 @@
+logging {
+  level  = "info"
+  format = "logfmt"
+}
+local.file_match "json_logs" {
+    path_targets = [{
+        __path__ = "/tmp/ngnix.log",
+        job      = "kazak",
+    }]
+}
+
+loki.source.file "json_logs" {
+    targets    = local.file_match.json_logs.targets
+    forward_to = [loki.process.parse_json.receiver]
+}
+
+loki.process "parse_json" {
+    stage.multiline {
+        firstline = "^(.*)$"
+        max_wait_time = "3s" // Defaults to 3s
+        max_lines = 128 // Defaults to 128
+    }
+    
+    stage.json {
+        expressions = {
+            msec = "msec",
+            connection = "connection",
+            connection_requests = "connection_requests",
+            ssl_cipher = "ssl_cipher",
+            scheme = "scheme",
+            request_method = "request_method",
+            server_protocol = "server_protocol",
+            pipe = "pipe",
+            gzip_ratio = "gzip_ratio",
+        }
+    }
+    forward_to = [loki.write.local_loki.receiver,loki.echo.debug.receiver]
+}
+
+loki.echo "debug" { }
+
+loki.write "local_loki" {
+    endpoint {
+        url = "http://loki:3100/loki/api/v1/push"
+    }
+}
