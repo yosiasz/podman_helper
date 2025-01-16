@@ -11,9 +11,9 @@ services:
     environment:
       MYSQL_USER: "grafana"
       # You can use whatever password you like
-      MYSQL_PASSWORD: "TechOps!"
+      MYSQL_PASSWORD: ""
       # Password for root access
-      MYSQL_ROOT_PASSWORD: "TechOps!"
+      MYSQL_ROOT_PASSWORD: ""
       MYSQL_ROOT_HOST: "%"
     ports:
       - 3306:3306
