@@ -1,0 +1,45 @@
+logging {
+  level  = "info"
+  format = "logfmt"
+}
+
+loki.source.file "files" {
+  targets    = [
+    {__path__ = "/tmp/syslog.log", "color" = "pink"},
+  ]
+  forward_to = [loki.process.pfsense.receiver]
+}
+
+loki.process "regex" {
+    stage.regex {
+        expression = `(?P<log_id><\d+>\d)\s*(?P<date>.*T)(?P<time>.*Z)\s*(-.)*(?P<trace>\w+\d+).(-\s*)(?P<time2>\d+:\d+:\d+.\d+)\s*(?P<msgid>.*):\s+(?P<message>.*)`
+    }
+    forward_to = [loki.echo.debug.receiver, loki.write.default.receiver]
+
+    stage.labels {
+      values = {
+        log_id = "",
+        trace = "",
+        msgid = "",
+        message = "",
+      }
+    }
+}
+
+loki.process "pfsense" {
+    forward_to = [loki.echo.debug.receiver, loki.write.default.receiver]
+
+    stage.static_labels {
+      values = {
+        job = "pfsense",
+      }
+    }
+}
+
+loki.echo "debug" { }
+
+loki.write "default" {
+  endpoint {
+    url = "http://loki:3100/loki/api/v1/push"
+  }
+}

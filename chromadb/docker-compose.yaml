@@ -1,0 +1,14 @@
+version: "3.6"
+networks:
+  chromadb:
+services:
+  chromadb:
+    image: chromadb/chroma
+    container_name: chromadb
+    restart: always
+    ports:
+      - "8000:8000"
+    volumes:
+      - ../.podman_volumes/chroma-data:/chromadb/data
+    networks:
+      - chromadb
