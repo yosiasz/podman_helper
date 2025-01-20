@@ -13,8 +13,11 @@ services:
     volumes:
       #- "./config.pfsense.alloy:/etc/alloy/config.alloy"
       #- "./data/pfsense.log:/tmp/syslog.log"
-      - "./config.json.alloy:/etc/alloy/config.alloy"
-      - "./data/ngnix.log:/tmp/ngnix.log"
+      #- "./config.json.alloy:/etc/alloy/config.alloy"
+      #- "./data/ngnix.log:/tmp/ngnix.log"
+
+      - "./config.jazz.alloy:/etc/alloy/config.alloy"
+      - "./data/jazz.log:/tmp/jazz.log"
     command:
       [
         "run",
