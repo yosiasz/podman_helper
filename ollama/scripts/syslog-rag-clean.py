@@ -16,13 +16,14 @@ import ollama
 logging.basicConfig(level=logging.INFO)
 
 # Constants
-DOC_PATH = "./data/sample.log"
+DOC_PATH = "../ollama/data/syslogs/sample.log"
 MODEL_NAME = "llama3.2"
 EMBEDDING_MODEL = "nomic-embed-text"
 VECTOR_STORE_NAME = "simple-rag"
 
 def ingest_syslog(doc_path):
     if os.path.exists(doc_path):
+        print('File exists')
         with open(doc_path) as f:
             logging.info("syslogs loaded successfully.")
             data = f.read().strip()
@@ -94,12 +95,14 @@ Question: {question}
 def main():
     # Load and process the syslog file
     data = ingest_syslog(DOC_PATH)
+
+    print(data)
     if data is None:
         return
 
     # Split the documents into chunks
     chunks = split_documents(data)
-
+    
     # Create the vector database
     vector_db = create_vector_db(chunks)
 

@@ -1,0 +1,24 @@
+#podman run -d -p 8000:8000 ghcr.io/chroma-core/chroma:latest
+#podman-compose -f .\containers\docker-qdrant.yaml up -d --force-recreate
+version: '3.9'
+
+networks:
+  net:
+    driver: bridge
+services:
+  server:
+    name: qdrant  
+    #image: ghcr.io/chroma-core/chroma:0.6.2
+    image: qdrant/qdrant  
+    volumes:
+      # Default configuration for persist_directory in chromadb/config.py
+      - qdrant-data:/qdrant/storage:z
+    ports:
+      - 6333:6333
+      - 6334:6334
+    networks:
+      - net
+
+volumes:
+  qdrant-data:
+    driver: local

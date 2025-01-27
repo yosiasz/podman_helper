@@ -1,0 +1,5 @@
+26.42s dynman.cpp   3327: Entered DynMan::Exit()
+26.42s render.cpp   3409: Entered Render::Exit()
+26.42s onscreen.cpp 4965: Entered OnScreen::Exit()
+26.42s vidman.cpp   2891: Entered VidMan::Exit()
+26.43s osman.cpp    1107: Entered OSMan::Exit()

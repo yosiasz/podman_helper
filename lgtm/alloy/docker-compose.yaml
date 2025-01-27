@@ -16,8 +16,8 @@ services:
       #- "./config.json.alloy:/etc/alloy/config.alloy"
       #- "./data/ngnix.log:/tmp/ngnix.log"
 
-      - "./config.jazz.alloy:/etc/alloy/config.alloy"
-      - "./data/jazz.log:/tmp/jazz.log"
+      - "./config.rf2.alloy:/etc/alloy/config.alloy"
+      - "./data/rf2.log:/tmp/rf2.log"
     command:
       [
         "run",
