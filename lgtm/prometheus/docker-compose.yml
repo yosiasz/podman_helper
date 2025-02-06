@@ -1,0 +1,13 @@
+#podman-compose up -d --force-recreate
+version: "3"
+networks:
+  alloy:
+services:
+  prometheus:
+    image: prom/prometheus
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml
+    networks:
+      - prometheus
+    ports:
+      - 9090:9090
