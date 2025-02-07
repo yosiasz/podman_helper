@@ -1,0 +1,14 @@
+#podman run -h db2server --name db2server --restart=always --detach --privileged=true -p 50000:50000 --env-file .env_list -v ../.podman_volumes/db2/:/database icr.io/db2_community/db2
+# Use root/example as user/password credentials
+version: "3.1"
+
+services:
+  db:
+    image: icr.io/db2_community/db2:latest
+    restart: always
+    env_file: ./.env_list
+    volumes:
+      - ../.podman_volumes/db2/:/database
+    ports:
+      50000:50000
+

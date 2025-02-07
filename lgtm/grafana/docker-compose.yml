@@ -1,13 +1,23 @@
 version: "3"
 services:
   grafana:
-    #image: grafana/grafana:latest
-    image: grafana/grafana:10.1.5
+    image: grafana/grafana:11.3.0
+    container_name: grafana
+    restart: unless-stopped
     environment:
       - GF_AUTH_ANONYMOUS_ENABLED=true
       - GF_AUTH_ANONYMOUS_ORG_ROLE=Admin
       - GF_USERS_DEFAULT_THEME=light
       - GF_LOG_MODE=console
       - GF_LOG_LEVEL=critical
+      - GF_PATHS_PROVISIONING=/etc/grafana/provisioning
+    volumes:
+      #- ./grafana:/var/lib/grafana
+      #- ./provisioning:/etc/grafana/provisioning
+      #- ./provisioning/provisioning.yaml:/etc/grafana/provisioning/dashboards/provisioning.yaml
+      - ./provisioning/datasources/001-datasources.yaml:/etc/grafana/provisioning/datasources/001-testdata.yaml
+      - ./provisioning/dashboards/002-dashboards.yaml:/etc/grafana/provisioning/dashboards/002-muzungi.yaml
+      - ./provisioning/dashboards/Muzungi.json:/etc/grafana/dashboards/Mock Dashboard.json
+      #- ./moozoo.yaml:/usr/share/grafana/conf/provisioning/dashboards
     ports:
-      - "3955:3000"
+      - "3900:3000"
