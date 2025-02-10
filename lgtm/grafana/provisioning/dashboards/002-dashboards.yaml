@@ -17,3 +17,8 @@ dashboards:
     uid: mock-dashboard
     datasource: TestData
     message: 'This is a provisioned mock dashboard'
+
+  - name: 'Muzungi'
+    uid: airline-seats
+    datasource: TestData
+    message: 'This is a provisioned mock dashboard'  
