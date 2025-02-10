@@ -1,0 +1,102 @@
+{
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": {
+          "type": "grafana",
+          "uid": "-- Grafana --"
+        },
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "type": "dashboard"
+      }
+    ]
+  },
+  "editable": true,
+  "fiscalYearStartMonth": 0,
+  "graphTooltip": 0,
+  "id": 385,
+  "links": [],
+  "panels": [
+    {
+      "datasource": {
+        "type": "datasource",
+        "uid": "grafana"
+      },
+      "fieldConfig": {
+        "defaults": {},
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 10,
+        "x": 0,
+        "y": 0
+      },
+      "id": 1,
+      "options": {
+        "baidu": {
+          "callback": "bmapReady",
+          "key": ""
+        },
+        "editor": {
+          "format": "auto"
+        },
+        "editorMode": "code",
+        "gaode": {
+          "key": "",
+          "plugin": "AMap.Scale,AMap.ToolBar"
+        },
+        "getOption": "$.get('/public/img/flight-seats.svg', function (svg) {\n\n  context.echarts.registerMap('flight-seats', { svg: svg });\n  const takenSeatNames = ['26E', '26D', '26C', '25D', '23C', '21A', '20F'];\n  option = {\n    tooltip: {},\n    geo: {\n      map: 'flight-seats',\n      roam: true,\n      selectedMode: 'multiple',\n      layoutCenter: ['50%', '50%'],\n      layoutSize: '951%',\n      tooltip: {\n        show: true\n      },\n      itemStyle: {\n        color: '#fff'\n      },\n      emphasis: {\n        itemStyle: {\n          color: undefined,\n          borderColor: 'green',\n          borderWidth: 2\n        },\n        label: {\n          show: false\n        }\n      },\n      select: {\n        itemStyle: {\n          color: 'green'\n        },\n        label: {\n          show: false,\n          textBorderColor: '#fff',\n          textBorderWidth: 2\n        }\n      },\n      regions: makeTakenRegions(takenSeatNames)\n    }\n  };\n  function makeTakenRegions(takenSeatNames) {\n    var regions = [];\n    for (var i = 0; i < takenSeatNames.length; i++) {\n      regions.push({\n        name: takenSeatNames[i],\n        silent: true,\n        itemStyle: {\n          color: '#bf0e08'\n        },\n        emphasis: {\n          itemStyle: {\n            borderColor: '#aaa',\n            borderWidth: 1\n          }\n        },\n        select: {\n          itemStyle: {\n            color: '#bf0e08'\n          }\n        }\n      });\n    }\n    return regions;\n  }\n  context.panel.chart.setOption(option);\n  // Get selected seats.\n  context.panel.chart.on('geoselectchanged', function (params) {\n    const selectedNames = params.allSelected[0].name.slice();\n    // Remove taken seats.\n    for (var i = selectedNames.length - 1; i >= 0; i--) {\n      if (takenSeatNames.indexOf(selectedNames[i]) >= 0) {\n        selectedNames.splice(i, 1);\n      }\n    }\n    console.log('selected', selectedNames);\n  });\n});",
+        "google": {
+          "callback": "gmapReady",
+          "key": ""
+        },
+        "map": "none",
+        "renderer": "canvas",
+        "themeEditor": {
+          "config": "{}",
+          "name": "default"
+        },
+        "visualEditor": {
+          "code": "return {\n  dataset: context.editor.dataset,\n  series: context.editor.series,\n  xAxis: {\n    type: 'time',\n  },\n  yAxis: {\n    type: 'value',\n    min: 'dataMin',\n  },\n}\n",
+          "dataset": [],
+          "series": []
+        }
+      },
+      "pluginVersion": "6.5.0",
+      "targets": [
+        {
+          "datasource": {
+            "type": "datasource",
+            "uid": "grafana"
+          },
+          "queryType": "randomWalk",
+          "refId": "A"
+        }
+      ],
+      "title": "Panel Title",
+      "type": "volkovlabs-echarts-panel"
+    }
+  ],
+  "preload": false,
+  "refresh": "",
+  "schemaVersion": 40,
+  "tags": [],
+  "templating": {
+    "list": []
+  },
+  "time": {
+    "from": "now-6h",
+    "to": "now"
+  },
+  "timepicker": {},
+  "timezone": "browser",
+  "title": "Airline Seats",
+  "uid": "airline-seats",
+  "version": 6,
+  "weekStart": ""
+}

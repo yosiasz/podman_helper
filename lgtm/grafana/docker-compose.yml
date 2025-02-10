@@ -6,18 +6,19 @@ services:
     restart: unless-stopped
     environment:
       - GF_AUTH_ANONYMOUS_ENABLED=true
+      - GF_SECURITY_CONTENT_SECURITY_POLICY=true
       - GF_AUTH_ANONYMOUS_ORG_ROLE=Admin
       - GF_USERS_DEFAULT_THEME=light
       - GF_LOG_MODE=console
       - GF_LOG_LEVEL=critical
       - GF_PATHS_PROVISIONING=/etc/grafana/provisioning
+      - GF_PLUGINS_PREINSTALL=volkovlabs-echarts-panel
     volumes:
-      #- ./grafana:/var/lib/grafana
-      #- ./provisioning:/etc/grafana/provisioning
-      #- ./provisioning/provisioning.yaml:/etc/grafana/provisioning/dashboards/provisioning.yaml
       - ./provisioning/datasources/001-datasources.yaml:/etc/grafana/provisioning/datasources/001-testdata.yaml
+      #- ./provisioning/plugins/001-volkov-labs.business-chart.yaml:/etc/grafana/provisioning/plugins/volkov-labs.business-chart.yaml
       - ./provisioning/dashboards/002-dashboards.yaml:/etc/grafana/provisioning/dashboards/002-muzungi.yaml
       - ./provisioning/dashboards/Muzungi.json:/etc/grafana/dashboards/Mock Dashboard.json
-      #- ./moozoo.yaml:/usr/share/grafana/conf/provisioning/dashboards
+      - ./provisioning/dashboards/airline-seats.json:/etc/grafana/dashboards/airline-seats.json
+      - ./provisioning/img/flight-seats.svg:/usr/share/grafana/public/img/flight-seats.svg
     ports:
       - "3900:3000"

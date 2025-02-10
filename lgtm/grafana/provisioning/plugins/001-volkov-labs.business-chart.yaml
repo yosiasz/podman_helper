@@ -1,0 +1,15 @@
+# # config file version
+apiVersion: 1
+
+apps:
+  - type: volkovlabs-echarts-panel
+    disabled: false
+    #uid: echarts
+    #isDefault: true
+    orgId: 1
+    #version: 1
+    #editable: true    
+#   - type: raintank-worldping-app
+#     org_id: 1
+#     jsonData:
+#       apiKey: "API KEY"
