@@ -15,9 +15,12 @@ services:
       #- "./data/pfsense.log:/tmp/syslog.log"
       #- "./config.json.alloy:/etc/alloy/config.alloy"
       #- "./data/ngnix.log:/tmp/ngnix.log"
+      - "./data/shawn.maddock.json:/tmp/shawn.maddock.log"
 
-      - "./config.jazz.alloy:/etc/alloy/config.alloy"
-      - "./data/jazz.log:/tmp/jazz.log"
+      #- "./config.jazz.alloy:/etc/alloy/config.alloy"
+      #- "./data/jazz.log:/tmp/jazz.log"
+      #- "./configs/config.windowsevents.alloy:/etc/alloy/config.alloy"
+      - "./configs/shawn.maddock.alloy:/etc/alloy/config.alloy"
     command:
       [
         "run",
@@ -36,6 +39,6 @@ services:
       - "3100:3100"
     command: -config.file=/etc/loki/local-config.yaml
     volumes:
-      - ./loki-config.yml:/etc/loki/loki-config.yml
+      - ./loki-config.yaml:/etc/loki/local-config.yml
     networks:
       - alloy

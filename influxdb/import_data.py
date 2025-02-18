@@ -2,18 +2,17 @@ import pandas as pd
 from influxdb_client import InfluxDBClient, Point, WritePrecision, WriteOptions
 from influxdb_client.client.write_api import SYNCHRONOUS
 from datetime import datetime, timezone
-#from dotenv import load_dotenv
+from dotenv import load_dotenv
 
 import os
-#sure=load_dotenv()
-TOKEN = 'WlnO0H0bDTkdskSHPmIc9Y49XXZkxqyJWzLjeamMvl3kez0JexEspvJ16DP3kRNBHwK7ehD0RC-jJaMpqKfqrg=='
+load_dotenv()
+TOKEN='jO14txxbOxmnsDyLRjp5Xan49VLSCZq4dQg34XLuRHI7scsp1eWRe0c7oMrkobhJEcQ5YD-ymCe5tFGiRja4FQ=='
 #os.getenv('INFLUX_TOKEN')
-URL = 'localhost:8086'
+URL='localhost:8086'
 #os.getenv('INFLUX_URL')
-ORG = 'research'
+ORG='research'
 #os.getenv('INFLUX_ORG')
 
-#,
 def load_lidar_vertices():
     bucket = "lidar_vertices"
 
@@ -146,6 +145,52 @@ def load_parking_lon():
     """
     client.__del__()
 
+def load_heads():
+    bucket = "heads"
+
+    """
+    Write data into InfluxDB
+    """
+    #print('load_heads', TOKEN,URL,ORG)
+    client = InfluxDBClient(url='http://localhost:8086', token='MK1lP5vOoMyTu1Z8JobRy5YHTl4-roiMMxXegLKPBZBUaON_4L8v0N1dVbpwlL10XateNtBDsl6CmyQDsQYnYg==', org='research', debug=True)
+    write_api = client.write_api(write_options=SYNCHRONOUS)  
+    #result,table,_time,_value,baseline
+    #0,2024-04-11T08:28:42.073Z,3339,cspcd.cis_master.10189
+    col_list = ["_field","_value","_time","group","line","machine","site","tagName"]
+    #_start,_stop,_time,_value,_field,_measurement,group,line,machine,site,tagName,
+
+    df = pd.read_csv("./data/heads.csv", usecols=col_list)
+    for index, row in df.iterrows():
+        #real_date = datetime.strptime(row['_time'], '%m/%d/%Y').date()
+        
+        _time =  row['_time']
+        _field =  row['_field']
+        _value =  float(row['_value'])
+        site = row['site']
+        tag_name = row['tagName']
+        group = row['group']
+        line = row['line']
+        machine = row['machine']
+
+        point = Point('weight') \
+                    .tag("tag1", tag_name) \
+                    .field(_field, _value) \
+                    .field('group', group) \
+                    .field('line', line) \
+                    .field('machine', machine) \
+                    .field('site', site) \
+                    .time(_time, WritePrecision.NS)
+
+        print(point)
+        write_api.write(bucket, 'research', point) 
+    write_api.__del__()
+
+    """
+    Close client
+    """
+    client.__del__()
+
+
 def load_parking_lat():
 #print(datetime.utcnow().timestamp()*10**9)
     bucket = "parking"
@@ -183,7 +228,8 @@ def main():
     #load_parking_lat()
     #load_parking_lon()
     #load_bie()
-    load_lidar_vertices()
+    #load_lidar_vertices()
+    load_heads()
 
 if __name__ == '__main__':
     main()

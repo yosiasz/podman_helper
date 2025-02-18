@@ -1,0 +1,58 @@
+logging {
+  level  = "info"
+  format = "logfmt"
+}
+
+loki.source.windowsevent "windows_event_logs" {
+  eventlog_name          = "Security"
+  xpath_query            = "*[System[(EventID=16384 or EventID=25753)]]"
+  poll_interval          = "0s"
+  use_incoming_timestamp = true
+  forward_to             = [loki.relabel.windows_event_logs.receiver]
+  labels                 = {
+    job = "windows_event_logs",
+  }
+  legacy_bookmark_path = "./bookmark.xml"
+}
+
+loki.relabel "windows_event_logs" {
+  forward_to = [loki.process.windows_event_logs.receiver]
+
+  rule {
+    source_labels = ["__name__"]
+    target_label  = "__name__"
+  }
+}
+
+loki.process "windows_event_logs" {
+  forward_to = [loki.echo.debug.receiver]
+  stage.regex {
+    expression = ".*EventID=\"(16384|25753)\".*SubjectUserName=\"(?P<username>[^\"]+)\".*ObjectName=\"(?P<file>[^\"]+)\".*ObjectType=\"(?P<folder>[^\"]+)\".*Computer=\"(?P<hostname>[^\"]+)\".*IpAddress=\"(?P<ip_address>[^\"]+)\".*TimeCreated=\"(?P<timestamp>[^\"]+)\".*"
+  }
+
+  stage.labels {
+    values = {
+      file       = "file",
+      folder     = "folder",
+      hostname   = "hostname",
+      ip_address = "ip_address",
+      timestamp  = "timestamp",
+      username   = "username",
+    }
+  }
+
+  stage.timestamp {
+    source = "timestamp"
+    format = "RFC3339"
+  }
+}
+
+
+loki.echo "debug" { }
+
+loki.write "default" {
+  endpoint {
+    url = "http://loki:3100/loki/api/v1/push"
+  }
+  external_labels = {}
+}
