@@ -1,2 +1,2 @@
-{"eventMessage":"This is my log message","messageType":"Default","timestamp":"2025-02-18 08:10:49.663652-0600"}
-{"eventMessage":"This is my second log message","messageType":"Other","timestamp":"2025-02-18 08:10:49.663652-0600"}
+{"eventMessage":"This is my log message","messageType":"Default","ts":"2026-02-18 11:54:49.663652-0600"}
+{"eventMessage":"This is my 2nd log message","messageType":"Notice","ts":"2026-02-18 11:55:49.663652-0600"}
