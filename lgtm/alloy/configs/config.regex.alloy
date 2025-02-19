@@ -1,0 +1,33 @@
+logging {
+  level  = "info"
+  format = "logfmt"
+}
+
+loki.source.file "files" {
+  targets    = [
+    {__path__ = "/tmp/shawn.maddock.log"},
+  ]
+  forward_to = [loki.process.regex.receiver]
+}
+
+loki.process "regex" {
+    stage.regex {
+        expression = `(?P<eventMessage>"eventMessage":\\S+?)`
+    }
+    
+    stage.labels {
+      values = {
+        eventMessage = "",
+      }
+    }
+    forward_to = [loki.write.local_loki.receiver,loki.echo.debug.receiver]
+
+}
+
+loki.echo "debug" { }
+
+loki.write "local_loki" {
+    endpoint {
+        url = "http://loki:3100/loki/api/v1/push"
+    }
+}
