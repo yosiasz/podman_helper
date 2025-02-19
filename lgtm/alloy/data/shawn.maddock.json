@@ -1,2 +1,4 @@
-{"eventMessage":"This is my log message","messageType":"Default","ts":"2026-02-18 11:54:49.663652-0600"}
-{"eventMessage":"This is my 2nd log message","messageType":"Notice","ts":"2026-02-18 11:55:49.663652-0600"}
+{"eventMessage":"This is my log message","messageType":"Default","timestamp":"2025-0-18 14:54:49.663652-0600"}
+{"eventMessage":"This is my 2nd log message","messageType":"Notice","timestamp":"2025-02-18 14:55:49.663652-0600"}
+{"eventMessage":"This is my 3rd message","messageType":"Default","timestamp":"2025-0-19 01:54:49.663652-0600"}
+{"eventMessage":"This is my 4th log message","messageType":"Notice","timestamp":"2025-02-18 22:00:49.663652-0600"}
