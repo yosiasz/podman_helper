@@ -20,8 +20,10 @@ services:
       #- "./config.jazz.alloy:/etc/alloy/config.alloy"
       #- "./data/jazz.log:/tmp/jazz.log"
       #- "./configs/config.windowsevents.alloy:/etc/alloy/config.alloy"
-      #- "./configs/shawn.maddock.alloy:/etc/alloy/config.alloy"
-      - "./configs/config.regex.alloy:/etc/alloy/config.alloy"
+      - "./configs/shawn.maddock.alloy:/etc/alloy/config.alloy"
+      #- "./configs/shawn.match.alloy:/etc/alloy/config.alloy"
+      #- "./configs/config.regex.alloy:/etc/alloy/config.alloy"
+      #- "./configs/config.hack3rcon.alloy:/etc/alloy/config.alloy"
     command:
       [
         "run",

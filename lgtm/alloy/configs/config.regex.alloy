@@ -7,12 +7,15 @@ loki.source.file "files" {
   targets    = [
     {__path__ = "/tmp/shawn.maddock.log"},
   ]
-  forward_to = [loki.process.regex.receiver]
+  forward_to = [loki.echo.debug.receiver, loki.process.regex.receiver]
 }
 
 loki.process "regex" {
-    stage.regex {
-        expression = `(?P<eventMessage>"eventMessage":\\S+?)`
+  stage.static_labels {
+        values = {
+          logs = "maddock",
+          env = "production",
+        }
     }
     
     stage.labels {
