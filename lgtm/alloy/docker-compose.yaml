@@ -4,7 +4,7 @@ networks:
   alloy:
 services:
   alloy:
-    image: grafana/alloy:latest
+    image: alloy:latest
     ports:
       - "12347:12345"
       #- "12348:12348"
@@ -15,12 +15,17 @@ services:
       #- "./data/pfsense.log:/tmp/syslog.log"
       #- "./config.json.alloy:/etc/alloy/config.alloy"
       #- "./data/ngnix.log:/tmp/ngnix.log"
-      - "./data/shawn.maddock.json:/tmp/shawn.maddock.log"
+      #- "./data/shawn.maddock.json:/tmp/shawn.maddock.log"
+      - "./data/videos.log:/tmp/videos.log"
 
       #- "./config.jazz.alloy:/etc/alloy/config.alloy"
       #- "./data/jazz.log:/tmp/jazz.log"
       #- "./configs/config.windowsevents.alloy:/etc/alloy/config.alloy"
-      - "./configs/shawn.maddock.alloy:/etc/alloy/config.alloy"
+      #- "./configs/shawn.maddock.alloy:/etc/alloy/config.alloy"
+      #- "./configs/shawn.match.alloy:/etc/alloy/config.alloy"
+      #- "./configs/config.regex.alloy:/etc/alloy/config.alloy"
+      #- "./configs/config.hack3rcon.alloy:/etc/alloy/config.alloy"
+      - "./configs/config.videos.alloy:/etc/alloy/config.alloy"
     command:
       [
         "run",

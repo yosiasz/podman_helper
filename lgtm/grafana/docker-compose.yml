@@ -12,7 +12,7 @@ services:
       - GF_LOG_MODE=console
       - GF_LOG_LEVEL=critical
       - GF_PATHS_PROVISIONING=/etc/grafana/provisioning
-      - GF_PLUGINS_PREINSTALL=volkovlabs-echarts-panel
+      - GF_PLUGINS_PREINSTALL=volkovlabs-echarts-panel,dalvany-image-panel
     volumes:
       - ./provisioning/datasources/001-datasources.yaml:/etc/grafana/provisioning/datasources/001-testdata.yaml
       #- ./provisioning/plugins/001-volkov-labs.business-chart.yaml:/etc/grafana/provisioning/plugins/volkov-labs.business-chart.yaml
@@ -20,5 +20,6 @@ services:
       - ./provisioning/dashboards/Muzungi.json:/etc/grafana/dashboards/Mock Dashboard.json
       - ./provisioning/dashboards/airline-seats.json:/etc/grafana/dashboards/airline-seats.json
       - ./provisioning/img/flight-seats.svg:/usr/share/grafana/public/img/flight-seats.svg
+      - ./provisioning/img/weather.jpg:/usr/share/grafana/public/img/weather.jpg
     ports:
       - "3900:3000"
