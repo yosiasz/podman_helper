@@ -11,6 +11,7 @@ local.file_match "json_logs" {
 }
 
 loki.source.file "files" {
+  UseIncomingTimestamp = true
   targets    = local.file_match.json_logs.targets
   forward_to = [loki.process.process_logs.receiver]
 }
@@ -29,6 +30,7 @@ loki.process "process_logs" {
 		source = "extracted_timestamp"
 		format = "2006-01-02 15:04:05.000000-0700"
 		action_on_failure = "fudge"
+		location = "America/Los_Angeles"
 	}
 	
 	stage.labels {

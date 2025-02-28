@@ -2,12 +2,14 @@ version: "3"
 
 services:
   mosquitto:
-    image: eclipse-mosquitto:latest
-    container_name: mosquitto
+    #image: eclipse-mosquitto:latest
+    image: hivemq/hivemq4:latest
+    container_name: hivemq
     #    restart: always
     ports:
       - "1883:1883"
       - "9001:9001"
+      - "8080:8080"
     networks:
       - iot
     volumes:
