@@ -25,7 +25,8 @@ services:
       #- "./configs/shawn.match.alloy:/etc/alloy/config.alloy"
       #- "./configs/config.regex.alloy:/etc/alloy/config.alloy"
       #- "./configs/config.hack3rcon.alloy:/etc/alloy/config.alloy"
-      - "./configs/config.videos.alloy:/etc/alloy/config.alloy"
+      #- "./configs/config.videos.alloy:/etc/alloy/config.alloy"
+      - "./configs/config.windows-events.alloy:/etc/alloy/config.alloy"
     command:
       [
         "run",

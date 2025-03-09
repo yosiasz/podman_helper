@@ -5,45 +5,18 @@ logging {
 
 loki.source.windowsevent "windows_event_logs" {
   eventlog_name          = "Security"
-  xpath_query            = "*[System[(EventID=16384)]]"
+  //xpath_query            = "*[System/EventID=291]" works!
+  xpath_query = "*[System[(EventID=4672 or EventID=5379)]]"
+  //xpath_query            = "*[System/EventID=5379]"
   poll_interval          = "0s"
   use_incoming_timestamp = true
-  //forward_to             = [loki.relabel.windows_event_logs.receiver]
-  forward_to = [loki.process.grab_labels.receiver]
-  labels                 = {
-    job = "windows_event_logs",
-  }
-  
-  //legacy_bookmark_path = "./bookmark.xml"
+  forward_to = [loki.echo.debug.receiver, loki.write.local_loki.receiver]
 }
 
-loki.process "grab_labels" {
-    
-  forward_to = [loki.echo.debug.receiver, loki.write.windows_event_logs.receiver]
-
-    stage.static_labels {
-      values = {
-        job = "windows_event_logs",
-      }
-    }
-
-  stage.labels {
-      values = {
-        file       = "",
-        folder     = "",
-        hostname   = "",
-        ip_address = "",
-        timestamp  = "",
-        username   = "",
-         event_id = "",
-
-      }
-    }
-}
 loki.echo "debug" { }
 
-loki.write "windows_event_logs" {
-  endpoint {
-    url = "http://loki:3100/loki/api/v1/push"
-  }
+loki.write "local_loki" {
+    endpoint {
+        url = "http://loki:3100/loki/api/v1/push"
+    }
 }

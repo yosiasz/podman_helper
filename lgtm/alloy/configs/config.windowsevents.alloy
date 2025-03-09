@@ -2,10 +2,10 @@ logging {
   level  = "info"
   format = "logfmt"
 }
-
+//*[System[(EventID=4660 or EventID=4663)]]
 loki.source.windowsevent "windows_event_logs" {
-  eventlog_name          = "Security"
-  xpath_query            = "*[System[(EventID=16384 or EventID=25753)]]"
+  eventlog_name          = "System"
+  xpath_query            = "*[System[(EventID=19)]]"
   poll_interval          = "0s"
   use_incoming_timestamp = true
   forward_to             = [loki.relabel.windows_event_logs.receiver]

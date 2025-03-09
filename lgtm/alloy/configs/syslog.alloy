@@ -1,0 +1,17 @@
+otelcol.receiver.filelog "default" {
+  include = ["../data/syslog/*.log"]
+  operators = [{
+    type = "regex_parser",
+    regex = "^(?P<timestamp>\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}\\.\\d{3,6}Z)",
+    timestamp = {
+      parse_from = "attributes.timestamp",
+      layout = "%Y-%m-%dT%H:%M:%S.%fZ",
+      location = "UTC",
+    },
+  }]
+  output {
+      logs = [otelcol.exporter.debug.default.input]
+  }
+}
+
+otelcol.exporter.debug "default" {}

@@ -1,0 +1,28 @@
+loki.process "timestamp_alignment" {
+
+        forward_to = [loki.write.grafana_loki.receiver]
+
+        stage.regex {
+                source = "filename"
+                expression = `log_(?P<file_year>\d{4})(?P<file_month>\d{2})(?P<file_day>\d{2})`
+        }
+
+        stage.regex {
+                source = ""
+                expression = `\[(?P<line_timestamp>\d{2}:\d{2}:\d{2}\.\d{3})`
+        }
+
+        stage.replace {
+                expression = `\[(?P<line_timestamp>\d{2}:\d{2}:\d{2}\.\d{3})\]`
+                replace    = "file_year" + "-" + "file_month" + "-" + "file_day" + "T" + "line_timestamp"
+                //replace    = "2025-02-26" + "T" + "line_timestamp"
+        }
+
+                //RFC3339: 2006-01-02T15:04:05-07:00
+                //2006-01-02T15:04:05.000000Z
+        stage.timestamp {
+                source = "time"
+                location = "Africa/Abidjan"
+                format = "RFC3339"
+        }
+}
