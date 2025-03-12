@@ -1,0 +1,39 @@
+logging {
+  level  = "info"
+  format = "logfmt"
+}
+
+loki.source.file "files" {
+  targets    = [
+    {__path__ = "/tmp/grafana.log"},
+  ]
+  forward_to = [loki.process.process_logs.receiver]
+}
+
+loki.process "process_logs" {
+
+    stage.static_labels {
+      values = {
+        job = "grafana_logs",
+      }
+    }
+
+    stage.labels {
+        values = {
+        logger       = "",
+        level   = "",
+        msg = "",
+        err  = "",
+        }
+    }
+    forward_to = [loki.write.local_loki.receiver,loki.echo.debug.receiver]
+
+}
+
+loki.echo "debug" { }
+
+loki.write "local_loki" {
+    endpoint {
+        url = "http://loki:3100/loki/api/v1/push"
+    }
+}

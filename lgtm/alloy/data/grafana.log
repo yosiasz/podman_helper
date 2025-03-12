@@ -1,0 +1,45 @@
+logger=licensing t=2025-03-09T07:32:45.7961117-07:00 level=info msg="Validated license token" appURL=http://localhost:1100/ source=disk status=NotFound
+logger=licensing.renewal t=2025-03-09T07:32:45.9027843-07:00 level=warn msg="failed to load or validate token" err="license token file not found: C:\\LGTM\\grafana-v11.5.2\\data\\license.jwt"
+logger=login_attempt t=2025-03-09T07:32:52.1300549-07:00 level=error msg="Problem deleting expired login attempts" error="database is locked"
+logger=sqlstore.transactions t=2025-03-09T07:32:53.9062176-07:00 level=info msg="Database locked, sleeping then retrying" error="database is locked" retry=0 code="database is locked"
+logger=sqlstore.transactions t=2025-03-09T07:32:54.005181-07:00 level=info msg="Database locked, sleeping then retrying" error="database is locked" retry=1 code="database is locked"
+logger=cleanup t=2025-03-09T07:32:54.0144193-07:00 level=info msg="Completed cleanup jobs" duration=8.6524502s
+logger=sqlstore.transactions t=2025-03-09T07:32:54.019016-07:00 level=info msg="Database locked, sleeping then retrying" error="database is locked" retry=2 code="database is locked"
+logger=infra.usagestats t=2025-03-09T07:32:54.1702588-07:00 level=info msg="Usage stats are ready to report"
+logger=infra.usagestats t=2025-03-09T07:33:16.5891214-07:00 level=info msg="Usage stats are ready to report"
+logger=cleanup t=2025-03-09T07:41:38.9876206-07:00 level=info msg="Completed cleanup jobs" duration=9.9814ms
+logger=plugins.update.checker t=2025-03-09T07:41:39.7840662-07:00 level=info msg="Update check succeeded" duration=127.4689ms
+logger=cleanup t=2025-03-09T07:51:38.9802048-07:00 level=info msg="Completed cleanup jobs" duration=2.6901ms
+logger=plugins.update.checker t=2025-03-09T07:51:39.7478444-07:00 level=info msg="Update check succeeded" duration=93.2575ms
+logger=cleanup t=2025-03-09T08:01:38.9947952-07:00 level=info msg="Completed cleanup jobs" duration=17.3093ms
+logger=plugins.update.checker t=2025-03-09T08:01:39.7529904-07:00 level=info msg="Update check succeeded" duration=98.6187ms
+logger=infra.usagestats t=2025-03-09T08:03:12.8333252-07:00 level=info msg="Usage stats are ready to report"
+logger=cleanup t=2025-03-09T08:11:38.9887226-07:00 level=info msg="Completed cleanup jobs" duration=10.9456ms
+logger=plugins.update.checker t=2025-03-09T08:11:39.7599732-07:00 level=info msg="Update check succeeded" duration=105.738ms
+logger=cleanup t=2025-03-09T08:21:39.3318005-07:00 level=info msg="Completed cleanup jobs" duration=353.2168ms
+logger=plugins.update.checker t=2025-03-09T08:21:39.834737-07:00 level=info msg="Update check succeeded" duration=179.1486ms
+logger=cleanup t=2025-03-09T08:31:39.1307503-07:00 level=info msg="Completed cleanup jobs" duration=152.6995ms
+logger=licensing t=2025-03-09T08:31:39.1299916-07:00 level=info msg="Validated license token" appURL=http://localhost:1100/ source=disk status=NotFound
+logger=licensing.renewal t=2025-03-09T08:31:39.1321152-07:00 level=warn msg="failed to load or validate token" err="license token file not found: C:\\LGTM\\grafana-v11.5.2\\data\\license.jwt"
+logger=plugins.update.checker t=2025-03-09T08:31:39.7963673-07:00 level=info msg="Update check succeeded" duration=141.8422ms
+logger=infra.usagestats t=2025-03-09T08:33:14.1874005-07:00 level=info msg="Usage stats are ready to report"
+logger=cleanup t=2025-03-09T08:41:38.980824-07:00 level=info msg="Completed cleanup jobs" duration=3.2386ms
+logger=plugins.update.checker t=2025-03-09T08:41:39.7735547-07:00 level=info msg="Update check succeeded" duration=119.3201ms
+logger=cleanup t=2025-03-09T08:51:38.981506-07:00 level=info msg="Completed cleanup jobs" duration=3.7161ms
+logger=plugins.update.checker t=2025-03-09T08:51:39.7446823-07:00 level=info msg="Update check succeeded" duration=90.5511ms
+logger=cleanup t=2025-03-09T09:01:38.9809291-07:00 level=info msg="Completed cleanup jobs" duration=3.2789ms
+logger=plugins.update.checker t=2025-03-09T09:01:39.7403358-07:00 level=info msg="Update check succeeded" duration=86.2458ms
+logger=infra.usagestats t=2025-03-09T09:03:12.6389597-07:00 level=info msg="Usage stats are ready to report"
+logger=cleanup t=2025-03-09T09:11:38.9826953-07:00 level=info msg="Completed cleanup jobs" duration=5.1103ms
+logger=plugins.update.checker t=2025-03-09T09:11:39.7708627-07:00 level=info msg="Update check succeeded" duration=116.5297ms
+logger=cleanup t=2025-03-09T09:21:38.9854788-07:00 level=info msg="Completed cleanup jobs" duration=7.5666ms
+logger=plugins.update.checker t=2025-03-09T09:21:39.7436813-07:00 level=info msg="Update check succeeded" duration=89.6955ms
+logger=cleanup t=2025-03-09T09:31:38.9812939-07:00 level=info msg="Completed cleanup jobs" duration=3.2446ms
+logger=licensing t=2025-03-09T09:31:39.0631749-07:00 level=info msg="Validated license token" appURL=http://localhost:1100/ source=disk status=NotFound
+logger=licensing.renewal t=2025-03-09T09:31:39.0643035-07:00 level=warn msg="failed to load or validate token" err="license token file not found: C:\\LGTM\\grafana-v11.5.2\\data\\license.jwt"
+logger=plugins.update.checker t=2025-03-09T09:31:39.7603886-07:00 level=info msg="Update check succeeded" duration=105.9608ms
+logger=infra.usagestats t=2025-03-09T09:33:12.6568291-07:00 level=info msg="Usage stats are ready to report"
+logger=cleanup t=2025-03-09T09:41:38.9872165-07:00 level=info msg="Completed cleanup jobs" duration=9.6786ms
+logger=plugins.update.checker t=2025-03-09T09:41:39.7536015-07:00 level=info msg="Update check succeeded" duration=99.5155ms
+logger=cleanup t=2025-03-09T09:51:38.9816996-07:00 level=info msg="Completed cleanup jobs" duration=3.6294ms
+logger=plugins.update.checker t=2025-03-09T09:51:39.7583825-07:00 level=info msg="Update check succeeded" duration=104.2097ms

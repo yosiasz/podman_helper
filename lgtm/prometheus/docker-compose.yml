@@ -1,7 +1,5 @@
 #podman-compose up -d --force-recreate
 version: "3"
-networks:
-  alloy:
 services:
   prometheus:
     image: prom/prometheus
@@ -11,3 +9,22 @@ services:
       - prometheus
     ports:
       - 9090:9090
+  alloy:
+    image: alloy:latest
+    ports:
+      - "12347:12345"
+    volumes:
+      - "../alloy/data/grafana.log:/tmp/grafana.log"
+      - "./alloy/configs/config.grafana.alloy:/etc/alloy/config.alloy"
+    command:
+      [
+        "run",
+        "--server.http.listen-addr=0.0.0.0:12345",
+        "--storage.path=/var/lib/alloy/data",
+        "--stability.level=public-preview",
+        "/etc/alloy/config.alloy",
+      ]
+    networks:
+      - prometheus
+networks:
+  prometheus:
