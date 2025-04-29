@@ -4,7 +4,7 @@ networks:
   alloy:
 services:
   alloy:
-    image: alloy:latest
+    image: grafana/alloy:latest
     ports:
       - "12347:12345"
       #- "12348:12348"
@@ -16,7 +16,9 @@ services:
       #- "./config.json.alloy:/etc/alloy/config.alloy"
       #- "./data/ngnix.log:/tmp/ngnix.log"
       #- "./data/shawn.maddock.json:/tmp/shawn.maddock.log"
-      - "./data/videos.log:/tmp/videos.log"
+      #- "./data/videos.log:/tmp/videos.log"
+      #- "./data/tomcat.log:/tmp/tomcat.log"
+      - "./data/boombap.json:/tmp/boombap.log"
 
       #- "./config.jazz.alloy:/etc/alloy/config.alloy"
       #- "./data/jazz.log:/tmp/jazz.log"
@@ -26,7 +28,10 @@ services:
       #- "./configs/config.regex.alloy:/etc/alloy/config.alloy"
       #- "./configs/config.hack3rcon.alloy:/etc/alloy/config.alloy"
       #- "./configs/config.videos.alloy:/etc/alloy/config.alloy"
-      - "./configs/config.windows-events.alloy:/etc/alloy/config.alloy"
+      #- "./configs/config.windows-events.alloy:/etc/alloy/config.alloy"
+      #- "./configs/taboni.alloy:/etc/alloy/config.alloy"
+      - "./configs/config.boombap.alloy:/etc/alloy/config.alloy"
+
     command:
       [
         "run",

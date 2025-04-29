@@ -1,0 +1,15 @@
+<setEntityDataFault xmlns="http://example.com/FakeService/v1" version="1" source="FakeInputModule" created="2025-04-01T05:02:56Z" code="ServerError" subcode="ReferenceNotFound" requestId="">
+  <reason>entity_set with key "id=XYZ123" not found in EntityData.contracts</reason>
+  <sourceMessage><![CDATA[
+    <setEntityDataRequest xmlns="http://example.com/FakeService/v1" created="2025-04-01T05:02:00" source="mock_load" version="1">
+      <entity entityId="FAKE001" type="PERSON" status="ACTIVE">
+        <attribute name="birthCountry" value="XX" />
+        <attribute name="birthDate" value="1990-01-01" />
+        <attribute name="city" value="FakeTown" />
+        <clearRelations />
+        <relation type="employment" refId="ABC123" validFrom="2022-01-01" validTo="2023-01-01" />
+        <relation type="assignment" refId="ZZZ999" validFrom="2022-01-01" />
+      </entity>
+    </setEntityDataRequest>
+  ]]></sourceMessage>
+</setEntityDataFault>

@@ -7,7 +7,10 @@ services:
     ports:
       - "10000-10002:10000-10002"
   cosmos:
+    #image: mcr.microsoft.com/cosmosdb/linux/azure-cosmos-emulator:latest
+    #image: mcr.microsoft.com/cosmosdb/linux/azure-cosmos-emulator:vnext-preview
     image: mcr.microsoft.com/cosmosdb/linux/azure-cosmos-emulator:latest
+    #command: --protocol https
     mem_limit: 4g
     cpu_count: 2
     environment:

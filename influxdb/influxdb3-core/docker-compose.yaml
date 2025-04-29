@@ -1,0 +1,22 @@
+version: "3.6"
+services:
+  influxdb:
+    image: quay.io/influxdb/influxdb3-core:latest
+    container_name: influxdb3-core
+
+    command: "influxdb3 serve --node-id my_host --object-store file"
+    #--node-id my_host --object-store file
+    restart: always
+    environment:
+      - INFLUXDB_DB=influx
+      - INFLUXDB_ADMIN_USER=admin
+      - INFLUXDB_ADMIN_PASSWORD=
+    ports:
+      - "8181:8181"
+    volumes:
+      #- ../.podman_volumes/influxdb2:/var/lib/influxdb2
+      - influxdb_data:/var/lib/influxdb3
+    logging:
+      driver: "json-file"
+volumes:
+  influxdb_data: {}

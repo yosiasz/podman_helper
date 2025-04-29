@@ -1,0 +1,27 @@
+[tenant.test]* 2025-03-18 08:44:49,192; ajp-nio-0.0.0.0-8010-exec-2; [ERROR]; HeadTag; com.agency.IA.dispatchers.actiondescriptor.internal.IASessionExpiredException: IASessionExpiredException - Instance not found, need redirect to login page
+[]* 2025-03-18 08:44:49,192; ajp-nio-0.0.0.0-8010-exec-2; [ERROR]; HeadTag; com.agency.IA.dispatchers.actiondescriptor.internal.IASessionExpiredException: IASessionExpiredException - Instance not found, need redirect to login page
+[tenant.test] 2025-03-18 08:44:49,192; ajp-nio-0.0.0.0-8010-exec-2; [ERROR]; HeadTag; com.agency.IA.dispatchers.actiondescriptor.internal.IASessionExpiredException: IASessionExpiredException - Instance not found, need redirect to login page
+[]* 2025-03-19 06:00:08,767; Timer-0; [WARN]; MainLogger; Generic error occurred at 06:00:08 303ms Wednesday 19 March originating thread process_24.0xxx for user CPContext of user:5.0 guest:false company:xxx username to be determined  instance: pippo.test  last accessed:Wed Mar 19 06:00:08 CET 2025 with stacktrace:java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at iacl_fspace_statsR.Page_4(iacl_fspace_statsR.java:475)
+	at iacl_fspace_statsR.Page_1(iacl_fspace_statsR.java:364)
+	at iacl_fspace_statsR.Run(iacl_fspace_statsR.java:520)
+	at iacl_fspace_statsR.Run(iacl_fspace_statsR.java:505)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+    

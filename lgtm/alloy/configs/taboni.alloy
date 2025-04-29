@@ -1,0 +1,66 @@
+logging {
+  level  = "info"
+  format = "logfmt"
+}
+
+local.file_match "tomcat_logs" {
+	path_targets = [{
+		__address__ = "ibiatap01",
+		__path__    = "/tmp/tomcat.log",
+		app         = "analytics",
+		environment = "blue",
+		job         = "tomcat",
+	}, 
+	{
+		__address__ = "ibiatap01",
+		__path__    = "/opt/tomcat_a/logs/webapps_green/analytics/main.log",
+		app         = "analytics",
+		environment = "green",
+		job         = "tomcat",
+	}]
+}
+
+loki.process "tomcat_logs" {	
+	stage.regex {
+		expression = "\\[(?P<tenant>[^\\]]*)\\]\\*? (?P<time>\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2}.\\d{3}); (?P<thread>[^;]+); \\[(?P<level>[^\\]]+)\\]; (?P<component>[^;]+); (?P<message>.+)"
+	}
+
+	stage.multiline {
+		firstline = "\\[(?P<tenant>[^\\]]*)\\]\\*? (?P<time>\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2}.\\d{3}); (?P<thread>[^;]+); \\[(?P<level>[^\\]]+)\\]; (?P<component>[^;]+); (?P<message>.+)"
+	}
+
+	stage.labels {
+		values = {
+			tenant = "tenant",
+			thread = "thread",
+			level = "level",
+			component = "component",
+			time = "time",
+		}
+	}
+
+	stage.timestamp {
+		source = "time"
+		format = "2006-01-02 15:04:05,999"
+	}
+
+	forward_to = [loki.write.default.receiver,loki.echo.debug.receiver]
+}
+
+loki.source.file "tomcat_logs" {
+	targets = local.file_match.tomcat_logs.targets
+	forward_to = [loki.process.tomcat_logs.receiver]
+}
+
+loki.echo "debug" { }
+
+loki.write "default" {
+    endpoint {
+        url = "http://loki:3100/loki/api/v1/push"
+    }
+    external_labels = {}
+}
+
+livedebugging {
+	enabled = true
+}
