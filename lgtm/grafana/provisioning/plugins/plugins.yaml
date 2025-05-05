@@ -1,0 +1,24 @@
+# # config file version
+apiVersion: 1
+
+panels:
+  - type: volkovlabs-echarts-panel
+    disabled: false
+    orgId: 1
+  - type: dalvany-image-panel
+    disabled: false
+    orgId: 1
+  - type: volkovlabs-variable-panel
+    disabled: false
+    orgId: 1    
+  - type: marcusolsson-dynamictext-panel
+    disabled: false
+    orgId: 1      
+  - type: orchestracities-map-panel
+    disabled: false
+    orgId: 1
+
+datasources:
+  - type:  yesoreyeram-infinity-datasource
+    org_id: 1
+    disabled: false

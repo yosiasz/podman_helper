@@ -3,6 +3,7 @@ const CosmosClient = require('@azure/cosmos').CosmosClient
 
 const config = require('./config')
 const url = require('url')
+const fs = require('fs')
 
 const endpoint = config.endpoint
 const key = config.key
@@ -14,6 +15,7 @@ const partitionKey = { kind: 'Hash', paths: ['/Country'] }
 const options = {
       endpoint: endpoint,
       key: key,
+      ca: fs.readFileSync('emulator.crt'),
       userAgentSuffix: 'CosmosDBJavascriptQuickstart'
     };
 

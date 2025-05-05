@@ -1,8 +1,6 @@
 apiVersion: 1
-
 datasources:
-  - name: TestData
-    type: testdata
-    uid: test-data-source
-    isDefault: true
-    editable: true    
+  - name: Infinity
+    uid: Infinity
+    type: yesoreyeram-infinity-datasource
+    isDefault: true   

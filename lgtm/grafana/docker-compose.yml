@@ -1,7 +1,7 @@
 version: "3"
 services:
   grafana:
-    image: grafana/grafana:11.3.0
+    image: grafana/grafana:11.0.0
     container_name: grafana
     restart: unless-stopped
     environment:
@@ -12,14 +12,20 @@ services:
       - GF_LOG_MODE=console
       - GF_LOG_LEVEL=critical
       - GF_PATHS_PROVISIONING=/etc/grafana/provisioning
-      - GF_PLUGINS_PREINSTALL=volkovlabs-echarts-panel,dalvany-image-panel
+      - GF_PLUGINS_PREINSTALL=volkovlabs-echarts-panel,dalvany-image-panel,yesoreyeram-infinity-datasource,volkovlabs-variable-panel,orchestracities-map-panel
     volumes:
-      - ./provisioning/datasources/001-datasources.yaml:/etc/grafana/provisioning/datasources/001-testdata.yaml
-      #- ./provisioning/plugins/001-volkov-labs.business-chart.yaml:/etc/grafana/provisioning/plugins/volkov-labs.business-chart.yaml
+      #- ./provisioning/plugins/001-all-plugins.yaml:/etc/grafana/provisioning/plugins/plugins.yaml
+      #- ./provisioning/datasources/001-datasources.yaml:/etc/grafana/provisioning/datasources/001-datasources.yaml
       - ./provisioning/dashboards/002-dashboards.yaml:/etc/grafana/provisioning/dashboards/002-muzungi.yaml
       - ./provisioning/dashboards/Muzungi.json:/etc/grafana/dashboards/Mock Dashboard.json
       - ./provisioning/dashboards/airline-seats.json:/etc/grafana/dashboards/airline-seats.json
       - ./provisioning/img/flight-seats.svg:/usr/share/grafana/public/img/flight-seats.svg
       - ./provisioning/img/weather.jpg:/usr/share/grafana/public/img/weather.jpg
+      #- ./grafana-db/grafana.db:/var/lib/grafana/grafana.db
+      #C:/your/windows/path:/var/lib/grafana
     ports:
-      - "3900:3000"
+      - "3000:3000"
+    networks:
+      - mssql-grafana
+networks:
+  mssql-grafana:

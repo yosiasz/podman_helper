@@ -7,7 +7,7 @@ import azure.cosmos.cosmos_client as cosmos_client
 import azure.cosmos.exceptions as exceptions
 from azure.cosmos import ThroughputProperties
 
-import config
+#import config
 
 # ----------------------------------------------------------------------------------------------------------
 # Prerequisites -
@@ -31,9 +31,12 @@ import config
 # 5. Delete a Database given its Id property (DeleteDatabase)
 # ----------------------------------------------------------------------------------------------------------
 
-HOST = config.settings['host']
-MASTER_KEY = config.settings['master_key']
-DATABASE_ID = config.settings['database_id']
+HOST = 'https://localhost:8081'
+#config.settings['host']
+MASTER_KEY = 'C2y6yDjf5/R+ob0N8A7Cgv30VRDJIWEHLM+4QDU5DE2nQ9nDuVTqobD4b8mGGyPMbIZnqyMsEcaGQy67XIw/Jw=='
+#config.settings['master_key']
+DATABASE_ID = 'moomoo'
+#config.settings['database_id']
 
 def find_database(client, id):
     print('1. Query for Database')
@@ -127,7 +130,7 @@ def run_sample():
         list_databases(client)
 
         # delete database by id
-        delete_database(client, DATABASE_ID)
+        #delete_database(client, DATABASE_ID)
 
     except exceptions.CosmosHttpResponseError as e:
         print('\nrun_sample has caught an error. {0}'.format(e.message))
