@@ -18,7 +18,8 @@ services:
       #- "./data/shawn.maddock.json:/tmp/shawn.maddock.log"
       #- "./data/videos.log:/tmp/videos.log"
       #- "./data/tomcat.log:/tmp/tomcat.log"
-      - "./data/boombap.json:/tmp/boombap.log"
+      #- "./data/boombap.json:/tmp/boombap.log"
+      - "./data/kreg.xml:/tmp/kreg.xml"
 
       #- "./config.jazz.alloy:/etc/alloy/config.alloy"
       #- "./data/jazz.log:/tmp/jazz.log"
@@ -30,7 +31,8 @@ services:
       #- "./configs/config.videos.alloy:/etc/alloy/config.alloy"
       #- "./configs/config.windows-events.alloy:/etc/alloy/config.alloy"
       #- "./configs/taboni.alloy:/etc/alloy/config.alloy"
-      - "./configs/config.boombap.alloy:/etc/alloy/config.alloy"
+      #- "./configs/config.boombap.alloy:/etc/alloy/config.alloy"
+      - "./configs/config.xml.alloy:/etc/alloy/config.alloy"
 
     command:
       [
@@ -54,3 +56,11 @@ services:
       #"../.podman_volumes/loki:
     networks:
       - alloy
+  prometheus:
+    image: prom/prometheus
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml
+    networks:
+      - alloy
+    ports:
+      - 9090:9090

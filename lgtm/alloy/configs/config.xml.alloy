@@ -1,0 +1,28 @@
+// Define where to get the XML data from
+local.file "xml_source" {
+  filename = "/tmp/kreg.xml"
+  // Or use http.client if the XML is from an API endpoint
+}
+
+// Process the XML data
+prometheus.exporter.unix "local_system" { }
+
+// Scrape the processed data
+prometheus.scrape "scrape_metrics" {
+  targets         = prometheus.exporter.unix.local_system.targets
+  forward_to      = [prometheus.relabel.process_xml.receiver]
+  scrape_interval = "10s"
+}
+
+// Process and relabel the data
+prometheus.relabel "process_xml" {
+  forward_to = [prometheus.remote_write.metrics_service.receiver]
+}
+
+// Send the data to Prometheus or another metrics service
+prometheus.remote_write "metrics_service" {
+  endpoint {
+    url = "http://prometheus:9090/api/v1/write"
+    // Add authentication if needed
+  }
+}
