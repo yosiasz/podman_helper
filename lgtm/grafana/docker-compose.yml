@@ -1,12 +1,14 @@
+#podman-compose up -d --force-recreate
 version: "3"
 services:
   grafana:
-    image: grafana/grafana:11.0.0
+    image: grafana/grafana:12.0.0
     container_name: grafana
     restart: unless-stopped
     environment:
       - GF_AUTH_ANONYMOUS_ENABLED=true
-      - GF_SECURITY_CONTENT_SECURITY_POLICY=true
+      - GF_SECURITY_CONTENT_SECURITY_POLICY=
+      - GF_FEATURE_TOGGLES_DASHBOARDNEWLAYOUTS=true
       - GF_AUTH_ANONYMOUS_ORG_ROLE=Admin
       - GF_USERS_DEFAULT_THEME=light
       - GF_LOG_MODE=console

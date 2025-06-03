@@ -1,0 +1,14 @@
+services:
+  firebird:
+    image: firebirdsql/firebird
+    restart: always
+    environment:
+      - FIREBIRD_ROOT_PASSWORD=TechOps!
+      - FIREBIRD_USER=alice
+      - FIREBIRD_PASSWORD=TechOps!
+      - FIREBIRD_DATABASE=mirror.fdb
+      - FIREBIRD_DATABASE_DEFAULT_CHARSET=UTF8
+    volumes:
+      - ./data:/var/lib/firebird/data
+    ports:
+      - 3050:3050
