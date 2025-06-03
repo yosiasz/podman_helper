@@ -1,6 +1,6 @@
-this is the original influxdb accessed only via cli
+This is the original influxdb accessed only via cli
 
-
+py -m pip install influxdb
 
 # DDL
 
@@ -10,15 +10,12 @@ CREATE DATABASE boombam
 # DML
 
 # CONTEXT-DATABASE: NOAA_water_database
+
 h2o_feet is measurement
 location is tag (indexed)
 water_level and level description are fields
+the last numeric bit is timestamp ns
 
-h2o_feet,location=coyote_creek water_level=8.120,level\ description="between 6 and 9 feet" 1566000000
-h2o_feet,location=coyote_creek water_level=8.005,level\ description="between 6 and 9 feet" 1566000360
-h2o_feet,location=coyote_creek water_level=7.887,level\ description="between 6 and 9 feet" 1566000720
-h2o_feet,location=coyote_creek water_level=7.762,level\ description="between 6 and 9 feet" 1566001080
-h2o_feet,location=coyote_creek water_level=7.635,level\ description="between 6 and 9 feet" 1566001440
-h2o_feet,location=coyote_creek water_level=7.500,level\ description="between 6 and 9 feet" 1566001800
-h2o_feet,location=coyote_creek water_level=7.372,level\ description="between 6 and 9 feet" 1566002160
 h2o_feet,location=coyote_creek water_level=7.234,level\ description="between 6 and 9 feet" 1566002520
+
+# How to add data to influxdbv1
