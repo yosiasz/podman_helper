@@ -1,0 +1,24 @@
+#docker pull doccano/doccano
+#docker container create --name doccano \
+#-e "ADMIN_USERNAME=admin" \
+#-e "ADMIN_EMAIL=admin@example.com" \
+#-e "ADMIN_PASSWORD=password" \
+#-v doccano-db:/data \
+#-p 8000:8000 doccano/doccano
+#podman-compose up -d --force-recreate
+# Use root/example as user/password credentials
+version: "3.1"
+
+services:
+  db:
+    image: doccano/doccano
+    container_name: doccano
+    restart: always
+    environment:
+      ADMIN_USERNAME: admin
+      ADMIN_EMAIL: solitcon@gmail.com
+      ADMIN_PASSWORD: TechOps!
+    volumes:
+      - "../.podman_volumes/doccano-db:/data"
+    ports:
+      - 8000:8000
