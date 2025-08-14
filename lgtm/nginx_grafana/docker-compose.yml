@@ -5,12 +5,14 @@ services:
   nginx:
     image: nginx
     container_name: nginx
-    ports:
+    #ports:
     ports:
       - target: 80
         published: 8081 # Outside port
         mode: host
-        protocol: tcp    
+        protocol: tcp
+    depends_on:
+      - grafana
       #- 8080:80
     volumes:
       #- "./nginx.conf:/etc/nginx/nginx.conf:ro"
@@ -30,10 +32,9 @@ services:
       - GF_LOG_MODE=console
       - GF_LOG_LEVEL=critical
     volumes:
-      - ./conf_grafana/defaults.ini:/usr/share/grafana/conf/defaults.ini
+      - ./conf_grafana/custom.ini:/usr/share/grafana/conf/custom.ini
     ports:
       - target: 3000
         published: 5000 # Outside port
         mode: host
-        protocol: tcp       
-      #- 5000:3000
+        protocol: tcp
