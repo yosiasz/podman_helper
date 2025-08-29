@@ -1,0 +1,31 @@
+# Use root/example as user/password credentials
+version: "3.1"
+
+services:
+  haproxy:
+    image: haproxy:latest
+    #haproxy:lts-alpine
+    #haproxytech/haproxy-alpine
+    container_name: haproxy
+    #user: root
+    #ports:
+    ports:
+      - "8080:8080" # host 80 → container 8080
+    depends_on:
+      - grafana
+    volumes:
+      - "./configs/haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg:ro"
+
+  grafana:
+    image: grafana/grafana:latest
+    container_name: grafana
+    environment:
+      - GF_AUTH_ANONYMOUS_ENABLED=true
+      - GF_AUTH_ANONYMOUS_ORG_ROLE=Admin
+      - GF_USERS_DEFAULT_THEME=light
+      - GF_LOG_MODE=console
+      - GF_LOG_LEVEL=critical
+    volumes:
+      - ./configs/custom.ini:/usr/share/grafana/conf/custom.ini
+    expose:
+      - "3000"
