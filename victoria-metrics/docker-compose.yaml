@@ -1,0 +1,19 @@
+# Use postgres
+version: "3.1"
+#podman pull timescale/timescaledb:latest-pg14 --tls-verify=false
+services:
+  victoria:
+    image: victoriametrics/victoria-metrics:latest
+    #restart: always
+    volumes:
+      - ../.podman_volumes/victoriametrics:/victoria-metrics-data
+    command:
+      - -storageDataPath=/victoria-metrics-data
+    restart: unless-stopped
+    ports:
+      - 8428:8428
+    networks:
+      - victoria
+
+networks:
+  victoria:
