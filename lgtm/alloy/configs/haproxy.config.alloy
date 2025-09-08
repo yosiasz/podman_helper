@@ -1,0 +1,49 @@
+livedebugging {
+    enabled = true
+}
+
+logging {
+    level = "debug"
+    format = "json"
+}
+
+loki.source.file "files" {
+  targets    = [
+    {__path__ = "/tmp/haproxy.log", "job" = "lb_haproxy_logs", "hostname" = env("HOSTNAME")},
+  ]
+  forward_to = [loki.process.lb_haproxy_logs.receiver]
+}
+
+loki.process "lb_haproxy_logs" {
+
+    stage.regex {
+        expression = "^(?P<timestamp>\\w+ \\d+ \\d+:\\d+:\\d+) (?P<host>\\S+) (?P<process>\\S+): (?P<ip>\\d+\\.\\d+\\.\\d+\\.\\d+):(?P<port>\\d+) \\[(?P<haproxy_timestamp>[^\\]]+)\\] "
+    }
+
+    stage.labels {
+        values = {
+            log_timestamp = "",
+            host = "",
+            process = "",
+            pid = "",
+            client_ip = "",
+            client_port = "",
+            frontend = "",
+            backend = "",
+            status_code = "",
+            http_method = "",
+            url = "",
+            http_version = "",
+        }
+    }
+
+    forward_to = [loki.echo.lb_haproxy_logs.receiver, loki.write.lb_haproxy_logs.receiver]
+}
+
+loki.echo "lb_haproxy_logs" {}
+
+loki.write "lb_haproxy_logs" {
+  endpoint {
+    url = "http://loki:3100/loki/api/v1/push"
+  }
+}

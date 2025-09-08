@@ -19,7 +19,8 @@ services:
       #- "./data/videos.log:/tmp/videos.log"
       #- "./data/tomcat.log:/tmp/tomcat.log"
       #- "./data/boombap.json:/tmp/boombap.log"
-      - "./data/kreg.xml:/tmp/kreg.xml"
+      #- "./data/kreg.xml:/tmp/kreg.xml"
+      - "./data/haproxy.log:/tmp/haproxy.log"
 
       #- "./config.jazz.alloy:/etc/alloy/config.alloy"
       #- "./data/jazz.log:/tmp/jazz.log"
@@ -32,7 +33,8 @@ services:
       #- "./configs/config.windows-events.alloy:/etc/alloy/config.alloy"
       #- "./configs/taboni.alloy:/etc/alloy/config.alloy"
       #- "./configs/config.boombap.alloy:/etc/alloy/config.alloy"
-      - "./configs/config.xml.alloy:/etc/alloy/config.alloy"
+      #- "./configs/config.xml.alloy:/etc/alloy/config.alloy"
+      - "./configs/haproxy.config.alloy:/etc/alloy/config.alloy"
 
     command:
       [
