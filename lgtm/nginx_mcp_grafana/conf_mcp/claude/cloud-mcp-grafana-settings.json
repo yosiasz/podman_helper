@@ -1,0 +1,25 @@
+/* this will spin up a mcp/grafana container (docker/podman) when Claude is opened. */
+
+{
+  "mcpServers": {
+    "grafana": {
+      "command": "podman",
+      "args": [
+        "run",
+        "--rm",
+        "-i",
+        "-e",
+        "GRAFANA_URL",
+        "-e",
+        "GRAFANA_SERVICE_ACCOUNT_TOKEN",
+        "mcp/grafana",
+        "-t",
+        "stdio"
+      ],
+      "env": {
+        "GRAFANA_URL": "http://localhost:1200",
+        "GRAFANA_SERVICE_ACCOUNT_TOKEN": "glsa_52yhV3yA3IBvb8oUFJjUWl3BBIkP60G4_e0069b87"
+      }
+    }
+  }
+}

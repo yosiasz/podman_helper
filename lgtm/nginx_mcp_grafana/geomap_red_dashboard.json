@@ -1,0 +1,289 @@
+{
+  "dashboard": {
+    "id": null,
+    "title": "Red Geomap Dashboard - SQL Server Data",
+    "tags": ["geomap", "sql-server", "red", "geographic"],
+    "style": "dark",
+    "timezone": "browser",
+    "panels": [
+      {
+        "id": 1,
+        "title": "Geographic Data with Red Tones",
+        "type": "geomap",
+        "targets": [
+          {
+            "refId": "A",
+            "datasource": {
+              "type": "mssql",
+              "uid": "mssql-working"
+            },
+            "rawSql": "SELECT \n  'US' as country,\n  'United States' as name,\n  -95.7129 as longitude,\n  37.0902 as latitude,\n  100 as value,\n  'High Risk' as status\nUNION ALL\nSELECT 'CA', 'Canada', -106.3468, 56.1304, 85, 'Medium Risk'\nUNION ALL\nSELECT 'MX', 'Mexico', -102.5528, 23.6345, 95, 'High Risk'\nUNION ALL\nSELECT 'BR', 'Brazil', -51.9253, -14.2350, 90, 'High Risk'\nUNION ALL\nSELECT 'AR', 'Argentina', -63.6167, -38.4161, 75, 'Medium Risk'\nUNION ALL\nSELECT 'GB', 'United Kingdom', -3.4360, 55.3781, 80, 'Medium Risk'\nUNION ALL\nSELECT 'FR', 'France', 2.2137, 46.2276, 70, 'Low Risk'\nUNION ALL\nSELECT 'DE', 'Germany', 10.4515, 51.1657, 65, 'Low Risk'\nUNION ALL\nSELECT 'IT', 'Italy', 12.5674, 41.8719, 75, 'Medium Risk'\nUNION ALL\nSELECT 'ES', 'Spain', -3.7492, 40.4637, 60, 'Low Risk'\nUNION ALL\nSELECT 'RU', 'Russia', 105.3188, 61.5240, 95, 'High Risk'\nUNION ALL\nSELECT 'CN', 'China', 104.1954, 35.8617, 88, 'High Risk'\nUNION ALL\nSELECT 'JP', 'Japan', 138.2529, 36.2048, 55, 'Low Risk'\nUNION ALL\nSELECT 'IN', 'India', 78.9629, 20.5937, 85, 'High Risk'\nUNION ALL\nSELECT 'AU', 'Australia', 133.7751, -25.2744, 45, 'Low Risk'\nUNION ALL\nSELECT 'ZA', 'South Africa', 22.9375, -30.5595, 80, 'Medium Risk'",
+            "format": "table"
+          }
+        ],
+        "fieldConfig": {
+          "defaults": {
+            "color": {
+              "mode": "thresholds"
+            },
+            "custom": {
+              "hideFrom": {
+                "legend": false,
+                "tooltip": false,
+                "vis": false
+              }
+            },
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": null
+                },
+                {
+                  "color": "yellow",
+                  "value": 50
+                },
+                {
+                  "color": "orange",
+                  "value": 70
+                },
+                {
+                  "color": "red",
+                  "value": 85
+                },
+                {
+                  "color": "dark-red",
+                  "value": 95
+                }
+              ]
+            },
+            "unit": "short"
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 12,
+          "w": 24,
+          "x": 0,
+          "y": 0
+        },
+        "options": {
+          "basemap": {
+            "name": "OpenStreetMap",
+            "type": "osm"
+          },
+          "controls": {
+            "mouseWheelZoom": true,
+            "showZoom": true,
+            "showAttribution": true,
+            "showScale": true,
+            "showDebug": false
+          },
+          "layers": [
+            {
+              "type": "markers",
+              "config": {
+                "showTooltip": true,
+                "tooltip": {
+                  "mode": "single"
+                },
+                "style": {
+                  "size": {
+                    "field": "value",
+                    "fixed": 10,
+                    "min": 5,
+                    "max": 30
+                  },
+                  "color": {
+                    "field": "value",
+                    "fixed": "red"
+                  },
+                  "opacity": 0.8,
+                  "symbol": "circle"
+                },
+                "name": "Risk Data",
+                "location": {
+                  "mode": "coords",
+                  "latitude": "latitude",
+                  "longitude": "longitude"
+                },
+                "tooltip": {
+                  "mode": "single"
+                }
+              }
+            }
+          ],
+          "view": {
+            "id": "zero",
+            "lat": 20,
+            "lon": 0,
+            "zoom": 2
+          }
+        }
+      },
+      {
+        "id": 2,
+        "title": "Risk Distribution by Country",
+        "type": "barchart",
+        "targets": [
+          {
+            "refId": "A",
+            "datasource": {
+              "type": "mssql",
+              "uid": "mssql-working"
+            },
+            "rawSql": "SELECT \n  name as country,\n  value as risk_score,\n  status\nFROM (\n  SELECT 'United States' as name, 100 as value, 'High Risk' as status\n  UNION ALL SELECT 'Canada', 85, 'Medium Risk'\n  UNION ALL SELECT 'Mexico', 95, 'High Risk'\n  UNION ALL SELECT 'Brazil', 90, 'High Risk'\n  UNION ALL SELECT 'Argentina', 75, 'Medium Risk'\n  UNION ALL SELECT 'United Kingdom', 80, 'Medium Risk'\n  UNION ALL SELECT 'France', 70, 'Low Risk'\n  UNION ALL SELECT 'Germany', 65, 'Low Risk'\n  UNION ALL SELECT 'Italy', 75, 'Medium Risk'\n  UNION ALL SELECT 'Spain', 60, 'Low Risk'\n  UNION ALL SELECT 'Russia', 95, 'High Risk'\n  UNION ALL SELECT 'China', 88, 'High Risk'\n  UNION ALL SELECT 'Japan', 55, 'Low Risk'\n  UNION ALL SELECT 'India', 85, 'High Risk'\n  UNION ALL SELECT 'Australia', 45, 'Low Risk'\n  UNION ALL SELECT 'South Africa', 80, 'Medium Risk'\n) as risk_data\nORDER BY value DESC",
+            "format": "table"
+          }
+        ],
+        "fieldConfig": {
+          "defaults": {
+            "color": {
+              "mode": "thresholds"
+            },
+            "custom": {
+              "hideFrom": {
+                "legend": false,
+                "tooltip": false,
+                "vis": false
+              }
+            },
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": null
+                },
+                {
+                  "color": "yellow",
+                  "value": 50
+                },
+                {
+                  "color": "orange",
+                  "value": 70
+                },
+                {
+                  "color": "red",
+                  "value": 85
+                },
+                {
+                  "color": "dark-red",
+                  "value": 95
+                }
+              ]
+            },
+            "unit": "short"
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 8,
+          "w": 12,
+          "x": 0,
+          "y": 12
+        },
+        "options": {
+          "orientation": "horizontal",
+          "xField": "country",
+          "yField": "risk_score",
+          "colorField": "risk_score"
+        }
+      },
+      {
+        "id": 3,
+        "title": "Risk Status Summary",
+        "type": "piechart",
+        "targets": [
+          {
+            "refId": "A",
+            "datasource": {
+              "type": "mssql",
+              "uid": "mssql-working"
+            },
+            "rawSql": "SELECT \n  status,\n  COUNT(*) as count\nFROM (\n  SELECT 'High Risk' as status\n  UNION ALL SELECT 'High Risk'\n  UNION ALL SELECT 'High Risk'\n  UNION ALL SELECT 'High Risk'\n  UNION ALL SELECT 'Medium Risk'\n  UNION ALL SELECT 'Medium Risk'\n  UNION ALL SELECT 'Low Risk'\n  UNION ALL SELECT 'Low Risk'\n  UNION ALL SELECT 'Medium Risk'\n  UNION ALL SELECT 'Low Risk'\n  UNION ALL SELECT 'High Risk'\n  UNION ALL SELECT 'High Risk'\n  UNION ALL SELECT 'Low Risk'\n  UNION ALL SELECT 'High Risk'\n  UNION ALL SELECT 'Low Risk'\n  UNION ALL SELECT 'Medium Risk'\n) as risk_data\nGROUP BY status\nORDER BY count DESC",
+            "format": "table"
+          }
+        ],
+        "fieldConfig": {
+          "defaults": {
+            "color": {
+              "mode": "palette-classic"
+            },
+            "custom": {
+              "hideFrom": {
+                "legend": false,
+                "tooltip": false,
+                "vis": false
+              }
+            },
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": null
+                },
+                {
+                  "color": "red",
+                  "value": 80
+                }
+              ]
+            },
+            "unit": "short"
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 8,
+          "w": 12,
+          "x": 12,
+          "y": 12
+        },
+        "options": {
+          "pieType": "pie",
+          "tooltip": {
+            "mode": "single"
+          },
+          "legend": {
+            "displayMode": "list",
+            "placement": "bottom"
+          }
+        }
+      }
+    ],
+    "time": {
+      "from": "now-1h",
+      "to": "now"
+    },
+    "timepicker": {},
+    "templating": {
+      "list": []
+    },
+    "annotations": {
+      "list": [
+        {
+          "builtIn": 1,
+          "datasource": {
+            "type": "grafana",
+            "uid": "-- Grafana --"
+          },
+          "enable": true,
+          "hide": true,
+          "iconColor": "rgba(255, 0, 0, 1)",
+          "name": "Red Alerts",
+          "type": "dashboard"
+        }
+      ]
+    },
+    "refresh": "5s",
+    "schemaVersion": 30,
+    "version": 0,
+    "links": []
+  }
+}
+

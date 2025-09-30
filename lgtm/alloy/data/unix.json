@@ -1,0 +1,26 @@
+[
+  {
+    "timestamp": "2025-09-19T14:01:54.041+02:00",
+    "accountID": 9987663234964776,
+    "userName": "bot1",
+    "displayName": "Bot One",
+    "status": "ENABLED",
+    "presenceCategory": "OFFLINE"
+  },
+  {
+    "timestamp": "2025-09-19T14:01:55.501+02:00",
+    "accountID": 164467976335421,
+    "userName": "bot2",
+    "displayName": "Bot Two",
+    "status": "ENABLED",
+    "presenceCategory": "AVAILABLE"
+  },
+  {
+    "timestamp": "2025-09-19T14:01:55.501+02:00",
+    "accountID": 644569676335422,
+    "userName": "bot3",
+    "displayName": "Bot Three",
+    "status": "ENABLED",
+    "presenceCategory": "AVAILABLE"
+  }
+]
