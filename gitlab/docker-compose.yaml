@@ -1,0 +1,31 @@
+version: "3.6"
+services:
+  web:
+    image: "gitlab/gitlab-ce:latest"
+    container_name: gitlab
+    restart: always
+    ports:
+      - "8080:80"
+      - "8043:443"
+      - "8022:22"
+    volumes:
+      - "gitlab_config:/etc/gitlab"
+      - "gitlab_logs:/var/log/gitlab"
+      - "gitlab_data:/var/opt/gitlab"
+    shm_size: "2gb"
+  gitlab-runner:
+    image: gitlab/gitlab-runner:alpine
+    depends_on:
+      - gitlab
+    volumes:
+      - ./gitlab-runner/config/:/etc/gitlab-runner/
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./.kube:/root/.kube:ro
+      #- gitlab-runner-config:/etc/gitlab-runner
+    deploy:
+      mode: replicated
+      replicas: 4
+volumes:
+  gitlab_config: {}
+  gitlab_logs: {}
+  gitlab_data: {}
