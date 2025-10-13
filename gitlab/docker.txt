@@ -1,0 +1,41 @@
+version: "3.9"
+#podman-compose up -d --force-recreate
+services:
+  gitlab:
+    image: gitlab/gitlab-ce:latest
+    container_name: gitlab
+    restart: always
+    hostname: gitlab.local
+    ports:
+      - "8080:80" # Web UI
+      - "8443:443" # HTTPS
+      - "2222:22" # Git SSH
+    volumes:
+      - ../.podman_volumes/gitlab/config:/etc/gitlab
+      - ../.podman_volumes/gitlab/logs:/var/log/gitlab
+      - ../.podman_volumes/gitlab/data:/var/opt/gitlab
+
+  gitlab-runner:
+    image: gitlab/gitlab-runner:latest
+    container_name: gitlab-runner
+    restart: always
+    depends_on:
+      - gitlab
+    volumes:
+      - ../.podman_volumes/gitlab-runner/config:/etc/gitlab-runner
+      - /var/run/docker.sock:/var/run/docker.sock
+
+  microk8s:
+    image: ubuntu:22.04
+    container_name: microk8s
+    privileged: true # Required for snap/microk8s
+    restart: always
+    command: >
+      sh -c "apt-get update &&
+             apt-get install -y snapd &&
+             snap install microk8s --classic &&
+             tail -f /dev/null"
+    ports:
+      - "16443:16443" # Kubernetes API server
+    volumes:
+      - ./microk8s-data:/var/snap/microk8s/common

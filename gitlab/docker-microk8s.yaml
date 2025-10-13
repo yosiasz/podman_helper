@@ -1,0 +1,22 @@
+version: "3.9"
+#podman-compose -f .\docker-microk8s.yaml up -d
+
+services:
+  microk8s:
+    #podman build -t gitlab_microk8s .
+    build: .
+    container_name: microk8s
+    privileged: true
+    volumes:
+      - microk8s-data:/var/snap/microk8s
+      - /lib/modules:/lib/modules:ro
+    ports:
+      - "16443:16443"   # Kubernetes API
+      - "10250:10250"
+      - "32000:32000"
+    environment:
+      - container=docker
+    restart: unless-stopped
+
+volumes:
+  microk8s-data:
