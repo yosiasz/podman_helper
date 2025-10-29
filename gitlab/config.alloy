@@ -1,0 +1,31 @@
+loki.relabel "journal" {
+  forward_to = [loki.write.default.receiver]
+  
+  rule {
+    source_labels = ["__journal__systemd_unit"]
+    target_label  = "unit"
+  }
+  
+  
+  rule {
+    source_labels = ["__journal__HOSTNAME"]
+    target_label  = "host"
+  }
+  
+  rule {
+    source_labels = ["__journal__CONTAINER_NAME"]
+    target_label  = "container"
+  }
+}
+
+loki.source.journal "containers" {
+  forward_to    = [loki.relabel.journal.receiver]
+  //relabel_rules = loki.relabel.journal.rules
+  labels        = {job = "containers"}
+}
+
+loki.write "default" {
+  endpoint {
+    url = "http://localhost:3100/loki/api/v1/push"
+  }
+}

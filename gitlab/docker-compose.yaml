@@ -24,7 +24,7 @@ services:
       #- gitlab-runner-config:/etc/gitlab-runner
     deploy:
       mode: replicated
-      replicas: 4
+      replicas: 2
 volumes:
   gitlab_config: {}
   gitlab_logs: {}

@@ -21,6 +21,8 @@ podman exec -it gitlab grep 'Password:' /etc/gitlab/initial_root_password
 
 #
 
+AvkMi+6mdzN7BUfh1t83VSi1nD9w+mabhNvfEjinrjE=
+
 helm repo add gitlab https://charts.gitlab.io
 helm repo update
 helm upgrade --install mcc-research gitlab/gitlab-agent \
